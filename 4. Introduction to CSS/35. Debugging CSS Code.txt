@@ -1,0 +1,17 @@
+DEBUGGING CSS CODE 
+==================
+
+notes:
+- we are gonna use chrome developer tools (this is why we use 
+chrome here)
+- if we open the chrome developer tool --> console, we're gonna
+be able to find the error there
+- the "/" in the linking makes the local relative 
+to the root, while without the "/" it makes it relative
+to the subdirectory that the index.html exists in 
+or it's the same with something like this: "./"
+
+
+things to ask:
+
+keywords:

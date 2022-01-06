@@ -1,0 +1,96 @@
+BOOTSTRAP BUTTONS AND FONT AWESOME 
+==================================
+
+bootstrap button docs:
+https://getbootstrap.com/docs/4.0/components/buttons/
+
+challenge:
+give dark and light button to style 
+our download button in the bootstrap title section 
+
+the buttons:
+- large button 
+- the left one: dark button 
+- the right one: outlined light button 
+
+solution:
+<button class="btn btn-dark" type="button">Download</button>
+            <button class="btn btn-outline-light" type="button">
+              Download
+            </button>
+
+then the button sizing:
+https://getbootstrap.com/docs/4.0/components/buttons/#sizes
+
+solution:
+<button class="btn btn-dark btn-lg" type="button">Download</button>
+            <button class="btn btn-outline-light btn-lg" type="button">
+              Download
+            </button>
+
+FONT AWESOME
+------------
+
+https://fontawesome.com/
+
+- font awesome is what gives you an icon text 
+
+- now go to font-awesome then go to icons 
+
+https://fontawesome.com/v5.15/icons?d=gallery&p=2
+
+- to use it just click on "start using this icon" 
+then copy the copiable part
+example:
+<i class="fab fa-apple"></i>
+
+note:
+here you have fab which is (font awesome button)
+then fa-apple which is the icon of the apple 
+
+- before using it, you need to embed it 
+
+- first go to font awesome --> get-started 
+then copy the cdn 
+
+note:
+first you need to login using your email 
+
+here's the kit for example:
+
+<script src="https://kit.fontawesome.com/59216d21ed.js" crossorigin="anonymous"></script>
+
+note:
+you can comment out things like this:
+1. type the comment
+2. on the comment: ctrl + /
+
+- ITALIC TAG ON FONT AWESOME:
+font awesome likes to use the <i></i> thing 
+which is not that great in terms of HTML best
+practice, but the reason is:
+glyphs and icons are not italicized therefore 
+it doesn't become slanted 
+another reason:
+the i tag is the shortest tag that can be used 
+for this purpose 
+
+note:
+you can use the i tag just like that, or if you want 
+a more semantically understandable css code, you 
+can use the <span></span> also 
+
+example:
+<span class="fab fa-apple"></span>
+
+challenge:
+implement the btn-outline-light icon using the  
+google play icon!
+
+solution:
+<button class="btn btn-outline-light btn-lg" type="button">
+              <span class="fab fa-google-play"></span> Download
+            </button>
+
+complete title challenge
+------------------------

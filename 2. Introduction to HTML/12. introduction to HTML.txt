@@ -1,0 +1,16 @@
+INTRODUCTION TO HTML
+====================
+
+one of the key skills of being a web developer --> getting good at finding out 
+how you can help yourself (how you do some googling)
+
+what you have to do:
+find the most reliable resources(documentations) out there
+
+
+these are some of the best resources:
+devdocs.io
+stackoverflow
+developer.mozilla.org
+w3schools.org
+

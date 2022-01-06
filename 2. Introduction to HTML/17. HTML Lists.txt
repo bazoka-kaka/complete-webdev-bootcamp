@@ -1,0 +1,22 @@
+HTML Lists
+==========
+
+to add unordered list:
+<ul>
+  <li>first</li>
+  <li>second</li>
+  <li>third</li>
+</ul>
+
+to add ordered list:
+<ol>
+  <li>first</li>
+  <li>second</li>
+  <li>third</li>
+</ol>
+
+note:
+ordered list is an ordered list meaning you have the orders that is of importance
+(1, 2, 3, ..etc)
+
+the unordered list has no such thing

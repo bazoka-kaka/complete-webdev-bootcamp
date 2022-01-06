@@ -1,0 +1,74 @@
+WHAT IS HTML BOILERPLATE
+========================
+
+boilerplate is just the beginning html code looks like 
+to do this in atom:
+html + [enter]
+! + [tab]
+html  + [tab]
+HTML:5 + [tab]
+
+boilerplate = a code-template that we can reuse 
+
+the most common keyboard shortcuts on atom:
+https://github.com/nwinkler/atom-keyboard-shortcuts
+
+what we're having now is html5
+
+- the above boilerplate automation is something that we created
+using emmet, we could find out more of these keys of emmet
+in here:
+https://docs.emmet.io/cheat-sheet/
+
+2 things in an html code:
+1. head
+this tells the browser how it should handle the page.
+there's title where you can set the name of the website
+
+another thing is the meta
+meta --> this gives you extra metadata or associated data to your html document 
+if your meta data looks like this:
+<meta charset="utf-8">
+
+in this case we're telling our browser when the browser opens up the "utf-8"
+file that all the text inside our webpage is encoded using UTF-8 encoding system
+
+this is bassically all of the available characters that we can use inside our website
+for it to be rendered correctly
+
+mojibake --> (japanese meaning characters that are transformed) this is because
+the browser is trying to render the characters using the wrong character set 
+(meaning it's rendered incorrectly)
+
+this is because at the same memory location, with different encoding system 
+the character is also going to be different that's why sometimes it's gonna be 
+a jumbled word
+
+the standard encoding of your website is: utf-8 encoding 
+
+this is because it includes all of those international symbols 
+and in fact every single code that's in the unicode character set 
+
+you can see all these here:
+https://unicode-table.com/en/
+
+the unicode also includes emojis 
+
+the meta charset=utf-8 gives you the maximum chance of correctly rendering the 
+browser that are from international visitors
+
+other than the charset element, there're also different attributes that you might see
+on different websites 
+
+these are the most common ones:
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+these meta tags tall the browser how it should render or display the webpage 
+they also give information to the search engine about the content of the website 
+(real important so that your website shows up first on search engines)

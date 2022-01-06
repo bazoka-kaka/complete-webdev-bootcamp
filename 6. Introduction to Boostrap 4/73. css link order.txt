@@ -1,0 +1,41 @@
+CSS LINK ORDER
+--------------
+
+- if you have overlapping styles in 
+your css linking, the one that is gonna be applied 
+is the one that is the last linked 
+
+example:
+in your styles1.css:
+h1 {
+  color: blue;
+}
+
+in your styles2.css:
+h1 {
+  color: red;
+}
+
+in your index.html:
+<link rel="stylesheet" href="styles2.css">
+<link rel="stylesheet" href="styles1.css">
+
+the one that is gonna be applied is the styles1 
+meaning the h1 is gonna have the color of blue 
+
+- according to the last statement, if you reference
+your styles.css before your boostrap cdn link, 
+you are not gonna see any difference sometimes, 
+since the boostrap has already defined it
+
+if you want to make your styles.css take an effect, 
+you have to place it after your bootstrap cdn link:
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+VERY IMPORTANT
+--------------
+
+Unlike CSS and JavaScript, HTML code is executed from 
+top to bottom so the order of your code matters.

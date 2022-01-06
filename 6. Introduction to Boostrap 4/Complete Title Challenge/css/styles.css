@@ -1,0 +1,62 @@
+#title {
+  background-color: #ff4c68;
+  height: 85vh;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-family: montserrat;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-brand {
+  font-family: ubuntu;
+  font-size: 2.5rem;
+  text-align: left;
+  position: absolute;
+  left: 0;
+}
+
+.title-full {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 50px;
+}
+
+.phone-img {
+  width: 250px;
+  object-fit: cover;
+  transform: rotate(25deg) translateX(-50%);
+  position: absolute;
+  left: 30%;
+  top: 70px;
+}
+
+.title-img-container {
+  position: relative;
+}
+
+#features {
+  z-index: 50;
+  background-color: white;
+}
+
+.navbar-nav {
+  font-size: 1.2rem;
+}
+
+.navbar-nav a {
+  margin: 0 15px;
+}

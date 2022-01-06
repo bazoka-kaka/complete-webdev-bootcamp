@@ -1,0 +1,126 @@
+CSS DISPLAY PROPERTY
+====================
+
+- block elements: those that take up essentially the whole width 
+of the screen on a webpage 
+(blocking any elements from sitting next to it on the left 
+or on the right side)
+
+- common block elements:
+a. paragraphs <p></p>
+b. headers <h1></h1>
+c. divisions <div></div>
+d. lists and list items <ul></ul>, <ol></ol>, <li></li>
+e. forms <form></form>
+
+- inline elements: this only takes up as much space as it needs
+to in the height and its width so you can see that 
+the box around it is only as big as its content
+
+- common inline elements:
+a. spans <span></span>
+b. images <img>
+c. anchors <a></a>
+
+- problem with inline element:
+a. we can't change the width
+
+- the thing with a block element:
+a. we can change the width 
+
+- to change the display property of an element: 
+example:
+p {
+  display: inline;
+}
+
+note:
+this makes the p (by default a block element) to become
+an inline element 
+
+or another example:
+a {
+  display: block;
+}
+
+note:
+this makes the a (by default an inline element) to become
+a block element 
+
+- So the question is:
+what should i do if i wanted elements that can occupy the same line
+but at the same time, we could change its width?
+
+answer: use something called inline-block 
+
+- inline-block elements: elements that occupy the same line 
+with another elements but we could change their widths
+
+- images are like an inline-block element, because we're able 
+to change its width and it sits on the same line with another 
+elements
+
+- here are display elements:
+a. block 
+element that is covering one entire line of the viewport by default, 
+its width could be adjusted 
+doesn't sit inline with another elements 
+
+b. inline
+element which container's size have the same size with its
+content, its width can't be adjusted, 
+sits inline with another elements 
+
+c. inline-block
+element which container's size is covering its own content by 
+default, its width could be adjusted,
+sits inline with another elements 
+
+d. none
+just gets rid of our element. this simply removes our element 
+from the website as if it didn't exist. the element completely
+disappears from the web, but not in our code 
+
+- 2 ways to hide things from your website:
+a. display: none 
+this takes the element out of the flow as if it never existed
+
+b. visibility: hidden
+it makes the element disappear, but it keeps its original position 
+and all the other elements still flow around it as if it's still 
+there but it just can't be seen anymore 
+
+here's the example: 
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <p>block element</p>
+  <a href='#'>inline element</a>
+  <p class='inline-block-element'>inline block element</p>
+</body>
+</html>
+
+styles.css:
+p {
+  background: red;
+}
+
+a {
+  background: blue;
+  color: white;
+  text-decoration: none;
+}
+
+.inline-block-element {
+  background: yellow;
+  display: inline-block;
+  width: 300px;
+}

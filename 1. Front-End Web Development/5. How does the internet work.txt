@@ -1,0 +1,27 @@
+HOW DOES THE INTERNET WORK
+==========================
+
+- internet is just a long wire that attaches lots of computer, 
+some of the computer have to be 24/7 so that other computers
+could access it. this is called a server 
+
+- any computer that a user uses to access the internet is called 
+a client
+
+how the internet works:
+client sends message to internet service provider (ISP) --> ISP will relay that message
+that you sent to DNS server (Domain Name System server) --> DNS finds IP address --> send it back to the
+client via ISP --> client sends that IP address to the ISP --> ISP deliver it to the server which has the IP address 
+through the literal backbone of the internet (which is a huge cable accross the seas) --> the server then is going to give
+the response of which you are requesting to them to the client (to you)
+
+internet service providers(ISPs):
+US: AT&T or comcast
+UK: BT or talktalk
+
+DNS (Domain Name System) --> this is just like a huge phone book that if we do some request it'll search in its
+database on what is the ip address of the website that you're requesting
+
+note:
+every single computer that is connected to the internet has an IP address (IP addres is like your postal code in your computer)
+

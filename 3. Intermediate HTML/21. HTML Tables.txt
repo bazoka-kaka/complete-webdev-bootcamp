@@ -1,0 +1,44 @@
+HTML TABLES
+===========
+
+when you see at the documentation, there are lots of attributes that 
+you can assign to the table element, but it's all been 
+deprecated meaning it's no longer recommended that you use them 
+(it's downgraded)
+
+this is because we have to remember that html is for structures,
+css is for styling, and javascript is for the functionality of
+your program
+
+note:
+<tr></tr> --> this is your table row (if you create one you're gonna be having
+one single row)
+
+<td></td> --> this is your table data that's inside of your rows (<tr></tr>)
+
+there're nothing called table columns, this means there are no elements
+that are in the functionality of a table column, you're only gonna be able
+to do something with the table rows
+<th></th> --> this is for your table heading for each column
+<td></td> --> this is for your table data
+
+this is your final table code:
+
+<table>
+    <thead>
+      <tr>
+          <th>Dates</th>
+          <th>Work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2019</td>
+        <td>Complete HighSchool</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Learn Web Programming</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,45 @@
+ANATOMY OF HTML TAG
+====================
+
+to see the elements that you wanna copy codes from, you could right click on 
+the element that you wish, then click "inspect" so that you could 
+look at the html and the css text 
+
+<hr size="3">
+
+note:
+size="3" --> this is an html attribute (to modify the html element)
+
+you could search for webdevelopment things in here:
+https://devdocs.io/
+
+these are the attributes of the <hr>:
+This element's attributes include the global attributes.
+
+align
+Sets the alignment of the rule on the page. If no value is specified, the default value is left.
+
+color
+Sets the color of the rule through color name or hexadecimal value.
+
+noshade
+Sets the rule to have no shading.
+
+size
+Sets the height, in pixels, of the rule.
+
+width
+Sets the length of the rule on the page through a pixel or percentage value.
+
+
+example of the hr:
+<hr size="3" noshade>
+
+to make your html code centered, you could do something like this:
+
+<center>
+  <!-- your html -->
+</center>
+
+this is the final code:
+

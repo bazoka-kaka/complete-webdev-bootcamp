@@ -1,0 +1,6 @@
+STYLING OUR WEBSITE CHALLENGES AND SOLUTIONS
+============================================
+
+- challenge:
+change all of the fonts to montserrat
+

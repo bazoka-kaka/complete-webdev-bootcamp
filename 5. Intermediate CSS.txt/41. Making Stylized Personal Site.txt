@@ -1,0 +1,12 @@
+MAKING STYLIZED PERSONAL SITE
+=============================
+
+CHALLENGE:
+1. create a new folder called CSS - My Site 
+2. Create an index.html
+3. add the HTML backbone and give your website a title of your 
+name 
+4. Create a CSS folder and a styles.css file
+5. Link up your html and css and give your website an ugly blue 
+color 
+

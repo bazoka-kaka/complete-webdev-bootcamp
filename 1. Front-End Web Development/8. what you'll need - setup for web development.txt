@@ -1,0 +1,11 @@
+SETUP FOR YOUR LOCAL WEB DEVELOPMENT ENVIRONMENT
+================================================
+
+2 main things:
+1. chrome browser
+2. atom text editor
+
+the best code editors:
+a. vs code
+b. atom 
+

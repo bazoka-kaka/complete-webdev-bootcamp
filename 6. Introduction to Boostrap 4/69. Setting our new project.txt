@@ -1,0 +1,28 @@
+SETTING UP OUR NEW PROJECT
+==========================
+
+here's the codeplay navbar:
+https://www.codeply.com/p/GVJU3ipWxP
+
+note:
+our boostrap link must go above our own stylesheet 
+
+example:
+    <!-- above -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- below -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+we don't have the javascript boostrap yet, 
+we have to implement the js too!
+
+https://getbootstrap.com/docs/4.0/getting-started/introduction/#js
+
+note:
+add this js just below the css links!
+

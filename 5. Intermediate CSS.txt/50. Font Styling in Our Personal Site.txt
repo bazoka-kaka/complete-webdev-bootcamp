@@ -1,0 +1,28 @@
+FONT STYLING 
+============
+
+serif --> has little feet at the end of the curves
+sans-serif --> doesn't have little feet at the end of the curves 
+
+- sometimes, operating systems can't read the websites 
+correctly, therefore there's something called 
+web safe fonts:
+this means there's a set of font families where most operating 
+systems will be able to render it correctly 
+
+(this gives you the maximum chance of being rendered correctly)
+
+this is the percentages of where you're 
+https://www.cssfontstack.com/
+
+you can browse more fonts here:
+https://fonts.google.com/
+
+for example you've added the font families:
+you have to copy the 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+these are the font families that you wanna implement:
+font-family: 'Montserrat', sans-serif;
+font-family: 'Sacramento', cursive;

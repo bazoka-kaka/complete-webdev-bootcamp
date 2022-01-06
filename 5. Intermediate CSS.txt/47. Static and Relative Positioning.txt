@@ -1,0 +1,153 @@
+STATIC AND RELATIVE POSITIONING
+===============================
+
+rules:
+1. content is everything
+if the content has a short width, the block is gonna have a short
+width, if the content has a big height, the block is gonna have 
+a big height 
+
+2. order comes from the code 
+
+3. children sit on parents
+example:
+<div>
+  <h1>Programmer</h1>
+</div>
+
+note:
+the <h1></h1> is gonna be on top of the <div></div> element 
+
+this is called a z-index (since the screen is considered as 
+x and y axis)
+
+another one:
+<h1><span>pro</span>grammer</h1>
+
+note:
+<span>pro</span> is gonna be on top of the <h1></h1>
+
+(greater z-index)
+
+POSITION
+--------
+
+4 types of positions:
+a. static
+keep to the default html flow
+
+b. relative
+positions the element that we select relative to how it 
+would be had it been static 
+
+c. absolute
+
+
+d. fixed 
+
+the default positioning for an html element: static 
+
+coordinates for relative absolute and fixed:
+top, bottom, right, and left
+
+note:
+if we do something like this:
+
+.red {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: relative;
+  right: 200px;
+}
+
+this is gonna sets the red box out of the screen, because 
+relative while its right coordinate is 200px means it's 
+200px relative to the static position of the box 
+not relative to the body element 
+
+challenge:
+change the display property of the blue and yellow squares so that 
+they'll show up in a row where we've got the red square, blue, 
+and yellow square, then move the red square to the right 
+of the yellow square 
+
+final solution: 
+styles.css:
+div {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background: red;
+  left: 200px;
+  position: relative;
+}
+
+.blue {
+  background: blue;
+  bottom: 100px;
+  position: relative;
+}
+
+.yellow {
+  background: yellow;
+  bottom: 200px;
+  left: 100px;
+  position: relative;
+}
+
+from the lecturer's solution:
+body {
+  background: white;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background: red;
+  display: inline-block;
+  position: relative;
+  left: 200px;
+}
+
+.blue {
+  background: blue;
+  display: inline-block;
+  position: relative;
+  right: 100px;
+}
+
+.yellow {
+  background: yellow;
+  display: inline-block;
+  position: relative;
+  right: 100px;
+}
+
+note:
+the space between the squares are inconsistent because by making 
+it inline block, there's a little space that gets added in by
+the browser 
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+  </body>
+</html>
+

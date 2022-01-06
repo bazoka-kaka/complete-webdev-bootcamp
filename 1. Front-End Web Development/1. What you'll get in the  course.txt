@@ -1,0 +1,8 @@
+INTRO
+=====
+
+we're gonna be learning project based applications, 
+we're gonna learn html, css, and bootstrap
+
+we'll learn about node, react, and MERN stack
+

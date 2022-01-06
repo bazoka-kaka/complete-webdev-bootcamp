@@ -1,0 +1,26 @@
+body {
+  color: blue;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: red;
+}
+
+/***************** CLASS SELECTORS *****************/
+
+.bacon {
+  background-color: blue;
+}
+
+.broccoli {
+  background-color: red;
+}
+
+.bacon:hover {
+  background-color: purple;
+}
+
+.broccoli:hover {
+  background-color: orange;
+}

@@ -1,0 +1,92 @@
+CSS SIZING
+==========
+
+font-size for example:
+font-size: 90px;
+
+note:
+this is not a dynamic size, for example if you zoom out your 
+website, you're not gonna see your website font-size 
+appear bigger 
+
+this is because you are using px for the size 
+
+solution:
+we can use something like a percentage:
+
+if it's 100% size:
+the size is actually 16px 
+
+meaning if you want 90px
+
+you have to do this:
+90/16 = 562.5%
+
+this is how you implement it:
+font-size: 562.5%;
+
+another way:
+- using em:
+-----------
+
+1em is 16px
+
+16px = 100%
+
+therefore 16px =  100% = 1em
+
+here's how you could count the em:
+
+if you want 90px converted to em:
+
+90/16 = 562.5%
+
+therefore since 
+1em = 100%
+
+you have to do this:
+90px = 562.5%/100em = 5.625em
+
+implementation:
+font-size: 5.625em;
+
+- distinction between statically and dynamically sized 
+fonts:
+
+when you're using dynamically sized fonts, that value 
+is inherited 
+
+example:
+body {
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 5.625em;
+}
+
+this is gonna make the font-size in h1 much larger
+than before when the font-size is not specified in
+the body 
+
+another dynamically sized sizing:
+rem:
+----
+
+rem means: ignore all the parent settings for the font-size 
+and just set it relative to the root 
+
+THE BEST WAY TO SIZE A TEXT:
+JUST USE REM!!!
+
+note:
+remember the number: 1 rem = 100% = 16px 
+
+if you want 90px --> 90/16 = 5.625rem
+
+challenge: in the title:  change the p to h2 then 
+set the font size to rem equals to 40px 
+40/16 = 2.5rem 
+
+
+

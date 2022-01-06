@@ -1,0 +1,41 @@
+INSTALLING BOOSTRAP 
+===================
+
+- the simplest way:
+just copy the boostrap cdn:
+from:
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+- cdn = content delivery network
+note:
+content delivery network is just a whole bunch of points
+in the world (not in the actual root server) where
+you can access your websites from.
+in indonesia, it's jakarta
+
+- another way to add boostrap:
+just copy and use their starter template
+https://getbootstrap.com/docs/3.3/getting-started/#template
+
+
+- the third way of using bootstrap:
+downloading the css and js code:
+https://getbootstrap.com/docs/3.3/getting-started/#download
+
+note:
+this is slow because since it's a local file in your website, 
+the browser won't recognize this and will not know that it's
+already been downloaded (most computers already downloaded boostrap)
+and already been cached so it'll have to download all of the css 
+boostrap files in your website to load up (which takes more time 
+than it's supposed to be)
+
+throughout this course, we're just gonna use the first
+method which is using the cdn link 
+
+note:
+for some components in javascript to work, they actually 
+need some javascript 
+

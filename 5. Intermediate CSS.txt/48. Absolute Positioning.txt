@@ -1,0 +1,187 @@
+ABSOLUTE POSITIONING
+====================
+
+if you're doing something like this:
+.red {
+  position: absolute;
+  right: 30px;
+  background: red;
+  width: 100px;
+  height: 100px;
+}
+
+you're gonna make the block positioned 30px from the right side 
+of your parent 
+
+difference with relative positioning:
+- relative positioning:
+adding margin relative to the static(default) positioning of the
+element itself
+
+- absolute positioning:
+adding margin relative to the parent of the element 
+
+challenge:
+create something like picture absolute-challenge.png 
+
+solution: 
+styles.css:
+body {
+  background: white;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.red {
+  background: red;
+  top: 200px;
+  left: 200px;
+}
+
+.blue {
+  background: blue;
+  top: 100px;
+  left: 100px;
+}
+
+.yellow {
+  background: yellow;
+  top: 0;
+  left: 0;
+}
+
+another way:
+body {
+  background: white;
+  margin: 0;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.red {
+  background: red;
+  top: 200px;
+  left: 200px;
+}
+
+.blue {
+  background: blue;
+  top: 100px;
+  left: 100px;
+}
+
+.yellow {
+  background: yellow;
+}
+
+
+note:
+this solution makes the margin of the body as 0 so that 
+initially all of the inside element touches the upper left 
+corner of the entire screen
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+  </body>
+</html>
+
+ABSOLUTE ELEMENT WITH RELATIVE PARENT 
+-------------------------------------
+
+instead of using the body as its parent, an element 
+could have another element which has a positioning value 
+of relative 
+
+example:
+the html:
+<div class="container">
+  <div class="red"></div>
+</div>
+
+the style:
+.container {
+  position: relative;
+}
+
+.red {
+  position: absolute;
+  background: red;
+}
+
+full example:
+styles.css:
+body {
+  background: white;
+  margin: 0;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background: red;
+  position: absolute;
+  right: 0;
+}
+
+.blue {
+  position: absolute;
+  background: blue;
+  top: 0;
+}
+
+.yellow {
+  position: absolute;
+  background: yellow;
+  top: 0;
+  left: 100px;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: grey;
+}
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="red"></div>
+    </div>
+
+    <div class="blue"></div>
+    <div class="yellow"></div>
+  </body>
+</html>

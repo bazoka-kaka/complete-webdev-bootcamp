@@ -1,0 +1,40 @@
+FLOAT AND CLEAR
+===============
+
+FLOAT 
+------
+
+- making elements inline
+
+example:
+float: left;
+
+note:
+this makes the element in the left side of the 
+entire part 
+
+CLEAR 
+------
+
+- prevents from wrapping anything on the sides that you 
+want to clear from 
+
+example:
+clear: left;
+
+note:
+float is the opposite of clear 
+
+important notes
+---------------
+
+use float only when necessary
+- float is only used to wrap text around a certain
+element, and don't use it for positioning 
+
+- instead use use relative or absolute units instead
+of floats 
+
+- remember: leave float for the cases of wrapping texts
+only 
+

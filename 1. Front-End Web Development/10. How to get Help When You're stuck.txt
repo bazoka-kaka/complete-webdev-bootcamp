@@ -1,0 +1,32 @@
+HOW TO GET HELP WHEN YOU'RE STUCK
+=================================
+
+- when you're stuck, think of it like a challenge that if you solve it
+you get the best feelings in the world 
+
+how to get yourself unstuck:
+1. have an understanding of what the reality vs the expectation is 
+what did your code expect to happen vs what actually happen 
+then understand what is causing the difference 
+
+tip: copy the error from your console to google so that you could understand
+the meaning
+
+the best website: stack overflow 
+
+2. rewatch the video from the beginning till where your code starts breaking 
+and check it thoroughly
+
+3. check the code 
+
+4. the qna (this is the final move)
+
+ask in the qna:
+1. what did you expect
+2. what actually happened
+3. screenshot your code 
+4. screenshot of the debug console 
+
+to take a screenshot in window:
+window + shift + s
+

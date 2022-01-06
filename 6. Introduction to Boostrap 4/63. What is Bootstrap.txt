@@ -1,0 +1,43 @@
+WHAT IS BOOTSTRAP
+=================
+
+- bootstrap is a frontend library 
+- font end:
+a. javascript
+b. css
+c. html
+- back end:
+a. .NET
+b. Ruby
+c. PHP
+d. Java
+e. NodeJS
+f. SQL 
+
+- boostrap is to make you design your web easier 
+(frontend library)
+
+- boostrap is originally developed by twitter 
+to try and get more consistency 
+
+- boostrap is the second most starred repository on github 
+
+- boostrap is the most popular frontend framework or library 
+that you'll ever come accross 
+
+- what does boostrap allows you to do:
+a. responsive 
+responsive = response to the viewport 
+boostrap makes this super2 easy 
+
+b. pre-styled elements
+boostrap has lots of prestyled elements that you can just 
+input to your code 
+
+we're gonna use codeply instead of codepen, 
+
+this is because it's gonna make you able to include 
+all of these frameworks 
+
+https://www.codeply.com/
+

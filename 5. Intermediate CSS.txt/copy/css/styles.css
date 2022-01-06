@@ -1,0 +1,83 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: "Sacramento", cursive;
+  font-size: 64px;
+  /* color: #4fbdba; */
+}
+
+.title p {
+  /* color: #072227; */
+  font-size: 20px;
+}
+
+.top {
+  height: 100vh;
+  position: relative;
+  background-color: #4fbdba;
+}
+
+.title {
+  position: absolute;
+  top: calc(calc(calc(100vh - 357px) / 2) + 10vh);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.middle {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.bottom {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+
+.bottom-cloud,
+.top-cloud {
+  position: absolute;
+}
+
+.bottom-cloud {
+  left: calc(-150px - 10px);
+  bottom: calc(-48px - 10px);
+}
+
+.top-cloud {
+  right: calc(-150px - 10px);
+  top: calc(-48px - 10px);
+}
+
+.profile-photo,
+.webdev,
+.hacking {
+  width: 200px;
+}
+
+.middle-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #aefeff;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+}

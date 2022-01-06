@@ -1,0 +1,156 @@
+EXTERNAL CSS
+============
+
+- root: when you have a static website that's not yet hosted anywhere
+you can't tap into this file using the root 
+
+what you can do is instead of tapping into the file
+using the root, you can do it within the same level 
+of your current index.html file:
+
+final code:
+styles.css:
+
+body {
+  background: #d6e5fa;
+}
+
+h1 {
+  color: #5fa79d;
+}
+hr {
+  background-color: white;
+  border-style: none;
+  border-top-style: dotted;
+  width: 10%;
+  border-width: 5px;
+  border-color: grey;
+}
+img {
+  height: 200px;
+}
+
+.main-hr {
+  border-top-style: solid;
+  width: 30%;
+  margin-left: 8px;
+  position: relative;
+  bottom: 10px;
+}
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Yehezkel's Personal Site</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <table cellspacing="20">
+      <tr>
+        <td>
+          <img src="./image.jpg" alt="jew tefilin" />
+        </td>
+        <td>
+          <h1>Yehezkel Wiradhika</h1>
+          <hr class='main-hr'/>
+          <p>
+            <em
+              >Founder and CEO of
+              <strong
+                ><a href="https://judaistic.netlify.app/" target="_blank"
+                  >Judaistic101.netlify.app</a
+                ></strong
+              >.</em
+            >
+          </p>
+          <p>
+            I am a hacker, web developer, and an ios developer. I love learning
+            torah and an avid Jew.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <h3>Websites</h3>
+    <ul>
+      <li>
+        <a href="https://codepen.io/bazoka-kaka/full/bGrmapE"
+          >Indonesian Jewish Kosher Food</a
+        >
+      </li>
+      <li>
+        <a href="https://codepen.io/bazoka-kaka/full/YzxJgav">Portofolio</a>
+      </li>
+      <li>
+        <a href="https://codepen.io/bazoka-kaka/full/QWMJLXz"
+          >Javascript Documentation</a
+        >
+      </li>
+    </ul>
+    <hr />
+    <h3>Work Experience</h3>
+    <table border="1">
+      <thead align="left">
+        <tr>
+          <th>Dates</th>
+          <th>Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2019</td>
+          <td>Complete High School</td>
+        </tr>
+        <tr>
+          <td>2018</td>
+          <td>Enter University</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h3>Skills</h3>
+    <table border="2">
+      <tr>
+        <td>
+          <table cellspacing="10">
+            <tr>
+              <td>Web Development</td>
+              <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Programming</td>
+              <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Hebrew</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table cellspacing="10">
+            <tr>
+              <td>Web Development</td>
+              <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Programming</td>
+              <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Hebrew</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <a href="./contact.html">Contact Me</a>
+  </body>
+</html>

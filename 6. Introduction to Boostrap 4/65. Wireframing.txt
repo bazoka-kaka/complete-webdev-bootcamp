@@ -1,0 +1,91 @@
+WIREFRAMING
+===========
+
+what the workflow of a web designer might look like 
+
+one of the first things that you have to do as a web designer
+before touching the code or designing etc:
+- wireframing
+
+wireframes = low fidelity representation of your design 
+
+note:
+you might wanna sketch out and discuss the low quality 
+representation of your website before designing it better 
+
+like building a home (you're architecturing it)
+
+you might be creating one version using wireframing, see if other 
+people like it, essentially you wanna settle for a design 
+before you go ahead and implement it 
+
+it's supposed to look really really simple, and doesn't take 
+so much time at all 
+
+the opposite of this:
+
+- mock up 
+high-fidelity representation of your app or your web's design 
+
+this is like using the figma 
+
+you want the actual representation of your website looks like 
+your mockup 
+
+problem:
+if it's not the first thing you start messing around with, 
+you're gonna end up stuck on choosing the colors, icons, 
+images, etc 
+
+- the classic workflow:
+a. see other people's websites
+this will give you the idea about the layout, structure, etc 
+here's websites to see other people's website (their portofolios
+to get an idea of how your website should look like)
+https://www.awwwards.com/
+
+b. looking up for ui patterns 
+http://ui-patterns.com/
+
+note:
+here you can look for the problems you're trying to solve
+as you're designing your website 
+
+example:
+you need to create a carousel, then it'll give you an example 
+from great websites 
+
+this is for understanding how other people solved problem 
+using their designs 
+
+c. create a simple sketch wireframe 
+for planning the layouts and how everything is going to be 
+
+d. create a mockup 
+you can use photoshop or illustrator or figma to see 
+the photo realistic versions of your future websites 
+
+e. create a prototype 
+this is an animated version of your website to show
+off what it's gonna be looking like 
+
+good source for looking for inspirations for all of these 
+fronts:
+https://dribbble.com/
+
+really cool thing about dribbble: 
+you can search dribbble by colors 
+(you can specify a tone that you quite like)
+
+HOW TO CREATE WIREFRAMES
+------------------------
+
+- the easiest way: use a pencil and a piece of paper 
+
+- you can print this an start wireframing:
+https://sneakpeekit.com/
+
+- a little bit more advanced version of wireframing:
+https://balsamiq.com/
+
+here you can share your design and even get comments

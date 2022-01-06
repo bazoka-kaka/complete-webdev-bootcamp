@@ -1,0 +1,10 @@
+SETUP PACKAGES
+==============
+
+top install a package: click on install a package --> open installer 
+
+on windows: 
+file --> settings --> install 
+
+here's a list of atom packages:
+https://docs.google.com/document/d/e/2PACX-1vQNuhDC5pFXEVVNGasvddKuDHEXnqR033lsSD5tLA9NiEdHrsYM4MXVEXja2RnBgsCxK6XEo6YkMOFI/pub

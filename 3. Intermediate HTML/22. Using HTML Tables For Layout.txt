@@ -1,0 +1,23 @@
+USING HTML TBALES FOR LAYOUT
+============================
+
+you could make the layout of your website to become inline horizontally using 
+table 
+
+note:
+to make your table have spacing you should use cellspacing
+
+such is the implementation:
+<table cellspacing="20">
+    <tr>
+      <td>
+        <img src='./image.jpg' alt='jew tefilin' />
+      </td>
+      <td>
+        <h1>Yehezkel Wiradhika</h1>
+        <p><em>Founder and CEO of <strong><a href='https://judaistic.netlify.app/' target='_blank'>Judaistic101.netlify.app</a></strong>.</em></p>
+        <p>I am a hacker, web developer, and an ios developer. I love learning torah and an avid Jew.</p>
+      </td>
+    </tr>
+  </table>
+

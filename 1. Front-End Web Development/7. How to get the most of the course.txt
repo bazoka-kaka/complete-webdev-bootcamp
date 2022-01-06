@@ -1,0 +1,51 @@
+HOW TO GET THE MOST OF THE COURSE
+=================================
+
+each lesson is 10 minutes long
+
+- don't type along!, you have to understand what the code is doing 
+after understanding it and what the tutorial is trying to teach you
+then go to your computer, and try to replicate what's going on 
+(this makes you understand your codes better)
+
+you could speed up your typing speed using some websites like:
+https://www.keybr.com
+
+- by doing this, you're gonna be able to learn better, you're gonna be able to absorb the content
+much better then you test yourself to see if you totally understand it or not
+
+(don't code along but learn it first, then try to replicate without seeing until you're stuck)
+
+--> 10 minutes interval
+
+- WHILE you're watching the video, you should take notes to review in the future
+this is totally useful after the 10 minutes are up and try to remember what the codes were
+and what the theories that was covered this is the cornel method:
+1. topic/title
+2. notes
+3. keywords/questions (this is what you're gonna research later also hints and reminders)
+4. summary (in a view bullet points)
+
+- if you already know most of the concept, you just fast forward, but the opposite, just
+slow it down
+
+- DON'T SKIP! never skip any of the tutorials or the modules except for the skippable parts
+which are those that are not really important
+
+- IF it becomes real hard that you can't solve it, just bookmark it, making a note on which module
+we're really struggling with and try to use the earlier method of watching the videos 
+
+IF it's real hard and you can't do it, that is something that you have to come back to later 
+maybe it's just weeks maybe months maybe days whatever just do that later!
+
+- YOU HAVE TO PERSEVERE AND PUT YOUR HOURS INTO THAT 
+PRACTICE = MASTERY 
+
+- STUCK?
+MOST OF THE PROGRAMMERS SPEND 90% OF THEIR TIME TRYING TO FIGURE OUT 
+WHAT IS WRONG, WHAT IS IT NOT WORKING (GETTING STUCK IS A VERY UNIVERSAL PART OF PROGRAMMING);
+SOMETHING THAT YOU HAVE TO LOVE AND ENJOY
+
+IF YOU'RE STUCK, YOU JUST HAVE TO SEARCH GOOGLE AND STACK OVERFLOW
+
+- STRUGGLING IS GOOD

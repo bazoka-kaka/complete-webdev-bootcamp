@@ -1,0 +1,22 @@
+WHAT ARE FAVICONS
+=================
+
+sean's website:
+https://web.archive.org/web/20180819202235js_/http://seanhalpin.io/
+
+this is where you can create favicon:
+https://www.favicon.cc/
+
+to implement favicon you have to do this in your head of 
+your html:
+
+<link rel="icon" href="favicon.ico" />
+
+if it doesn't work do this instead:
+<link rel="icon" href="favicon.ico?v=2" />
+
+note:
+this is because your website have been downgraded to the previous
+version or it's just trying to create a default one 
+that it's placed there.
+

@@ -1,0 +1,78 @@
+THE DARK ART OF CENTERING ELEMENTS WITH CSS 
+===========================================
+
+if we wanna center all of our elements, do this 
+in the parent element such as the body element:
+
+text-align: center;
+
+this works as long as:
+1. if we've got an inline block element 
+2. we've got this full width block elements
+
+note:
+this is not gonna work on block element with the width of less
+than 100%
+
+another way of centering an element:
+using the margin 
+
+here's an example:
+
+h1 {
+  display: block; /* the display is block */
+  width: 10%; /*the width is not full */
+  margin: 0 auto 0 auto; /* centered using margin */
+}
+
+
+we can do this to the block element that has a width that is not 
+100%
+
+margin: 0 auto 0 auto;
+
+the shorter one is this:
+margin: 0 auto;
+
+note:
+the 0 is for top and bottom margin 
+the auto is for left and right margin 
+
+3 types of margin: 
+a. one value:
+margin: 1px; --> on all four sides
+
+b. two values:
+margin: 1px 1px; --> first: top and bottom, second: left and right 
+
+c. three values:
+margin: 1px 2px 1px; --> first: top, second: left and right, third: bottom 
+
+d. four values:
+margin: 1px 2px 1px 2px; --> first: top, second: right, third: bottom, fourth: left 
+
+POSITIONING AN ABSOLUTE ELEMENT TO SOMETHING
+--------------------------------------------
+
+- to position an absolutely positioned element relative to something, 
+one of its parent has to have its position as relative 
+if not, then it'll position itself relative to the body element 
+
+- example:
+<div class='blue'>
+  <div class='red'></div>
+</div>
+
+.blue {
+  position: relative;
+}
+
+.red {
+  position: absolute;
+  top: 0;
+}
+
+notE:
+the .red div is gonna be positioned relative to the .blue so
+it's top is in the 0th top position of the .blue element 
+

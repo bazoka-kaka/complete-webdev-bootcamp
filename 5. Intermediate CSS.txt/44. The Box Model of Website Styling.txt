@@ -1,0 +1,90 @@
+THE BOX MODEL OF WEBSITE STYLING
+================================
+
+definitions:
+- if you have an element with width and height, it could have a 
+border, which is outside of the div and the border is not part
+of the div, so if you wanna make the border have a width, then
+the total size of the element will be the border's width + 
+the elements' width or height 
+
+- padding is how much space do you have from your element's
+content to the sides of the element's box 
+
+- margin is how much space do you have from your element's 
+box sides to another elements' box sides
+
+challenge:
+1. add 2 more divs below the current div 
+2. add each of the 3 divs a class
+3.
+a. the first should be the top container
+b. the second: middle container
+c. the third: bottom container
+4. each of the 2 divs should be a square 
+with the height and width of 200px
+5. give each of the 2 divs a different background color 
+so we can differentiate them in our website 
+
+final code:
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yehezkel Wiradhika</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="top">
+      <h1>I'm Yehezkel</h1>
+      <p>a programmer.</p>
+    </div>
+    <div class="middle"></div>
+    <div class="bottom"></div>
+  </body>
+</html>
+
+
+styles.css:
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  background-color: #e4f9f5;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.top {
+}
+
+.middle {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.bottom {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+
+CHALLENGE:
+3 boxes: 200x200px
+1st box: 10px border & 20px padding 
+
+2nd box: 20px border
+
+3rd box: 10px border 
+
+use the developer tool in chrome!

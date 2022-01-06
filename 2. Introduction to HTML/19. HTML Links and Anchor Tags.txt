@@ -1,0 +1,9 @@
+HTML LINKS AND ANCHOR TAGS
+==========================
+
+HTML = Hypertext Markup Language 
+
+we already learned about the markup language, but what about the hypertext part?
+
+Hypertext just bassically is a bunch of text documents that can be linked together
+using these hyperlinks 

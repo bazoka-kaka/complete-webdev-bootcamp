@@ -1,0 +1,13 @@
+HOW WEBSITES WORK
+=================
+
+- what HTML, CSS, JAVASCRIPT do?
+- to access a website, we need a browser (internet explorer, chrome, safari, firefox, etc) that can
+render the website so it's human readable
+- usually the website that you received from the server consists of these three types of files:
+html, css, and javascript files
+
+html --> this is your website structure
+css --> this is your website styles
+javascript --> this is what allows your website to do things
+

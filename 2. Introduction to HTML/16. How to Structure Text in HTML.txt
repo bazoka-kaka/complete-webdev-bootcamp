@@ -1,0 +1,32 @@
+HOW TO STRUCTURE TEXT IN HTML 
+=============================
+
+<i></i> and <em></em> these two are catalicizing text, but there's
+difference between it:
+em contains an information that the text should be emphesized
+so that it's got more important meaning than the rest of the text, 
+
+another thing is this:
+instead of using <b></b> you should use <strong></strong>
+to give meaning that the text should be highlighted instead
+of just making the text darker 
+
+this is the final code:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yehezkel's Personal Site</title>
+</head>
+
+<body>
+  <h1>Yehezkel Wiradhika</h1>
+  <p><em>Founder and CEO of <strong>Torah Study App</strong>.</em></p>
+  <p>I am a hacker, web developer, and an ios developer. I love learning torah and an avid Jew.</p>
+  <hr>
+</body>
+
+</html>

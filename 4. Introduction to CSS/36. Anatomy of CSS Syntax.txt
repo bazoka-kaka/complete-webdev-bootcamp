@@ -1,0 +1,9 @@
+ANATOMY OF CSS SYNTAX
+=====================
+
+- CSS Syntax:
+selector { property: value;}
+
+CSS properties based on keywords:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
