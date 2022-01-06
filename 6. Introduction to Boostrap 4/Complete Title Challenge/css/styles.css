@@ -1,6 +1,10 @@
+body {
+  font-family: "Montserrat";
+}
+
 #title {
   background-color: #ff4c68;
-  height: 85vh;
+  height: 100vh;
 }
 
 h1 {
@@ -20,7 +24,7 @@ h1 {
 }
 
 .navbar-brand {
-  font-family: ubuntu;
+  font-family: "Ubuntu";
   font-size: 2.5rem;
   text-align: left;
   position: absolute;
@@ -36,7 +40,7 @@ h1 {
 }
 
 .phone-img {
-  width: 250px;
+  width: 60%;
   object-fit: cover;
   transform: rotate(25deg) translateX(-50%);
   position: absolute;
@@ -54,9 +58,9 @@ h1 {
 }
 
 .navbar-nav {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .navbar-nav a {
-  margin: 0 15px;
+  margin: 0 18px;
 }

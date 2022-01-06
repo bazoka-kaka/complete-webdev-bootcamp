@@ -1,6 +1,201 @@
 STYLING OUR WEBSITE CHALLENGES AND SOLUTIONS
 ============================================
 
-- challenge:
+------------------------------------------------------
+TIPS (THE MOST IMPORTANT THING ON A WEBSITE)
+----
+the most important thing:
+whenever you are designing a website, you have to think 
+about what is the first thing you want the user to look 
+at 
+
+you wanna establish like the visual hierarchy 
+
+you can do that using size, weight, highlighting, 
+etc 
+
+then the second most important thing:
+THEM TO START TAKING ACTION (the download button for
+example)
+
+the third most important thing:
+WHAT OUR COMPANY IS 
+and things they can explore 
+------------------------------------------------------
+
+- challenge 1:
 change all of the fonts to montserrat
+
+solution:
+styles.css:
+body {
+  font-family: "Montserrat";
+}
+
+note:
+don't forget the semicolon!
+
+- challenge 2:
+change the title text to have white color 
+
+first solution:
+
+h1 {
+  font-size: 3rem;
+  font-family: montserrat;
+  line-height: 1.5;
+  font-weight: 700;
+  color: white;
+}
+
+another solution:
+#title {
+  background-color: #ff4c68;
+  color: white;
+}
+
+challenge 3:
+change the navbar brand to:
+font-family: ubuntu 
+font-size: 2.5 
+font-weight: bold
+
+solution: 
+/* Navigation Bar */
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+challenge4 :
+change the bottom padding of the navbar to 4.5rem
+
+solution: 
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+challenge 5:
+add space in the nav-items using the padding spacing, 
+and add it as 18 px each and make it larger also
+change the font-family to montserrat-light
+so that it's not so prominent on the page 
+
+solution: 
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+}
+
+
+note:
+in the nav-item we're using absolute sizing because if 
+we're gonna make our sites responsive, we're gonna 
+have to make this not change 
+
+
+- change the padding of the navbar-nav so that 
+it doesn't have padding on the left and right 
+solution:
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+TIPS
+----
+
+when you are designing websites, apps, or whatever, 
+try to minimize on the number of lines that you 
+can align things to 
+
+because it'll usually make your design look together 
+
+- challenge 5:
+add margin to the button so that it doesn't get too close 
+with the text
+
+solution:
+.download-btn {
+  margin: 5% 3% 5% 0;
+}
+
+note:
+in order to target the button, we have 2 options:
+1. use the bootstrap btn class, and customize
+the bootstrap styles
+2. add in our custom class 
+
+in this situation if you start being lazy 
+and using classes provided in the bootstrap, 
+you are gonna be in the situation when you 
+are gonna use the btn class, therefore 
+it's better to use a custom class instead
+of customizing the classes already provided 
+in the bootstrap 
+
+since we wanna the size relative to the viewport, 
+here we're using the relative sizing 
+
+remember to add the class in your button in html  
+
+
+- challenge 6:
+make the image 60% of the parent's size 
+
+solution: 
+.title-image {
+  width: 60%;
+}
+
+
+note:
+again we are using the relative sizing since 
+we want our image size to be relative to the viewport 
+
+- challenge 7:
+making the image rotating 
+
+solution: 
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+}
+
+
+TIPS (THE MOST IMPORTANT THING ON A WEBSITE)
+----
+the most important thing:
+whenever you are designing a website, you have to think 
+about what is the first thing you want the user to look 
+at 
+
+you wanna establish like the visual hierarchy 
+
+you can do that using size, weight, highlighting, 
+etc 
+
+then the second most important thing:
+THEM TO START TAKING ACTION (the download button for
+example)
+
+the third most important thing:
+WHAT OUR COMPANY IS 
+and things they can explore 
+
+
+- increase the title size:
+change the title size to 3.5 rem 
+solution: 
+h1 {
+  font-size: 3.5rem;
+  font-family: montserrat;
+  line-height: 1.5;
+  font-weight: 700;
+}
 
