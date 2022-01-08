@@ -1,0 +1,10 @@
+INTRODUCTION TO JAVASCRIPT 
+==========================
+
+if you wanna build an IOs APP, learn:
+swift 
+if you wanna build an android app, learn:
+java 
+if you wanna build web app, learn:
+javascript 
+

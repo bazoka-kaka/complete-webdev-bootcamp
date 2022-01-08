@@ -1,0 +1,31 @@
+JAVASCRIPT ALERT (ADDING BEHAVIORS TO YOUR WEBSITE)
+===================================================
+
+- you can do javascript using your browser console:
+to go to the next line:
+hold shift + enter 
+
+- to alert in your browser:
+alert("type something");
+
+- another way of writting javascript in your browser:
+sources --> ">>" --> snippets --> "+ New Snippets"
+
+note:
+you can run your code using the bottom right corner
+"play button" or by pressing: Ctrl + Enter
+
+- javascript documentation:
+https://developer.mozilla.org/en-US/docs/Web/javascript
+
+useful javascript documentation:
+https://github.com/rwaldron/idiomatic.js
+
+note:
+in a javascript or any programming project, you have to be so consistent
+that even if lots of people are typing the code, 
+it's like the one who types the code is just one person 
+
+this docs is just to make sure that you use the right syntax 
+and the right structure
+

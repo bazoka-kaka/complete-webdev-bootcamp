@@ -1,0 +1,30 @@
+JAVASCRIPT VARIABLES 
+====================
+
+- to ask a user to enter something:
+prompt("Enter something!");
+
+- you can do this:
+const name = prompt("Enter your name!");
+
+note:
+this is gonna save your name in name variable 
+
+- keywords in javascript:
+a. var 
+b. let 
+c. const 
+
+note:
+a keyword meaning that you are creating a new variable 
+
+- if you reassign a new value to a var variable, 
+you are gonna take that value and delete it, then you 
+enter the value as your new value that you changed 
+(the earlier is forever lost)
+
+- to resassign a variable, you can do this:
+variable = "a value";
+
+(not using a keyword)
+

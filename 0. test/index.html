@@ -1,50 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>TinDog</title>
-    <!-- font awesome embed -->
-    <script
-      src="https://kit.fontawesome.com/59216d21ed.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- css boostrap embed -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <!-- local css embed -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yehezkel's Site</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- ubuntu & monserrat embed -->
+    <!-- sacramento and montserrat text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <!-- javascript boostrap embed -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </head>
-
   <body>
-    <div class="red">RED</div>
-    <div class="yellow">YELLOW</div>
-    <div class="blue">BLUE</div>
+    <section id="title">
+      <div class="title-text">
+        <img class="cloud-img cloud-top" src="images/cloud.png" alt="" />
+        <h1 class="main-title">I'm Yehezkel</h1>
+        <h2 class="sub-title">a <span class="pro">pro</span>grammer</h2>
+        <img class="cloud-img cloud-bottom" src="images/cloud.png" alt="" />
+      </div>
+      <img class="mountain-img" src="images/mountain.png" alt="" />
+    </section>
+    <section id="content">
+      <div class="about-me">
+        <img
+          class="content-img"
+          src="images/yehezkel.png"
+          alt="Yehezkel Wiradhika"
+        />
+        <div class="about-me-text">
+          <h2 class="content-main-title">Hello.</h2>
+          <p>
+            My name is Yehezkel Wiradhika, I'm an undergraduate student at
+            Institute Technology Sepuluh Nopember, Surabaya.
+          </p>
+        </div>
+      </div>
+      <div class="skills">
+        <hr />
+        <h2 class="content-main-title">My Skills.</h2>
+        <div class="webdev">
+          <img
+            class="content-img webdev-img"
+            src="images/webdev.png"
+            alt="Webdev"
+          />
+          <div class="webdev-text">
+            <h3>Front End Web Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet, quis in duis, iaculis id felis.
+              Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit
+              nam, lectus ante, ut lorem eros.
+            </p>
+          </div>
+        </div>
+        <div class="hacking">
+          <div class="hacking-text">
+            <h3>Hacking</h3>
+            <p>
+              Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu,
+              bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel
+              eu, rutrum nam
+            </p>
+          </div>
+          <img
+            class="content-img hacking-img"
+            src="images/hacking.png"
+            alt="hacking"
+          />
+        </div>
+        <hr />
+      </div>
+    </section>
+    <section id="cta">
+      <div class="call-to-act">
+        <h2 class="cta-main-title">Get In Touch</h2>
+        <h3>Lorem ipsum dolor sit amet, non elit.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales,
+          tellus donec dui, ornare erat.
+        </p>
+        <button>Contact Me</button>
+      </div>
+    </section>
   </body>
 </html>

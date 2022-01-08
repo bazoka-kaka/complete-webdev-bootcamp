@@ -1,0 +1,8 @@
+DATA TYPES
+==========
+
+the main 3 datatypes in all programming languages:
+1. Number 
+2. String 
+3. Boolean 
+

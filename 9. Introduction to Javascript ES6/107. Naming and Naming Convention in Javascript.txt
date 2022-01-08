@@ -1,0 +1,5 @@
+NAMING AND NAMING CONVENTION IN JAVASCRIPT 
+==========================================
+
+- clear the console in your browser console:
+ctrl + k
