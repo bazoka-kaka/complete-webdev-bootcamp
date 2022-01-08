@@ -1,0 +1,337 @@
+BOOTSTRAP CAROUSEL PART 2
+=========================
+
+bootstrap carousel docs:
+https://getbootstrap.com/docs/4.0/components/carousel/
+
+example of a carousel:
+<div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            style="background-color: yellow"
+            src="..."
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            style="background-color: red"
+            src="..."
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            style="background-color: purple"
+            src="..."
+            alt="Third slide"
+          />
+        </div>
+      </div>
+    </div>
+
+CHANGING CAROUSEL'S SPEED 
+-------------------------
+
+<div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="1000"
+    >
+    ...
+    </div>
+
+note:
+you have to change the data-interval 
+
+in this case this is every 1000ms 
+
+
+HOW TO PAUSE CAROUSEL ON HOVER 
+------------------------------
+
+<div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="1000"
+      data-pause="hover"
+    >
+    ...
+    </div>
+
+note:
+you have to change the data-interval to "hover"
+
+HOW TO UNSLIDE THE CHARACTER WHEN CHANGING 
+------------------------------------------
+<div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="1000"
+      data-pause="hover"
+    >
+    ...
+    </div>
+
+note:
+you have to remove the "slide" class from there
+
+HOW TO DISABLE THE AUTOPLAY 
+---------------------------
+<div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="false"
+      data-interval="1000"
+      data-pause="hover"
+    >
+    ...
+    </div>
+
+note:
+you have to change the data-ride to "false" or if 
+you want to change it to autoplay, you have to set it 
+to "carousel"
+
+MAKING SLIDING CAROUSEL 
+-----------------------
+<div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="1000"
+      data-pause="hover"
+    >
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="background-color: red; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: yellow; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: blue; height: 100vh; width: 100vw"
+        ></div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+note:
+you have to have this element:
+
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+- you have to notice that the href of the carousel 
+is the same with the id of the parent carousel 
+so that the button is gonna work 
+
+SUMMARY 
+-------
+
+in the carousel-inner div, you need to have 
+a div that has a class "active" as the initial carousel 
+
+example:
+
+      <div class="carousel-inner">
+        <!-- carousel active --> 
+        <div
+          class="carousel-item active"
+          style="background-color: red; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: yellow; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: blue; height: 100vh; width: 100vw"
+        ></div>
+      </div>
+
+  aria-hidden --> this is for the visually impaired person 
+  meaning it's gonna skip the carousel button 
+
+  another thing:
+  the span next has a class sr-only means screen reader only 
+  it's not gonna be able to be accessible by other than
+  screen readers 
+
+  final code:
+  index.html:
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TinDog</title>
+    <!-- font awesome embed -->
+    <script
+      src="https://kit.fontawesome.com/59216d21ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css boostrap embed -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- local css embed -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- ubuntu & monserrat embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- javascript boostrap embed -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="1000"
+      data-pause="hover"
+    >
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="background-color: red; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: yellow; width: 100vw; height: 100vh"
+        ></div>
+        <div
+          class="carousel-item"
+          style="background-color: blue; height: 100vh; width: 100vw"
+        ></div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </body>
+</html>
+
+MAKING THE BUTTON FURTHER APART 
+-------------------------------
+
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  color: white;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+/* Press  */
+
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 15px;
+}
+
+note:
+just make the .carousel-item has the padding instead
+of the #testimonials

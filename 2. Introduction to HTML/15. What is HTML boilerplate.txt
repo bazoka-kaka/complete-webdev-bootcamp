@@ -29,7 +29,7 @@ another thing is the meta
 meta --> this gives you extra metadata or associated data to your html document 
 if your meta data looks like this:
 <meta charset="utf-8">
-
+  
 in this case we're telling our browser when the browser opens up the "utf-8"
 file that all the text inside our webpage is encoded using UTF-8 encoding system
 

@@ -1,0 +1,34 @@
+HOW TO BECOME A BETTER PROGRAMMER - CODE REFACTORING
+====================================================
+
+- as a programmer you wanna be DRY 
+(Don't Repeat Yourself!)
+
+don't be WET!
+(We Enjoy Typing!)
+
+WHY DO CODE REFACTORING?
+------------------------
+a. readability
+so that other people or your future self can come back 
+and understand your code 
+
+b. modularity
+how easy is it to reuse bits of codes and how easy is it 
+to narrow down where your error is occuring (or another 
+problems)
+
+c. efficiency
+how fast does your code run one of the example is using 
+low level languages like c also the programming 
+algorithm
+
+d. length 
+but don't make your code less readable!
+
+code golf
+---------
+try to write the shortest code 
+to achieve the same result (not a good practice!)
+note:
+this is not important at all!

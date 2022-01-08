@@ -1,0 +1,69 @@
+MEDIA QUERY BREAK POINTS
+========================
+
+google ranks your website on whether your website 
+is mobile friendly or not 
+
+you could do mobile friendly test here:
+https://search.google.com/test/mobile-friendly
+
+and just paste your website there 
+
+you could do 2 things:
+1. you can redirect your website if they are using mobile 
+to another website that is for mobile phones 
+
+2. you can make your website responsive
+styles.css:
+@media print {
+  h1 {
+    color: red;
+  }
+}
+
+note:
+here if we hit ctrl+p we are gonna see 
+the h1 color turned to red 
+
+another one:
+@media screen {} --> this is gonna dependant on the 
+screen size 
+
+@media speech {} --> this is gonna work if the website
+is being read to a visually imparied person 
+
+MEDIA QUERY 
+-----------
+syntax:
+@media <type> <feature>
+
+another one:
+@media (max-width: 900px) {
+  //do something
+}
+
+note:
+this is gonna be activated when the width is leess than 
+or equals to 900px 
+
+you can do this too:
+@media (min-width: 900px) and (max-width: 1000px) {
+  //do something
+}
+
+final code:
+styles.css:
+@media (max-width: 992px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+as a programmer you wanna do this:
+DRY --> don't repeat yourself!
+

@@ -1,0 +1,35 @@
+BOOTSTRAP CHALLENGE 2 SOLUTION 
+==============================
+
+styles.css:
+
+/* CTA  */
+#cta {
+  background-color: #ff4c68;
+  padding: 7% 15% 4%;
+  text-align: center;
+}
+
+#cta h3 {
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+
+.cta-btn {
+  font-family: "Ubuntu";
+  font-size: 1.3rem;
+  margin: 5% 1.5%;
+  font-weight: 500;
+}
+
+/* Footer  */
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.footer-fa {
+  margin: 20px 10px;
+}

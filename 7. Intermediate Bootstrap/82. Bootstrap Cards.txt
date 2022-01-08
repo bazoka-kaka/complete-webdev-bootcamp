@@ -1,0 +1,206 @@
+BOOTSTRAP CARDS
+===============
+
+- bootstrap has already got a pricing section 
+- you just have to copy it from bootstrap and customize it 
+
+- LESS TIME SAME RESULT MORE MONEY!
+
+here's the example:
+https://getbootstrap.com/docs/4.1/examples/pricing/
+
+just go to the source, then copy the part 
+that you wanna use then change it as your liking
+
+another source:
+https://bootsnipp.com/
+
+here's the docs for bootstrap card:
+https://getbootstrap.com/docs/4.0/components/card/
+
+note:
+bootstrap card is just a container of card 
+
+- image
+- description 
+- button 
+
+CREATING CARD FROM SCRATCH
+--------------------------
+
+<div class='card'>
+    <div class='card-header'>
+        card header
+    </div>
+    <div class='card-body'>
+        card body
+    </div>
+    <div class='card-footer'>
+        card footer
+    </div>
+</div>
+
+note:
+a card has 3 components, header, body, and footer, 
+or just the things that you wanna include
+
+IMPLEMENTING THE CARD TO OUR WEBSITE 
+------------------------------------
+
+<!-- Pricing -->
+
+    <section id="pricing">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chihuahua</h3>
+        </div>
+        <div class="card-body">
+          <h2>Free</h2>
+          <p>5 Matches Per Day</p>
+          <p>10 Messages Per Day</p>
+          <p>Unlimited App Usage</p>
+          <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Labrador</h3></div>
+        <div class="card-body">
+          <h2>$49 / mo</h2>
+          <p>Unlimited Matches</p>
+          <p>Unlimited Messages</p>
+          <p>Unlimited App Usage</p>
+          <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Mastiff</h3></div>
+        <div class="card-body">
+          <h2>$99 / mo</h2>
+          <p>Pirority Listing</p>
+          <p>Unlimited Matches</p>
+          <p>Unlimited Messages</p>
+          <p>Unlimited App Usage</p>
+          <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <h2>A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+    </section>
+
+  
+  STYLING OUR CARD
+  ----------------
+
+  - insert all your card to a parent div with the class 
+  "card deck"
+
+  note:
+  card deck makes the card inline, the cards get distributed 
+  evenly accross the width of the website, they also end up 
+  with the same height 
+
+  one problem:
+  not as adaptable as the bootstrap grid system 
+
+  - challenge:
+  using the bootstrap grid system, make as such:
+  1. on the largest screen, make the cards all inline 
+  2. but on the tablet make two cards inline, and leave the last 
+  one fill the entire width 
+  3. on phone, make the entire card inline in a col 
+
+  buttons
+  -------
+buttons property for our cards:
+class="btn btn-lg btn-block btn-outline-primary"
+
+note:
+btn-block -- it's gonna take the full width of our 
+card
+btn-lg -- the size of the button 
+btn-outline-primary -- this is gonna be the outlined button style  
+btn-primary -- this is gonna be the button style 
+(not outlined style)
+
+BUTTON LAYOUTS 
+---------------
+
+note:
+it's rare to have a static padding, but 
+even on mobile, you need that static padding 
+
+final code:
+index.html:
+<!-- Pricing -->
+
+    <section id="pricing">
+      <h2>A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 pricing-column">
+          <div class="card">
+            <div class="card-header">
+              <h3>Chihuahua</h3>
+            </div>
+            <div class="card-body">
+              <h2>Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+              <button
+                type="button"
+                class="btn btn-lg btn-block btn-outline-primary"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pricing-column">
+          <div class="card">
+            <div class="card-header"><h3>Labrador</h3></div>
+            <div class="card-body">
+              <h2>$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button type="button" class="btn btn-lg btn-block btn-primary">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pricing-column">
+          <div class="card">
+            <div class="card-header"><h3>Mastiff</h3></div>
+            <div class="card-body">
+              <h2>$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button type="button" class="btn btn-lg btn-block btn-primary">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+styles.css:
+/* pricing section */
+#pricing {
+  padding: 100px;
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+

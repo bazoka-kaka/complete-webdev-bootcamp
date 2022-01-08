@@ -1,0 +1,73 @@
+COMBINING SELECTORS 
+===================
+
+Multiple Selectors 
+------------------
+
+selector1, selector2, ... {}
+
+example:
+h1, p {
+  color: red;
+}
+
+Hierarchical Selectors 
+----------------------
+
+example:
+#title .container-fluid {
+  padding-top: 3%;
+  text-align: left;  
+}
+
+syntax:
+parent child {}
+
+Combined Selectors 
+------------------
+
+syntax:
+selector1.selector2 {} --> html element combined with a class 
+or
+selector1#selector2 {} --> html element combined with an id 
+
+note:
+you shouldn't add any spacing between the selectors!
+
+this is the opposite of the hierarchical selectors!
+
+if you are a hierarchical selectors, then this is the syntax:
+parent child {}
+
+examlpe:
+index.html:
+<div class='container'>
+  <h1 class='heading'>
+    testing <span class='inner'>something</span>
+  </h1>
+</div>
+
+styles.css:
+//hierarchical selector
+.container .heading {
+  color: red;
+}
+
+//combined selectors 
+div.container {
+  color: black;
+}
+
+note:
+div.container meaning that the div which has a class  
+container should have the color black 
+
+you can't do this:
+div.inner {
+  color: blue;
+}
+
+this is because currently you don't have any div 
+which has a class called .inner 
+
+
