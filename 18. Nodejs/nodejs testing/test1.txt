@@ -1,0 +1,4 @@
+if you have anything inside of the destination 
+file, everything that is inside of the destination 
+file is gonna be replaced with everything 
+that is inside the src file!

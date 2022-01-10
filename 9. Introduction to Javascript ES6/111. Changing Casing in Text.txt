@@ -1,0 +1,8 @@
+CHANGING CASING IN TEXT 
+=======================
+
+- to make the string all in uppercase:
+string.toUpperCase();
+
+- to make the string all in lowercase:
+string.toLowerCase();

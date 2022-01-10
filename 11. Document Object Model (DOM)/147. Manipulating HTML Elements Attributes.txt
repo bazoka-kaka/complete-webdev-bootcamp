@@ -1,0 +1,22 @@
+MANIPULATING HTML ELEMENTS ATTRIBUTES
+=====================================
+
+- attributes are something specific about html element 
+example:
+here:
+<a href='#' class='something' id='anotherThing'></a>
+id is an attribute, class is an attribute, href is an attribute 
+
+meaning everything that is inside the tag other than 
+the tag name!
+
+- retrieving the current value of an attribute:
+example:
+document.querySelector("a").getAttribute("href");
+
+output:
+https://www.google.com
+
+- to change the current value of an attribute:
+document.querySelector("a").setAttribute("href", "https://www.bing.com");
+

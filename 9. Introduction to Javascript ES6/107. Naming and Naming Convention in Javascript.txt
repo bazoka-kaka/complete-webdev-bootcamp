@@ -3,3 +3,14 @@ NAMING AND NAMING CONVENTION IN JAVASCRIPT
 
 - clear the console in your browser console:
 ctrl + k
+
+
+- 2 naming convention:
+a. myVar --> camelcase 
+b. my_var --> using underscore 
+
+- a variable name can't begin with a number but it can 
+contain a number example:
+const 1set --> not valid!
+const set1 --> valid! 
+

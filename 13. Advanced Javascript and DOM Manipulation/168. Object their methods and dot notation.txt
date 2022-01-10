@@ -1,0 +1,37 @@
+OBJECT THEIR METHODS AND DOT NOTATION 
+=====================================
+
+- challenge:
+add in our housekeeper constructor a method called 
+"clean" which is gonna alert "cleaning in progress"
+
+solution:
+function HouseKeeper(yearsOfExp, name, cleaningRepetoire) {
+    this.yearsOfExp = yearsOfExp;
+    this.name = name;
+    this.cleaningRepetoire = cleaningRepetoire;
+    this.clean = function() {
+        alert("Cleaning in Progress");
+    }
+}
+
+let houseKeeper1 = new HouseKeeper(12, "Jane", ["Bathroom", "Bedroom"]);
+
+console.log(houseKeeper1);
+HouseKeeper.clean();
+
+- our audio object might look like this:
+function Audio(fileLocation) {
+  this.fileLocation = fileLocation;
+  this.play = function() {
+    //tap into the audio hardware
+    //check the file at fileLocation exists 
+    //check the file at fileLocation is a sound file 
+    //play the file at fileLocation
+  }
+}
+
+and then we could just do the following:
+let tom1 = new Audio("sounds/tom-1.mp3");
+tom1.play();
+

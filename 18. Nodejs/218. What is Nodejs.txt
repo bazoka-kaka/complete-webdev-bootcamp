@@ -1,0 +1,65 @@
+WHAT IS NODEJS 
+==============
+
+- other backend apps:
+a. php 
+b. ruby
+c. rails 
+d. asp.net 
+e. nodejs 
+f. java 
+g. python 
+
+examples of websites using nodejs:
+twitter, ebay, netflix, trello, uber 
+
+- why nodejs?
+node is real fast!
+
+before using nodejs our javascript is locked behind 
+the bar and we haven't make something beyond of it 
+
+you haven't been able to have access to the file system,
+the networking processes, etc 
+
+good reason:
+you don't wanna have a website created by a random person 
+filled with malicious javascript codes!
+
+but some cases you need access to the file system, 
+for example if you are using something like atom 
+
+bassically:
+you need to be able to write code that can interact 
+directly to the computer, independent of the browser!
+
+that's the use of nodejs!
+
+nodejs is gonna make javascript able to interact 
+with the hardware of the computer 
+
+atom is based on nodejs 
+
+by using nodejs, we can create an application 
+in the website, but also something that 
+works within our local computer!
+
+meaning:
+you can program desktop application using nodejs
+
+- what is the point by us making a local application?
+we can use nodejs to run javascript code on server or someone else's computer 
+
+google then will make a request to a google server and 
+on those servers, we can execute javascript codes 
+to process their requests! after that, we can send it back 
+to the client!
+
+VERY IMPORTANT 
+--------------
+
+all of those heavy lifting doesn't have to happen on the browser!
+they are all (the logics etc) are gonna work on the local server!
+
+meaning the speed is gonna be super fast!!!!!!
+

@@ -1,0 +1,46 @@
+CREATING OPENING AND REMOVING FILES USING BASH 
+==============================================
+
+- creating a new text file 
+> touch newText.txt 
+
+- opening a text file 
+> open newText.txt 
+
+note:
+in windows: use start instead of open 
+
+> start newText.txt 
+
+- specifying which application that you wanna open your 
+file with 
+windows:
+> start atom newFile.txt 
+
+note:
+the application used is atom, but you can also use another 
+application 
+
+on another OS:
+> open -a atom newText.txt 
+
+- deleting files inside the command line:
+> rm newFile.txt 
+
+- removing all the files inside a folder:
+> rm *
+
+- knowing in which directory you are currently in:
+> pwd 
+
+- remove folder 
+> rm -r dirName/
+
+note:
+this is gonna delete everything inside the directory too!
+
+sudo - Super User do 
+
+sudo rm -rf something --> this is gonna force remove the directory 
+without even asking!
+

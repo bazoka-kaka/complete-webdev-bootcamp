@@ -1,0 +1,58 @@
+HOW TO INCORPORATE JQUERY INTO WEBSITES 
+=======================================
+
+- the most popular option is use the google's CDN 
+
+- the beauty of using a popular cdn:
+if a user has been on another website 
+that uses the same cdn to fetch the jquery library 
+then they'll likely have it already cached 
+and saved in their browser meaning they won't have 
+to fetch a fresh copy of jquery 
+
+- this is the link:
+https://developers.google.com/speed/libraries/#jquery
+use the 3x one!
+
+- you have to put the jquery cdn just 
+above the javascript link!
+
+example:
+<body>
+  <!-- your code -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="index.js"></script>
+</body>
+
+note:
+if the link of jquery cdn is below your javascript link
+then it'll not work!
+
+this is because javascript doesn't know that 
+jquery is linked yet!
+
+also you can't put both the javascript and the jquery link
+in the head section, it'll not work!
+
+this is because:
+before we try to loadup the jquery's library, index.js 
+might actually be trying to access it 
+
+prevention:
+checking whether the jquery is ready 
+
+$document.ready(function() {
+  $('h1').css('color', 'red');
+})
+
+here we're waiting for the jquery library has finished loading, 
+then we do the jquery styling 
+
+another way to do this is again do this:
+<body>
+<!-- your code -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="index.js"></script>
+</body>
+
+putting the libraries cdn in the end of your website

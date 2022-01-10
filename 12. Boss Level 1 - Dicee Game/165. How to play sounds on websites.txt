@@ -1,0 +1,13 @@
+HOW TO PLAY SOUNDS ON WEBSITES
+==============================
+
+- implementing a sound:
+let audio = new Audio('audio-file.mp3');
+audio.play();
+
+- changing the color to white when clicking on a button:
+for (let i = 0; i < drums.length; ++i) {
+  drums[i].addEventListener("click", function () {
+    this.style.color = "white";
+  });
+}

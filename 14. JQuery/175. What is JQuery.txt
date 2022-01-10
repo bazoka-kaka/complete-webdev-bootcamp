@@ -1,0 +1,24 @@
+WYHAT IS JQUERY 
+===============
+
+- the most popular javascript library 
+
+- if you're not using the jquery:
+for(let i = 0; i < document.querySelectorAll("button).length; ++i) {
+  document.querySelectorAll("button")[i].addEventListener("click", function() {
+    document.querySelector("h1").style.color = "red";
+  });
+}
+
+note:
+this is a really long code!
+
+- instead of doing this:
+document.querySelector("h1");
+
+we can do this:
+jQuery("h1");
+
+the simpler one:
+$("h1");
+

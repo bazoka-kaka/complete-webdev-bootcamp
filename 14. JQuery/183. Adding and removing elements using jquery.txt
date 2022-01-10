@@ -1,0 +1,45 @@
+ADDING AND REMOVING ELEMENTS USING JQUERY 
+=========================================
+
+ADDING ELEMENTS TO THE HTML 
+-------------------------------
+- we can use jquery to add new element in our html 
+adding new button before the h1:
+.before()
+
+example:
+$("h1").before("<button>Click me!</button>");
+
+note:
+this is not gonna change our .html file 
+
+adding new button after the h1:
+.after()
+
+example:
+$("h1").after("<button>Click me!</button>");
+
+- adding new html element inside our html element:
+adding before the content of the element:
+.prepend()
+
+example:
+$("h1").prepend("<button>Click left!</button>");
+
+adding after the content of the element:
+.append()
+
+example:
+$("h1").append("<button>Click right!</button>");
+
+REMOVING ELEMENTS FROM THE HTML 
+-------------------------------
+
+.remove()
+example:
+removing all of the buttons:
+$("button").remove();
+
+syntax:
+$(elementToRemove).remove();
+

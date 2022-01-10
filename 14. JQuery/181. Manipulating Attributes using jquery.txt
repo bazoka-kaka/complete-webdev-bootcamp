@@ -1,0 +1,19 @@
+MANIPULATING ATTRIBUTES USING JQUERY 
+====================================
+
+- getting the attribute's value
+example:
+console.log($("a").attr("href"));
+
+output:
+https://www.google.com
+
+- setting the attribute's value:
+console.log($("a").attr("href", "https://www.yahoo.com"));
+
+note that a class is also an attribute, 
+therefore this code:
+console.log($('h1').attr('class'));
+
+will output all of the classes that is inside the h1 
+

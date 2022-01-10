@@ -1,0 +1,90 @@
+ADDING JAVASCRIPT TO WEBSITES
+=============================
+
+- inline javascript:
+<body onload='alert("Hello")'></body>
+
+note:
+here means whenever the body is loaded, our javascript 
+is also going to be loaded up with it 
+
+the quotation marks are confusing 
+
+we have to put it in another place!
+
+- internal javascript 
+  <body>
+    <script type="text/javascript">
+      alert("Hello");
+    </script>
+  </body>
+
+- external javascript:
+index.html:
+  <body>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+
+index.js:
+alert("Hello");
+
+- you have to put the styling link in the first this is why:
+index.htMl:
+  <body>
+    <h1>Hello!</h1>
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </body>
+
+index.js:
+alert("Hello");
+
+styles.css:
+h1 {
+  color: red;
+  background-color: black;
+}
+
+note:
+this will alert "Hello" first while the styling is still 
+in the default (black color and white body background color)
+
+then after we press okay, the style is just implemented
+(late)
+
+- why javascript is in the end?
+so that the page loads first! (to make more sense of it!)
+then the javascript
+
+another thing is that,
+javascript can't load things that haven't existed 
+example:
+your dom wanna change the h1, if it didn't find it, 
+it'll never be implemented at all!
+
+example:
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="index.js" charset="utf-8"></script>
+    <title>JAVASCRIPT DOM</title>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+  </body>
+</html>
+
+index.js:
+document.querySelector("h1").innerHTML = "GoodBye!";
+
+
+note:
+the index.js will never be implemented!
+
+you have to put your .js file in the end of your body element 
+

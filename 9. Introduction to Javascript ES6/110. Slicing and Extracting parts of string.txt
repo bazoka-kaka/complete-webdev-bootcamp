@@ -1,0 +1,31 @@
+SLICING AND EXTRACTING PARTS OF STRING 
+======================================
+
+- we use slice(x, y)
+example:
+let name = "Yehezkel Wiradhika";
+console.log(name.slice(0, 8));
+console.log(name);
+output:
+Yehezkel 
+Yehezkel Wiradhika 
+
+note:
+x is the first index, y is the last index + 1
+
+- you can also save the function in a variable
+example:
+let name = "Yehezkel Wiradhika";
+const firstName = name.slice(0, 8);
+console.log(firstName);
+
+output:
+Yehezkel 
+
+ - challenge:
+prompt the user for their name, then output 
+the name with the first char uppercase and the rest, lowercase 
+
+solution:
+let name = prompt("Enter your name");
+alert("Hello, " + name.slice(0, 1).toUpperCase() + name.slice(1, name.length).toLowerCase());

@@ -1,0 +1,47 @@
+ADDING EVENT LISTENER TO BUTTONS
+================================
+
+- event listener example:
+document.querySelector("button").addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+note:
+here you are listening to the "click" event 
+and the way to handle it is alert("Button clicked!");
+
+you can do it like this:
+document.querySelector("button").addEventListener("click", handleClick);
+
+function handleClick() {
+  alert("I got clicked");
+}
+
+note:
+there's no parenthesis there!
+
+if we use the () thing in our event listener, then 
+it's a method call! it'll call the method straight away!
+not event waiting for the event listener to listen
+
+ANONYMOUS FUNCTION 
+------------------
+
+- anonymous function is just a function that doesn't have 
+a name 
+
+example:
+document.querySelector("button").addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+- doing this for all of the other buttons:
+let drums = document.querySelectorAll(".drum");
+
+for (let i = 0; i < drums.length; ++i) {
+  drums[i].addEventListener("click", handleClick);
+}
+
+function handleClick() {
+  alert("I got clicked");
+}

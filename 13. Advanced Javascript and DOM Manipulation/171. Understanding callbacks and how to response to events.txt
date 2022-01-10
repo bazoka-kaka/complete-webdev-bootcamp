@@ -1,0 +1,57 @@
+UNDERSTANDING CALLBACKS AND HOW TO RESPOND TO EVENTS 
+====================================================
+
+- example of a higher order function:
+document.addEventListener("click", function() {
+  //do something here 
+})
+
+note:
+the higher order function is the document.addEventListener
+
+- callback function 
+definition: a function that gets passed in as an input 
+
+from the example, the anonymous function is the callback function 
+(a function that doesn't have a name)
+
+function() {
+  //do something here 
+}
+
+- you can take arguments to event listener like this:
+document.addEventListener("click", function(event) {
+  console.log(event);
+});
+
+note:
+if it's clicked, then the one that's gonna be printed 
+is the event 
+
+the callback function is not called by us, 
+but the object that's experienced the click 
+
+the function is never gonna be called until 
+the object's event happen!
+
+- here's what happens:
+function anotherAddEventListener(typeOfEvent, callback) {
+    //detect event code 
+    let eventThatHappened = {
+        eventType: "keypress",
+        key: "p",
+        durationOfKeypress: 2
+    };
+
+    if(eventThatHappened.eventType == typeOfEvent) {
+        callback(eventThatHappened);
+    }
+}
+
+anotherAddEventListener("keypress", function(event) {
+    console.log(event);
+});
+
+
+
+

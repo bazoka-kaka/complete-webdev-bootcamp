@@ -1,0 +1,143 @@
+SELECTING HTML ELEMENTS WITH JAVASCRIPT 
+======================================
+
+- document.getElementsByTagName();
+note:
+this is getting or setting by the tag name 
+
+example:
+document.getElementsByTagName("li");
+
+notice:
+that the word Elements is plural!
+
+meaning it's gonna fetch all of the elements with the tag 
+name that you want 
+
+important:
+this is not gonna work:
+document.getElementsByTagName("li").style.color = "red";
+
+this is because you are setting a color property to an array !
+
+you only can do something like this:
+example:
+document.getElementsByTagName("li")[0].style.color = "red";
+
+you can also generate the number of elements with the tag 
+li:
+document.getElementsByTagName("li").length;
+
+- document.getElementsByClassName();
+
+note:
+this is gonna select elements based on the name of the class 
+
+example:
+document.getElementsByClassName("btn");
+
+notice:
+that this is also using plural "Elements"
+
+you still have to treat it like an array example:
+document.getElementsByClassName("btn")[0].styles.color = 'red';
+
+- document.getElementById()
+
+note:
+this is gonna get element by id 
+
+notice:
+the word is no longer "Elements" but "Element"
+
+you're only gonna get one item, instead of an array 
+
+example:
+document.getElementById("title").innerHTML = "Good Bye!";
+
+- document.querySelector()
+
+note:
+the parameter is a selector that you want to do something with 
+
+this is gonna return one element only instead of an array 
+of elements 
+
+with selectors, we can combine lots of different things 
+example an id with a class, a class with an element, 
+and it's much more specific way of selecting something 
+in your website 
+
+in document.querySelector() you can put a class, id, 
+or an element, it doesn't really matter 
+
+example:
+document.querySelector("h1");
+document.querySelector("#title");
+document.querySelector(".btn");
+
+note:
+you can combine our selectors and query for something 
+that is more specific 
+
+example:
+document.querySelector("li a");
+
+note:
+this is gonna select the a inside the li 
+
+every querySelector will return the first specified element 
+only, the rest is gonna be ignored if there are more 
+than one elements with the same specification
+
+combining selectors in the same element:
+example:
+document.querySelector("li.item");
+document.querySelector("#list a"); //hierarchical selector 
+
+WHAT IF YOUR SELECTOR MATCHES MORE THAN ONE OBJECT?
+---------------------------------------------------
+
+example:
+document.querySelector("item");
+
+this is gonna be referencing to any element with the class .item
+
+answer:
+even if there are more than one of those, 
+you are gonna get back the first one!
+
+WHAT IF YOU WANT ALL OF THE OBJECT THAT MATCH THAT SELECTOR?
+------------------------------------------------------------
+
+- document.querySelectorAll();
+
+note:
+this is to get all that matches the selector
+
+this is gonna return a list (array) of items 
+
+meaning you have to specify the index!
+
+example:
+document.querySelectorAll("item")[0].style.color = "blue";
+
+WHICH ONES SHOULD YOU USE?
+--------------------------
+querySelector and querySelectorAll!
+
+why?
+it's more flexible!
+
+no need any other ones bassically!
+
+CHALLENGE
+---------
+
+change the text color of the Google link in the first li!
+change the color to red!
+
+use the query selector!
+
+solution:
+document.querySelector(".item a").style.color = "red";

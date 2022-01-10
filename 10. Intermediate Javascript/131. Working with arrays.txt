@@ -1,0 +1,13 @@
+WORKING WITH ARRAYS
+===================
+
+- to check if something is in the array:
+arr.includes("something");
+
+example:
+const arr = [1, 2, 3, 4];
+console.log(arr.includes(1));
+
+output:
+true 
+

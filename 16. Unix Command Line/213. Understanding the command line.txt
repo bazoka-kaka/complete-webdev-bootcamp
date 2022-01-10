@@ -1,0 +1,40 @@
+UNDERSTANDING THE COMMAND LINE 
+==============================
+
+- kernel = the thing that is directly communicating 
+with your hardware (the core of the operating system)
+
+- shell = this is the User Interface (for common people 
+interacting with the computer)
+
+- there are 2 types of things in the shell:
+1. the GUI shells 
+2. the command line shells 
+
+- BASH = Bourne Again Shell
+
+- BASH shell is a cli or a command line intepreter 
+for the UNIX system 
+
+- UNIX based system are all over the place
+example:
+linux is a UNIX based system, lots of servers run on 
+UNIX, even max os 10 
+
+- the window uses something called DOS and windows 
+
+- lots of things you can do using command line cna be done 
+using GUI 
+
+- why use command line?
+greater control!
+
+COMMANDS 
+--------
+
+listing all the files 
+> ls -a 
+
+making secret folders :
+> ls .secretFolder 
+

@@ -1,0 +1,17 @@
+REPL (READ EVALUATION PRINT LOOP)
+=================================
+
+- this is gonna allow you to execute codes in 
+byte sized chunks just like the developer tool in 
+chrome!
+
+- accessing the REPL 
+> node 
+
+note:
+you are now inside the REPL!
+
+- exiting the REPL:
+> .exit 
+another way:
+ctrl + c 

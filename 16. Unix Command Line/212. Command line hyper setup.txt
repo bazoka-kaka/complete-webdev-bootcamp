@@ -1,0 +1,13 @@
+COMMAND LINE HYPER SETUP 
+========================
+
+CONFIGURING HYPER FOR WINDOWS TO USE BASH 
+-----------------------------------------
+go to hyper --> settings --> preferences --> delete all 
+copy and paste everything from here:
+https://gist.github.com/coco-napky/404220405435b3d0373e37ec43e54a23
+
+quit hyper and open it again 
+
+voila!
+

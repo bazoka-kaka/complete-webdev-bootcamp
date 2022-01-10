@@ -1,0 +1,38 @@
+RANDOM NUMBER GENERATOR: BUILDING LOVE CALCULATOR 
+=================================================
+
+- to create a random number you need Math.random()
+example:
+const n = Math.random();
+
+note:
+this will generate 16 decimal places random number 
+0.xxxxx...
+
+this will never reach one!
+
+- to create an integer random number:
+let n = Math.random();
+n *= 6;
+n = Math.floor();
+
+note:
+this will create a random number from 0 to 5 (not including 6)
+
+to make it reach 6:
+++n;
+
+in short:
+let n = Math.floor(Math.random() * 6) + 1;
+
+- challenge:
+create a love calculator:
+ask the name of 2 people, ignore that,
+generate a number between 1 and 100,
+alert the user what is their love score
+
+solution:
+const firstName = prompt("Enter your name");
+const loveName = prompt("Enter your lover's name");
+const rand = Math.floor(Math.random() * 100) + 1;
+alert(firstName + " and " + loveName + "\'s love score = " + rand);

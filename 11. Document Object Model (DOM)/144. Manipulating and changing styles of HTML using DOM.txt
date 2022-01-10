@@ -1,0 +1,17 @@
+MANIPULATING AND CHANGING STYLES OF HTML USING DOM 
+==================================================
+
+naming conventions in DOM:
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+- the values that you want something to change 
+to (its style) has to be a string 
+
+example:
+document.querySelector("h1").style.color = "yellow";
+
+challenge:
+use dom to change the button's color to yellow!
+
+solution:
+document.querySelector(".btn").style.backgroundColor = "yellow";

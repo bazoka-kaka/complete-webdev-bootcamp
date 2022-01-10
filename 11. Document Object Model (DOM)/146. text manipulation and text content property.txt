@@ -1,0 +1,31 @@
+TEXT MANIPULATION AND TEXT CONTENT PROPERTY 
+===========================================
+
+- we can change the text inside an HTML property 
+using the following:
+document.getElementById("title").innerHTML = "Good Bye!";
+
+- another property:
+using the following:
+document.getElementById("title").textContent = "Hello!";
+
+- difference:
+if you have the following code:
+<h1 id='title'><strong>Something here!</strong></h1>
+
+then you use this:
+document.getElementById("title").innerHTML;
+
+output:
+<strong>Something here!</strong>
+
+if you use this:
+document.getElementById("title").textContent;
+
+output:
+Something here!
+
+- meaning:
+you can do something like this:
+document.getElementById("title").innerHTML = "<em>Good Bye!</em>";
+

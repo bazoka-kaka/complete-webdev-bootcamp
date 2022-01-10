@@ -1,0 +1,21 @@
+COMMAND LINE TECHNIQUES AND DIR NAVIGATIONS 
+===========================================
+
+- list all of the directories and files
+> ls 
+
+- also the hidden ones 
+> ls -a 
+
+- creating new dir 
+> mkdir newDirName 
+
+- creating a hidden dir 
+> mkdir .hiddenDir 
+
+- easily going back to the root directory 
+> cd ~
+
+- clear all the command without touching anything:
+> ctrl + u 
+

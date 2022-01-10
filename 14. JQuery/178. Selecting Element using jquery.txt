@@ -1,0 +1,17 @@
+SELECTING ELEMENT USING JQUERY 
+==============================
+
+- instead of doing this:
+document.querySelector("h1");
+
+we can do this:
+$("h1");
+
+- jquery will select every element that is specified, 
+example:
+$("button");
+
+this is gonna select all of the buttons 
+
+(there's no difference between selecting one or many!)
+

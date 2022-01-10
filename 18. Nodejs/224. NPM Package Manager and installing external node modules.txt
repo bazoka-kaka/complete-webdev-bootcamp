@@ -1,0 +1,74 @@
+NPM PACKAGE MANAGER AND INSTALLING EXTERNAL NODE MODULES 
+========================================================
+
+- NPM (Node Package Manager)
+note:
+this is the world's largest collection of external 
+node packages 
+
+- why using a package manager?
+instead of making something from scratch, 
+you can add something that already is made!
+
+also you can incorporate those packages into your own project!
+
+- initializing npm 
+> npm init 
+
+and this is gonna create a file called "package.json"
+
+- package.json
+this is the description of all of our npm packages!
+
+- installing our first module 
+we're gonna install the superheroes module:
+https://www.npmjs.com/package/superheroes
+
+- installing superheroes:
+> npm install superheroes 
+
+note:
+our package.json now has a dependency called 
+superheroes!
+
+{
+  "name": "nodejs-testing",
+  "version": "1.0.0",
+  "description": "this is an intro to node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yehezkel",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0"
+  }
+}
+
+- implementing in our index.js:
+var superheroes = require("superheroes");
+
+const mySuperhero = superheroes.random();
+
+console.log(mySuperhero);
+
+challenge:
+supervillains - npm package
+
+after that you have to console log some supervillain names!
+
+index.js:
+const superheroes = require("superheroes");
+const supervillains = require("supervillains");
+
+const mySuperhero = superheroes.random();
+const mySupervillain = supervillains.random();
+
+console.log(mySuperhero);
+console.log(mySupervillain);
+
+inside of a dependency there are usually other dependencies 
+
+this is like that has something inside of it all the time!
+

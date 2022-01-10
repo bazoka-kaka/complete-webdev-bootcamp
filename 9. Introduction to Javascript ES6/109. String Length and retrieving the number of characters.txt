@@ -1,0 +1,6 @@
+STRING LENGTH AND RETRIEVING THE NUMBER OF CHARACTERS 
+=====================================================
+
+- to get the number of characters:
+word.length;
+

@@ -1,0 +1,165 @@
+WEBSITE ANIMATIONS USING JQUERY 
+===============================
+
+- hiding selected elements 
+.hide()
+
+example:
+$("button").on("click", function () {
+  $("h1").hide();
+});
+
+note:
+this is gonna hide the h1 after clicking any of the buttons 
+
+- showing hidden elements
+.show()
+
+example:
+$("h1").hide();
+
+$("button").on("click", function () {
+  $("h1").show();
+});
+
+note:
+after hiding the h1, if we click the button, 
+the h1 is gonna show!
+
+- toggling the hide and show 
+.toggle()
+
+example:
+$("button").on("click", function () {
+  $("h1").toggle();
+});
+
+- fading appearance 
+
+to make the button reduce opacity until it's totally hidden, 
+we can use something called 
+
+.fadeOut()
+
+example:
+$("button").on("click", function () {
+  $("h1").fadeOut();
+});
+
+note:
+this will make the button disappear slowly 
+
+- the opposite of fadeOut()
+
+fadeIn()
+
+example:
+$("h1").hide();
+
+$("button").on("click", function () {
+  $("h1").fadeIn();
+});
+
+note:
+this will make the button appear slowly (from hidden)
+
+- .fadeToggle()
+
+note:
+this will toggle the appearance 
+
+example:
+$("button").on("click", function () {
+  $("h1").fadeToggle();
+});
+
+- .slideUp()
+
+note:
+this is gonna collapse out our element (making it disappear)
+
+example:
+$("button").on("click", function () {
+  $("h1").slideUp();
+});
+
+- .slideDown() 
+
+note:
+this is gonna uncollapse out our element (making it appear)
+
+example:
+$("h1").hide();
+
+$("button").on("click", function () {
+  $("h1").slideDown();
+});
+
+- .slideToggle()
+
+example:
+$("button").on("click", function () {
+  $("h1").slideToggle();
+});
+
+IMPORTANT: this is useful for dropdown menu 
+for example
+
+- .animate()
+
+note:
+this is gonna define some custom css 
+that you wanna animate!
+
+example:
+$("button").on("click", function () {
+  $("h1").animate({ opacity: 0.5 });
+});
+
+when the button clicked, the h1 is gonna have .5 opacity!
+
+VERY IMPORTANT!
+--------------
+
+everything that is inside the .animate({}) function 
+meaning the styles should be a numerical value, 
+you can't assign something like for example the color:
+
+example:
+$("button").on("click", function () {
+  $("h1").animate({ color: white });
+});
+
+note:
+this is not gonna work!
+
+another example of numerical values:
+$("button").on("click", function () {
+  $("h1").animate({ margin: 20 });
+});
+
+note:
+the numerical value is in px!
+
+if you want some other size, you can do it within a string
+
+example:
+$("button").on("click", function () {
+  $("h1").animate({ margin: "2rem" });
+});
+
+to get more than on animation happening:
+you can chain them together 
+
+CHAINING ANIMATIONS TOGETHER 
+----------------------------
+
+example:
+$("button").on("click", function () {
+  $("h1").slideUp().slideDown().animate({ margin: "2rem" });
+});
+
+note:
+this is gonna happen in sequence, you can't have 2 animations 
+together!
+

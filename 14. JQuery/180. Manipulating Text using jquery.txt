@@ -1,0 +1,38 @@
+MANIPULATING TEXT USING JQUERY 
+==============================
+
+- use .text() method 
+example:
+$("h1").text("Good Bye World!");
+
+note:
+since jquery is gonna select all of the elements 
+that we specified for example:
+$("button").text("Yehezkel is in Israel");
+
+this is gonna change all of the buttons to the text 
+"Yehezkel is in Israel"
+
+(not just the first element)
+
+- using .html 
+using this, we're not just gonna be able to change the 
+text but also add html element inside there!
+
+example:
+$("h1").html("<strong>You are handome!</strong>");
+
+note:
+this is making the text bold and the text is gonna be changed
+to "You are handome!"
+
+SOMETHING IMPORTANT 
+-------------------
+
+if you don't understand how vanilla javascript work, 
+jquery will seem like a complete magic!
+
+note:
+most of developers are using jquery to write javascript!
+instead of the javascript itself!
+

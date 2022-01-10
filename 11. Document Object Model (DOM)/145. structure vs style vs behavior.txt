@@ -1,0 +1,50 @@
+STRUCTURE VS STYLE VS BEHAVIOR 
+==============================
+
+- showing all the class attached to one one element:
+document.querySelector("button").classList;
+
+- since the css, javascript, and html should be different, 
+we can't just do something like this:
+document.querySelector("button").style.visibility = "hidden";
+
+instead, we can create a class in styles.css:
+.invisible {
+  visibility: hidden;
+}
+
+in the index.js:
+document.querySelector("button").classList.add(".invisible");
+
+note:
+this is gonna add the class .invisible to the button element 
+without changing the css of the html (just adding a class 
+to an element)
+
+- removing a class using DOM:
+document.querySelector("button").classList.remove(".invisible");
+
+- toggling
+note:
+toggle meaning if it's on, then turn it off, if it's off, 
+then turn it on 
+
+or something that doesn't exist in this case should made 
+exist and vice versa!
+
+example:
+document.querySelector("button").classList.toggle(".invisible");
+
+challenge:
+create a class called "huge" which has the font-size of 10rem 
+then apply it to h1 using DOM!
+
+solution:
+in styles.css:
+.huge {
+  font-size: 10rem;
+}
+
+
+in the browser console:
+document.querySelector("h1").classList.add("huge");

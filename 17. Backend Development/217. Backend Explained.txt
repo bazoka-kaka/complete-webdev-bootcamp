@@ -1,0 +1,54 @@
+BACKEND DEVELOPMENT
+===================
+
+- this consists of:
+a. servers 
+this serves your html, javascript, etc 
+
+b. database 
+this stores the user data (login, passwords)
+
+c.Application 
+this is where you create your business logic, how your web 
+application work
+example:
+a. calculating flight price
+b. making payment 
+
+analogy:
+restaurant -- client side (front end)
+kitchen -- server 
+larder -- database 
+
+- you can't make your backend in your frontend part:
+a. it's your business secret!
+b. this is gonna make your website so slow, because you have
+to load all the backend (because we are gonna show it 
+to the user if you are taking it to the frontend!)
+
+1. server creates the application 
+2. the application is brought to the client-side 
+
+examples of backend technologies:
+a. php 
+b. node.js 
+c. java 
+d. ruby 
+
+examples of backend frameworks:
+a. cakePHP 
+b. ruby rails or spring
+c. express 
+
+the common one:
+ruby and ruby on rails 
+
+the main job of these technologies:
+reduce the amount of repetitive stuffs 
+that a developer has to do!
+
+express is the nodejs's framework 
+
+note:
+nodejs runs on javascript 
+

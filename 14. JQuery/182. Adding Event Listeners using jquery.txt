@@ -1,0 +1,76 @@
+ADDING EVENT LISTENERS USING JQUERY 
+===================================
+
+- click event listener:
+example:
+$("h1").click(function () {
+  $("h1").css("color", "blue");
+});
+
+note:
+on click, we're gonna change the color of h1 to blue 
+
+- adding event listener to multiple elements:
+example in vanilla javascript:
+for (let i = 0; i < document.querySelectorAll("button").length; ++i) {
+  document.querySelectorAll("button")[i].addEventListener("click", function () {
+    document.querySelector("h1").style.color = "blue";
+  });
+}
+
+note:
+this is very long and unnecessary 
+
+example in jquery:
+$("button").click(function () {
+  $("h1").css("color", "blue");
+});
+
+note:
+this is gonna select all of the buttons, not 
+just the first button!
+
+- detecting keystrokes inside input 
+example:
+$("input").keypress(function (event) {
+  console.log(event.key);
+});
+
+if we wanna detect keystrokes in the entire document:
+example:
+$(document).keypress(function (event) {
+  console.log(event.key);
+});
+
+note:
+if you wanna select the document, do it 
+without the parenthesis!
+
+alternate: if you wanna select everything that is 
+happening in your website, do it in the body:
+$('body')
+
+challenge:
+whenever we strike a key in our website, the h1 is  
+gonna be the key!
+
+solution:
+$("body").keypress(function (event) {
+  $("h1").text(event.key);
+});
+
+- instead of using the .click() or .keypress(), 
+we can use something called "on"
+documentation:
+https://api.jquery.com/on/#on-events-selector-data-handler
+
+syntax:
+$(element).on(eventType, handleFunction);
+
+example:
+$("h1").on("mouseover", function () {
+  $("h1").css("color", "blue");
+});
+
+when we hover over our h1, it's gonna change to blue 
+

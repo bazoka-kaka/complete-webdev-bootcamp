@@ -1,0 +1,33 @@
+DEEPER UNDERSTANDING OF JAVASCRIPT OBJECTS 
+==========================================
+
+- creating an object factory:
+function BellBoy(name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = true;
+  this.languages = languages;
+}
+
+note:
+this is called a constructor function 
+
+the unique thing about this is that it has to be 
+a capital letter for the first one!
+
+- initializing a constructor:
+example:
+let bellBoy1 = new BellBoy("Timmy", 20, true, ["japanese", "german"]);
+
+- full example:
+function HouseKeeper(yearsOfExp, name, cleaningRepetoire) {
+    this.yearsOfExp = yearsOfExp;
+    this.name = name;
+    this.cleaningRepetoire = cleaningRepetoire;
+}
+
+let houseKeeper1 = new HouseKeeper(12, "Jane", ["Bathroom", "Bedroom"]);
+
+console.log(houseKeeper1);
+
+

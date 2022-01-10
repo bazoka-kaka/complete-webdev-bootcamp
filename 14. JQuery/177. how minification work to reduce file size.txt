@@ -1,0 +1,11 @@
+HOW MINIFICATION WORK TO REDUCE FILE SIZE
+=========================================
+
+this is the web:
+https://www.minifier.org/
+
+just copy your code and paste it there 
+
+note:
+this is gonna minify your file size!
+

@@ -1,0 +1,34 @@
+USING NATIVE NODE MODULES 
+=========================
+
+nodejs documentation:
+https://nodejs.org/en/docs/
+
+- library to make nodejs able to get access 
+with the local system directly:
+the module is called the file system module
+this is the link:
+https://nodejs.org/api/fs.html
+
+- to use the module, we have to require it:
+const fs = require("fs");
+
+- example of how to use this module:
+1. create a file called test.txt 
+2. write something to that file 
+3. we're gonna use something called 
+fs.copyFileSync(src, dest);
+
+note:
+this is gonna copy the file's content 
+
+if you have anything inside of the destination 
+file, everything that is inside of the destination 
+file is gonna be replaced with everything 
+that is inside the src file!
+
+the final code:
+index.js:
+const fs = require("fs");
+fs.copyFileSync("test.txt", "test1.txt");
+

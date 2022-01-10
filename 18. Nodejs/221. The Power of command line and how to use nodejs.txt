@@ -1,0 +1,10 @@
+THE POWER OF COMMAND LINE AND HOW TO USE NODEJS 
+===============================================
+
+- running a javascript file locally using nodejs 
+> node index.js
+
+note:
+make sure you are in the same folder that you wanna 
+execute your nodejs in! (in the hyper)
+

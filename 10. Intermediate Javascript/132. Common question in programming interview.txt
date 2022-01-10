@@ -1,0 +1,28 @@
+COMMON QUESTION IN PROGRAMMIGN INTERVIEW 
+========================================
+
+write a program 1 - 100. but for multiples of 3, print "Fizz"
+5 - "Buzz", 3 and 5 - "FizzBuzz"
+
+solution:
+
+const arr = [];
+
+function fizzBuzz() {
+    for(let i = 1; i <= 100; i++) {
+        if(i % 3 == 0 && i % 5 == 0) {
+            arr.push("FizzBuzz");
+        } else if(i % 3 == 0) {
+            arr.push("Fizz");
+        } else if(i % 5 == 0) {
+            arr.push("Buzz");
+        } else {
+            arr.push(i);
+        }
+    }
+}
+
+fizzBuzz();
+for(let i = 0; i < 100; ++i) {
+    console.log((i + 1) + " " + arr[i]);
+}

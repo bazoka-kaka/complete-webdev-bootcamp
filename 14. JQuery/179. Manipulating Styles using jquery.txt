@@ -1,0 +1,67 @@
+MANIPULATING STYLES USING JQUERY 
+================================
+
+- using the dot css method
+example:
+$('h1').css('color', 'red');
+
+syntax:
+$(element).css(property, value);
+
+- getting the current value of the css property:
+example:
+let currValue = $('h1').css('color');
+console.log(currValue);
+
+note:
+changing something that's related to the style inside 
+our javascript code is dirty (like before)
+
+instead, create a class inside our .css file, then 
+we toggle the class in the html using the existing class 
+
+ADDING CLASS
+------------
+example:
+in styles.css:
+.big-title {
+  font-size: 10rem;
+  color: yellow;
+  font-family: cursive;
+}
+
+.margin-50 {
+  margin: 50px;
+}
+
+
+in index.js:
+$("h1").addClass("big-title");
+
+REMOVING CLASS 
+--------------
+removing class:
+$('h1').removeClass('big-title');
+
+ADDING AND REMOVING MULTIPLE CLASSES 
+------------------------------------
+
+example:
+$("h1").addClass("big-title margin-50");
+
+note:
+just add space between the classes 
+
+CHECKING IF OUR ELEMENT HAS A PARTICULAR CLASS 
+----------------------------------------------
+
+example:
+$("h1").addClass("big-title margin-50");
+console.log($("h1").hasClass("margin-50"));
+
+output:
+true 
+
+note:
+use the .hasClass() method 
+

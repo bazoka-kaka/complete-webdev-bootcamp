@@ -1,0 +1,151 @@
+INTRODUCTION TO DOCUMENT OBJECT MODEL 
+=====================================
+
+- to change parts of the website on the fly 
+(to make our website interactable)
+
+- DOM catalogues the web page into individual object 
+that we can select and manipulate
+
+- the task of converting an html file into DOM is done 
+by the browser when you load up your web page 
+(it turns the html into a tree structure - making its 
+relationships with each other)
+
+example:
+title is descendant of head tag 
+but the head and the body are siblings 
+
+- everything that is inside your HTML document 
+is contained in an object called the document 
+(the tree structure of DOM)
+
+- install the following:
+HTML tree generator 
+note:
+this is gonna show what the tree of a page's html
+
+- navigating through the tree:
+in the js console in your browser:
+document;
+
+note:
+this is the entire html file 
+
+document.firstElementChild;
+
+note:
+this is navigating through the first child 
+in the tree 
+
+
+document.firstElementChild.firstElementChild
+
+note:
+this is navigating through the first child of 
+the first child in the tree 
+
+document.lastElementChild;
+
+note:
+this is gonna output everything that is inside the body 
+
+- after you successfully selected the object 
+that you're interested in inside the DOM, then 
+you can manipulate it 
+
+- manipulating the h1:
+let heading = document.firstElementChild.firstElementChild.firstElementChild;
+heading.innerHTML = "Good Bye!";
+
+- to manipulate the content of an html element:
+htmlElement.innerHTML = "something";
+example:
+heading.innerHTML = "Good Bye!";
+
+- to manipulate the style of an html element:
+htmlElement.style.style = "something";
+example:
+htmlElement.style.color = "red";
+
+- selecting elements and make it do things 
+example:
+to select our input (the checkbox):
+document.querySelector("input").click();
+
+note:
+document.querySelector("input") --> this is looking through 
+the entire document for the object that has  
+selector of "input"
+
+the .click() meaning that it'll click on the input 
+selector
+
+the code above is gonna click the checkbox making it 
+as selected 
+
+- our objects inside the DOM can have:
+1. properties
+describes something about the object 
+example of a property:
+text color, width, height, etc 
+
+2. methods
+things that an object can do 
+example:
+break(), drive(), park(), etc 
+
+
+GET PROPERTY 
+-------------
+
+example:
+car.color; //red 
+
+SET PROPERTY 
+------------
+
+example:
+car.numbersOfDoors = 0;
+
+CALL METHOD 
+-----------
+
+example:
+car.drive();
+
+note:
+difference between method and function
+a method is something that an object can do 
+(it has to be associated with an object)
+while a function doesn't get associated 
+with an object 
+
+DOM EXAMPLES OF PROPERTIES AND METHODS
+--------------------------------------
+
+properties:
+a. innerHTML
+b. style 
+c. firstChild 
+
+methods:
+a. click()
+b. appendChild() 
+c. setAttribute()
+
+challenge
+---------
+
+in the resources, we've got the file of the challenge 
+1. select the third li 
+2. change the word "Third" to your name 
+note:
+don't touch the file, you have to do it through the console!
+
+solution:
+let lastLi = document.querySelector("ul").lastElementChild;
+lastLi.innerHTML = "Yehezkel Wiradhika"
+
+another solution:
+document.firstElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML = "Angela"
