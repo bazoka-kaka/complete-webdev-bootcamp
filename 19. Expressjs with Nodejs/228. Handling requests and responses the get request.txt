@@ -1,0 +1,88 @@
+HANDLING REQUESTS AND RESPONSES: THE GET REQUEST 
+================================================
+
+- earlier our server doesn't have anything to display!
+
+- localhost:3000 is like the root (the homepage)
+of any website 
+
+example:
+the root of google page is:
+https://www.google.com
+
+or localhost:3000/ means that it's in the homepage 
+of our website!
+
+when the server sees the request (localhost:3000) it's 
+gonna send our browser a get response (html, css, and javascript)
+that is needed to render the website that we want!
+
+- making the server sends something back when our browser 
+makes the get request:
+
+app.get(location_of_get_request, callback_function)
+
+note:
+this is a method from express that specifies what 
+should happen when a browser gets in touch with our server 
+and makes a get request
+
+example:
+app.get("/", function (request, response) {
+  //do something here
+});
+
+this is gonna define what should happen when 
+someone makes a get request to the home route!
+
+note:
+route is just a more specific place in a port!
+
+in the callback function:
+request --> this is the request from the browser 
+
+response --> this is the response that outcome server 
+can make when the request gets triggered 
+at certain location 
+
+server.js:
+const express = require("express");
+
+// a function that represents express module
+const app = express();
+
+app.get("/", function (request, response) {
+  response.send("Hello");
+});
+
+//this listens on a specific port for any HTTP request
+//that gets sent to our server
+app.listen(3000, function () {
+  console.log("server started on port 3000!");
+});
+
+note:
+this is gonna output "Hello"
+
+notice this:
+app.get("/", function (request, response) {
+  response.send("Hello");
+});
+
+we could even do something like this:
+app.get("/", function (request, response) {
+  response.send("<h1 style='color: red'>Hello World</h1>");
+});
+
+note:
+this is gonna output the html code of 
+<h1 style='color: red'>Hello World</h1>
+
+like the usual html code output in your browser!
+
+
+best practice:
+app.get("/", function (req, res) {
+  //do something
+});
+

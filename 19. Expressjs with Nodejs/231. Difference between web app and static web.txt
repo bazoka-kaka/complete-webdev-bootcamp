@@ -1,0 +1,23 @@
+DIFFERENCE BETWEEN WEB APP AND STATIC WEB 
+=========================================
+
+- web application is not just a website anymore
+
+- the static website:
+browser makes request to the server --> server sends back 
+the css, html, and javascript --> if there any javascript 
+it'll get run in the client side (in the frontend)
+therefore all the clients are gonna be able to see those processes 
+
+and also this is gonna be real slow!
+
+- the web application:
+this is gonna make our website run serverside 
+
+our browser makes a request to the server --> it's 
+gonna execute the code and only deliver the outcome 
+back to the user  (the user doesn't have to see all the logics)
+
+we're gonna be able to interact with databases, queries, 
+search, manipulate databases, more web applications 
+

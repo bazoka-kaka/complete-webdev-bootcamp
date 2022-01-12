@@ -1,0 +1,24 @@
+WHAT IS EXPRESSJS 
+=================
+
+- express is a nodejs framework
+
+- previously: nodejs is to liberate javascript 
+from the browser allowing programmers 
+to use javascript to interact with the 
+computer directly 
+
+- using node, we can create desktop application 
+example:
+atom is created using nodejs 
+
+- node is like a screwdriver, and 
+express is like the motorscrew driver!
+
+express is used to make programming web application 
+less repetitive and is made specifically for 
+web developers 
+
+- express is one of the most used 
+backend programming framework 
+

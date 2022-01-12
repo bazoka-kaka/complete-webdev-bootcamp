@@ -1,0 +1,53 @@
+UNDERSTANDING AND WORKING WITH ROUTES 
+=====================================
+
+- adding another route response:
+const { response } = require("express");
+const express = require("express");
+
+// a function that represents express module
+const app = express();
+
+app.get("/", function (req, res) {
+  res.send("<h1 style='color: red; font-family: sans-serif'>Hello World!</h1>");
+});
+
+app.get("/contact", function (req, res) {
+  res.send("Contact me on: kakanihonjin@gmail.com");
+});
+
+//this listens on a specific port for any HTTP request
+//that gets sent to our server
+app.listen(3000, function () {
+  console.log("server started on port 3000!");
+});
+
+
+note:
+just add another .get() function with different route!
+
+- stop restarting your server everytime you wanna make change:
+you can install something called:
+nodemon.io 
+
+https://nodemon.io/
+
+note:
+this is a utility using npm that will monitor 
+
+for changes for your source code and it'll 
+automatically restart your server when it detects change!
+
+to install:
+> npm install -g nodemon 
+
+note:
+it doesn't matter where you install this, this is 
+gonna work all the time wherever you are!
+
+- to add nodemon to your working file:
+> nodemon [fileName]
+
+example:
+> nodemon server.js 
+

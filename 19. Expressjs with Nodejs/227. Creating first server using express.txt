@@ -1,0 +1,92 @@
+CREATING FIRST SERVER USING EXPRESS 
+===================================
+
+- first things first:
+create a new file called server.js in a dir
+then init the npm
+
+- installing express 
+docs:
+http://expressjs.com/
+
+installing:
+http://expressjs.com/en/starter/installing.html#installing
+
+to install:
+> npm install express --save
+
+note:
+--save --> this is gonna add expressjs into your packages.json 
+under the dependencies 
+
+you don't have to add the "--save" manually anymore!
+
+it's done by default!
+
+so all you need to do is this:
+> npm install express 
+
+- requiring express 
+
+hello world example:
+http://expressjs.com/en/starter/hello-world.html#hello-world-example
+
+note:
+app --> this word is almost always gonna be used  
+when you are referring to an express module!
+(best practice)
+
+server.js:
+const express = require("express");
+
+// a function that represents express module
+const app = express();
+
+//this listens on a specific port for any HTTP request
+//that gets sent to our server
+app.listen(3000);
+
+note:
+this is the barebone of the express server!
+
+running the server:
+> node server.js 
+
+note:
+this is not doing anything, it just is listening 
+for a port!
+
+- what is a port?
+port is a channel that we tune our server to!
+
+- if we wanna be able to see when our port is setup 
+and when our server is running:
+add a callback function in the .listen() function!
+
+server.js:
+const express = require("express");
+
+// a function that represents express module
+const app = express();
+
+//this listens on a specific port for any HTTP request
+//that gets sent to our server
+app.listen(3000, function () {
+  console.log("server started on port 3000!");
+});
+
+- going to the actual server:
+in your browser go to the webpage:
+localhost:3000
+
+note:
+this is gonna show something like this:
+Cannot GET /
+
+this means:
+when we start our browser to go to the server port 3000 
+we're not able to get anything back!
+
+- to get our server responds when a browser is making
+a request to our server:
+next!
