@@ -1,1 +1,1 @@
-document.querySelector("h1").innerHTML = "GoodBye!";
+document.querySelector("a").setAttribute("href", "https://www.bing.com");

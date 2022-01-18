@@ -1,0 +1,24 @@
+WHAT IS JSON 
+============ 
+
+- JSON = Javascript Object Notation 
+- the reason why we use JSON to pass data around 
+the internet:
+it's in a format that is human readable but it can 
+also be easily collapsed down to take up as little 
+space as possible 
+
+- json is not the only format that we can 
+receive data from apis 
+
+another format is like xml, which is extensive markup language,
+or html, hypertext markup language 
+
+but json is the most favourite one because it's the most 
+lightweight and is real easy to turnup back to javascript 
+object 
+
+- if you wanna turn a raw json into a pretty version, 
+you can download a chrome extension:
+json viewer awesome 
+

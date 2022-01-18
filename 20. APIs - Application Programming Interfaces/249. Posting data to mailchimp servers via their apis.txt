@@ -1,0 +1,54 @@
+POSTING DATA TO MAILCHIMP SERVERS VIA THEIR APIS 
+================================================ 
+
+- you first have to register to 
+mailchimp then you have to create 
+your api key 
+
+note:
+this is mine:
+8886c3bf5853603add085afb657679e0-us20
+
+- go here:
+mailchimp.com/developer/reference 
+
+then you can use this to figure out how you can 
+add subscribers to our list 
+
+go to the list/audiences section
+
+we're interested in the POST /list/{list_id}
+part because we wanna subscribe some 
+list members 
+
+the process is the same whether you wanna 
+batch subscribe lots of people or 
+subscribe a single person 
+
+all you need is a list id, and you can 
+provide the members you wanna subscribe 
+in the body of your request 
+
+- getting our list id:
+in the mailchimp.com dashboard 
+go to audience --> manage audience --> 
+settings --> scroll down and get your 
+unique id 
+
+note:
+this is your audience id or your list id 
+
+this is gonna help mailchip identify the list 
+that you want to put your subscribers into 
+
+copy that and paste then comment
+at the bottom of your app.js file 
+
+- start sending our request to mailchimp:
+
+to add request to the api:
+use https.request()
+
+documentation:
+https://nodejs.org/dist/latest-v17.x/docs/api/https.html
+

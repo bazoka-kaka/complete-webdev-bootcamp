@@ -1,0 +1,73 @@
+UNDERSTANDING COLOR THEORY 
+==========================
+
+- you have to be aware of the mood of your 
+color palette 
+example:
+a treehouse - green 
+a diving lesson - blue 
+
+1. RED 
+love, energy, intensity 
+example: red car that is making you feel energetic
+
+2. YELLOW 
+joy, intellect, attention 
+example: beachboy
+
+3. GREEN 
+freshness, safety, growth 
+example: usually grocery stores use this color
+
+4. BLUE 
+stability, trust, serenity 
+example: financial companies like paypal, or 
+cryptocurrency
+note: if you use blue shirts, people are gonna trust you 
+more!
+
+5. PURPLE 
+royalty, wealth, feminimity 
+example: payday loan that is targeted to women 
+
+IMPORTANT
+---------
+
+it's not about that you like the color, but 
+it's about what you're trying to convey 
+as message to the user!
+
+COMBINING COLORS 
+----------------
+
+- usually designers are gonna look for scientific
+ways of designing colors 
+example:
+analogous color palette - colors that are 
+right at each other 
+note:
+this is real harmonious and work together 
+(good for navigation bars, body of your website, 
+things like logo, and its background)
+
+it's not good for standing up tough!
+
+complementary color palette - colors that are opposite 
+from each other 
+note:
+this make things pop up 
+()
+example: meat that are placed with fake green 
+plants to make it more fresh
+
+not good:
+styling text and text background that are opposite 
+of colors because it looks very jarring 
+don't do this concerning texts
+good:
+make things like logos or things that really2 stands 
+out to be created using complementary colors 
+
+good website for coloring:
+adobe color 
+

@@ -1,0 +1,18 @@
+INTRODUCTION TO VERSION CONTROL AND GIT 
+======================================= 
+
+- things we're gonna learn about git:
+a. version control 
+b. cloning repos
+c. how to fork 
+d. how to make pull request 
+e. merging repositories
+etc 
+
+- version control 
+example if you made a repo that's real broken
+and you wanna go back to your earlier version 
+you can do that using git, not just the last 
+earlier version, but you can go to any version 
+that you want
+

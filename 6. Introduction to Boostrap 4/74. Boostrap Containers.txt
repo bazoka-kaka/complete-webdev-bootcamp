@@ -9,6 +9,10 @@ components in bootstrap
 
 - it's required when you use lots of bootstrap components 
 
+- containers allows you to be fully responsive relative 
+to the size of the viewport 
+
+
 example:
 grid container 
 

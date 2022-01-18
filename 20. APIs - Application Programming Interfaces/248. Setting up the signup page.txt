@@ -1,0 +1,85 @@
+SETTING UP THE SIGNUP PAGE 
+========================== 
+
+1. cd where you wanna make 
+your folder 
+2. create new project folder 
+called Newsletter-Signup
+3. create a 
+new app.js file, signup.html file, 
+success.html file, and a failure.html file 
+4. initialize npm with default options 
+5. install body-parser, express, and 
+request npm modules to the new project 
+6. require the newly installed modules 
+in app.js file 
+7. create a new express app and set it 
+to listen on port 3000 
+8. once port is setup, log 
+"server is running on port 3000"
+
+note:
+you can install modules all at the same time:
+> npm i express body-parser request 
+
+- boostrap sign in:
+https://getbootstrap.com/docs/4.0/examples/sign-in/
+
+note: this is what we're gonna use 
+
+right click on it then view source 
+then copy all of it and copy it in our signup.html 
+
+- challenge:
+setup the get method for our home route 
+to the signup page so that we can 
+test it on the browser at localhost 3000 
+
+note:
+something is not quite right:
+our image is gone and our css is also gone 
+
+because the styles.css and our image is a static file!
+
+in order for our server to serve static files 
+we need to use a special function of express 
+which is called static 
+
+we have to do this:
+in our app.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+const request = require("request");
+
+const app = express();
+
+//you have to define a static folder called public here
+app.use(express.static("public"));
+
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/signup.html");
+});
+
+app.listen(3000, function () {
+  console.log("server is running at port 3000");
+});
+
+after that you have to create a folder called 
+"public" and inside there create another folder 
+called "css" then put your styles.css there 
+
+then in signup.html:
+you have to reference your styles.css file like 
+this:
+<link href="css/styles.css" rel="stylesheet" />
+
+- another challenge:
+programming the post routes:
+we're gonna use body parser to grab the data 
+from the signup form and we're gonna console.log 
+it from our server. 
+
+hint:
+you will need to change the code in the html 
+form on the signup.html page 
+

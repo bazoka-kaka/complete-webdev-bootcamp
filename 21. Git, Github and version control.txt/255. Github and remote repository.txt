@@ -1,0 +1,27 @@
+GITHUB AND REMOTE REPOSITORIES 
+==============================
+
+- pushing commit into github:
+a. creating a remote 
+this is telling our local git repo that 
+we've created a remote repo somewhere in
+the internet and i wanna transfer all of my commits 
+over there.
+note:
+origin is the name of the remote and you can call 
+it anything you want but by convention and 
+highly recommended that you use the keyword 
+"origin"
+> git remote add origin [your github repo url]
+
+b. pushing to your remote github repo 
+> git push -u origin master
+note:
+origin --> this is the name or remote 
+master --> this is the name of branch 
+which is the default branch or the main branch 
+of all of your commits 
+
+- to see all of your save points in the github:
+insights --> graphs --> network
+

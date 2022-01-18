@@ -25,6 +25,15 @@ h1 {
   margin: 0 auto 0 auto; /* centered using margin */
 }
 
+note:
+------------------------------------------------------------------
+you can also do the following:
+h1 {
+  margin: 0 auto;
+}
+
+the first arg is the vertical one and the second one is horizontal
+------------------------------------------------------------------
 
 we can do this to the block element that has a width that is not 
 100%

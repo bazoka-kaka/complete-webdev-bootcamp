@@ -1,0 +1,22 @@
+WHY DO WE NEED APIs 
+===================
+
+- you can use all sorts of data from using 
+APIs and you can use them in your own website 
+
+- definition of API:
+An Application Programming Interface(API) is a set of 
+commands, functions, protocols, and objects 
+that programmers can use to create software 
+or interact with an external system 
+
+- how websites tell which datas that you can access from 
+them and how to do that?
+example:
+if it's a restaurant website, it's in the form of a menu 
+if it's a weather api, it's temperatures, weather condition,
+weather image, pressure 
+
+example of an api:
+jquery
+

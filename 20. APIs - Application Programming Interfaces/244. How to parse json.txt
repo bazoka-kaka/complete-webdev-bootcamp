@@ -1,0 +1,120 @@
+HOW TO PARSE JSON 
+================= 
+
+- to get more specific result in the response
+we can do this:
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res.statusCode);
+  });
+  res.send("Server is up and running");
+});
+
+note:
+the specific thing is the console.log(res.statusCode);
+where we're outputting our website status code 
+
+this is the full status codes:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+- common status codes:
+200: GET - the best outcome that we could get 
+when making an http request to an external server 
+404: Not Found - the server can't find the requested 
+resources 
+bassically it's a resource not found (doesn't exist)
+401: unauthorized http request (wrong passwords or 
+another identifications)
+
+- if we do something like this:
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res.statusCode);
+    res.on("data", function (data) {
+      console.log(data);
+    });
+  });
+  res.send("Server is up and running");
+});
+
+this is gonna output 
+1. our website request status code 
+2. hexadecimal code 
+
+note:
+the hexadecimal code if we convert it to normal text, 
+we're gonna get the right message 
+
+(our requested json text)
+
+we should use a method: JSON.parse() method to convert 
+our hexadecimal code to the normal JSON text 
+
+example:
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res.statusCode);
+    res.on("data", function (data) {
+      const weatherData = JSON.parse(data);
+      console.log(weatherData);
+    });
+  });
+  res.send("Server is up and running");
+});
+
+we can go to other direction if we wanted to 
+using: JSON.stringify()
+example:
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res.statusCode);
+    res.on("data", function (data) {
+      const weatherData = JSON.parse(data);
+      const object = {
+        name: "Yehezkel",
+        country: "Israel",
+      };
+      console.log(JSON.stringify(object));
+    });
+  });
+  res.send("Server is up and running");
+});
+
+this is the output:
+{"name":"Yehezkel","country":"Israel"}
+
+this is the final code in app.js:
+const express = require("express");
+const https = require("https");
+
+const app = express();
+
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res.statusCode);
+    res.on("data", function (data) {
+      const weatherData = JSON.parse(data);
+      //outputting the temperature
+      const temp = weatherData.main.temp;
+      console.log(temp);
+      //outputting the description of weather
+      const weatherDesc = weatherData.weather[0].description;
+      console.log(weatherDesc);
+    });
+  });
+  res.send("Server is up and running");
+});
+
+app.listen(3000, function () {
+  console.log("server is running on port 3000");
+});

@@ -78,7 +78,7 @@ document.querySelector(".btn");
 
 note:
 you can combine our selectors and query for something 
-that is more specific 
+that is more specific
 
 example:
 document.querySelector("li a");

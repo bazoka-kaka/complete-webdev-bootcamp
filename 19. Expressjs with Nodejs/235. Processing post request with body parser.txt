@@ -1,0 +1,162 @@
+PROCESSING POST REQUEST WITH BODY PARSER 
+========================================
+
+- inside our calculator, if we entered the data 
+and send it, we're gonna get an error message:
+cannot POST /index.html
+
+this is because of this:
+<form action="index.html" method="post">
+      <input type="text" name="num1" placeholder="First Number" />
+      <input type="text" name="num2" placeholder="Second Number" />
+      <button type="submit" name="submit">Calculate</button>
+    </form>
+
+the action attribute is set to index.html 
+
+note:
+'post' method meaning we're sending the form data somewhere 
+and the location is defined in the action attribute 
+
+we wanna send it to our server, not to index.html:
+<form action="/" method="post">
+      <input type="text" name="num1" placeholder="First Number" />
+      <input type="text" name="num2" placeholder="Second Number" />
+      <button type="submit" name="submit">Calculate</button>
+    </form>
+
+event if we don't define the action, we're gonna be
+automatically redirected to the current page of the website!
+example:
+if you're on the homepage: '/' the form is gonna be submitted 
+to "/" meaning you can do this also:
+<form method="post">
+
+note:
+this time we're still getting 404 and a cannot post, 
+but if you see in the network, we've got a bunch 
+of information, including the form that we submitted 
+but still the status code is still the same: 404 (not found)
+
+http return codes:
+100s - hold on (something's gonna happen)
+200s - here you go (ok/successful!)
+300s - go away (there's some security involved)
+400s - you fucked up
+500s - i fucked up
+
+this is the full list:
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+2 of the most often ones:
+200 --> success 
+400 --> client errors (example: the user tries to request 
+something that doesn't exist!)
+
+- fixing the issue:
+we just have to define the method that handles any post 
+request that come to our home route:
+app.post("/", function(req, res) {
+  res.send("thanks for posting that");
+});
+
+- getting the data into the callback function 
+so that we can send the result back to the browser 
+
+we have to install body-parser (npm package):
+> npm install body-parser 
+
+note:
+this is gonna allow us to pass the information 
+from the post request meaning we can have access to properties 
+and variables to be able to do calculations 
+
+after that you have to require it:
+const bodyParser = require('body-parser');
+
+getting our app to use it:
+app.use(bodyParser);
+
+- body parser have a few modes:
+bodyParser.text() --> transforms into text 
+bodyParser.json() --> transforms into json 
+bodyParser.urlencoded() --> specially used to pass datas 
+that come from html form, meaning whenever you get 
+the datas from html form, you have to use this type 
+
+note:
+this is what we shall pass:
+app.use(bodyParser.urlencoded({extended: true}));
+
+extended: true --> this is gonna allow us to post nested 
+objects this is not something that we're gonna use 
+but this is something that bodyParser is requiring us to 
+explicitly declare 
+
+this is the code that you need to write everytime 
+you are using body-parser 
+
+why using body parser?
+allows you to go into any of your routes, 
+you can tap into something called request.body 
+and this is the parsed version of 
+http request 
+
+example:
+app.post("/", function (req, res) {
+  res.send(req.body);
+});
+
+note:
+this is gonna output something like:
+{"num1":"2","num2":"3","submit":""}
+
+therefore by using bodyParser we're able to parse the 
+http request and by using urlencoded(), we can 
+get access to the form data as if they were just 
+properties of the object body 
+
+we can even do something like this:
+app.post("/", function (req, res) {
+  res.send(req.body.num1);
+});
+
+this is the example output:
+2
+
+note:
+this is the first number that we submitted from the form 
+that we inputted
+
+the main point of all of this:
+if you see the source of your website, it's only gonna  
+show you the html code without showing the full 
+thing that is happening behind, meaning the server 
+is doing the heavy lifting and the browser is just 
+gonna receive the calculated income without doing 
+anything.. this is the power of web application 
+instead of just regular website!
+
+final code:
+server.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", function (req, res) {
+  var num1 = Number(req.body.num1);
+  var num2 = Number(req.body.num2);
+  var result = num1 + num2;
+
+  res.send("Your result is: " + result);
+});
+
+app.listen(3000, function () {
+  console.log("server started on port 3000!");
+});

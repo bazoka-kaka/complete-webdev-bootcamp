@@ -1,0 +1,53 @@
+RESPONDING TO RESQUEST WITH HTML FILES 
+======================================
+
+- create a new file called index.html 
+
+- inside the index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <input type="text" name="num1" placeholder="First Number" />
+      <input type="text" name="num2" placeholder="Second Number" />
+      <button type="submit" name="submit">Calculate</button>
+    </form>
+  </body>
+</html>
+
+note:
+the name inside the inputs are for the variable name 
+that is gonna be inside our database 
+
+- to send files, instead of using the res.send() you are 
+gonna be using res.sendFile()
+
+you're gonna have to do this:
+app.get('/', function(req, res) {
+  res.sendFile('FileName');
+});
+
+note:
+this is only for files that are in our desktop 
+
+but when we deploy our servers to the cloud or someone
+else's computer, we have no idea where that location is 
+therefore instead of those relative file path, 
+we can use a constant for something like this:
+__dirname
+
+and this is gonna return the full path of your 
+current working directory 
+even if you are on the server, local computer, 
+or someone else's computer
+
+example of usage:
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + 'FileName');
+});

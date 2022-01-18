@@ -1,0 +1,112 @@
+VERSION CONTROL USING GIT AND THE COMMAND LINE 
+============================================== 
+
+- do the following first:
+1. go to your desktop 
+2. mkdir Story
+3. touch chapter1.txt in the Story dir 
+4. edit the chapter1.txt 
+(enter any text here)
+
+- the git part 
+> git init 
+note: creating a new repository on your current 
+local dir 
+
+> la -a 
+note: this is gonna show the git dirs and 
+file configs 
+
+to start tracking the changes:
+we need to add our files into the staging 
+area 
+
+staging area = an intermediate place where 
+you can pick and choose which files inside 
+your pwd that you wanna commit 
+
+to see what's inside the staging area:
+> git status 
+
+note:
+something in red or that is having the label 
+of untracked means something 
+that is inside your working dir but is 
+not staged 
+
+to put a file in the staging area:
+> git add [fileName]
+or if you wanna put everything to the staging 
+area: 
+> git add .
+
+- commiting under our version control:
+> git commit -m "(message)"
+
+note:
+commit message is real important to help 
+you keep track of what changes you've made 
+in each commit 
+
+you wanna be as explicit as possible 
+about what changes were made 
+between the last save point and this current 
+save point 
+
+best practice:
+write commit message in the present tense
+note: this is the convention
+
+example:
+> git commit -m "Complete chapter1"
+
+- to see what commits you've made:
+> git log 
+
+- challenge:
+now create 2 more chapters
+and write anything in there 
+
+note:
+you can edit text using vim or 
+to open it using your current 
+default text editor:
+> open fileName.txt 
+
+then you add them and commit them 
+
+- reason of staging area:
+sometimes you might not want all 
+of your files to be tracked or to be committed 
+so the staging area is a good place to figure out 
+what are the things that you want git to 
+ignore and what are the things that you 
+want to be tracked
+
+working dir --> staging area --> local repository 
+
+note:
+remember that the staging area is where you 
+git add things!
+
+from your staging area, then you go to your local 
+repository using git commit 
+
+- using the last version after committing 
+to our local repository:
+> git checkout 
+
+- to see the difference that you've made
+before adding it to the staging area:
+> git diff [fileName]
+
+- rolling back to the previous version:
+> git checkout [fileName]
+
+note:
+this is gonna roll back to the last version 
+that was committed in our local repo 
+
+this only happens when you havent commited 
+your changes yet 
+

@@ -1,0 +1,7 @@
+HOW TO PLAY SOUNDS ON A WEBSITE 
+===============================
+
+- you can do it by the following:
+var audio = new Audio('audio_file.mp3);
+audio.play();
+

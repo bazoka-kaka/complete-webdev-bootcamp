@@ -4,6 +4,6 @@
 //   });
 // }
 
-$("button").click(function () {
-  $("h1").slideUp().slideDown().animate({ margin: 10 });
+$("button").on("click", function () {
+  $("h1").slideUp().slideDown().animate({ opacity: 0.5, margin: 10 });
 });

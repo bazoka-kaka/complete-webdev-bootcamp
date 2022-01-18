@@ -1,0 +1,91 @@
+USER INTERFACE DESIGN 
+=====================
+
+- you have to convey the most important things 
+by making the fonts that you want appear larger, 
+bolder, more contrasting color, or something like that 
+
+COLOR 
+-----
+
+- colors that really stands out and pops out and 
+have contrast with the background tend to be 
+used for high hierarchy 
+
+example:
+if your predominant colors are grey and white, 
+then you're gonna have to use another bright color 
+like green and red to the complete the purchase 
+or the current tab they are in 
+
+SIZE 
+----
+
+- bigger items often draw your eyes to it 
+
+LAYOUT 
+------
+
+- different sizes and shapes also different hierarchies 
+make your design looks more interesting 
+
+example of a bad design:
+wikipedia
+
+- too long and it gets too tedious to read 
+- to short and it get a bit choppy and awkward 
+to read 
+
+- THE IDEAL CHARACTERS IN A LINE:
+40 - 60 characters per line 
+
+- good layout example:
+gramarly website 
+
+ALIGNMENT 
+---------
+
+- how you position your element relative 
+to one another 
+
+- one of the easiest ways of making any sort of design 
+you create look professional:
+
+REDUCE THE NUMBER OF ALIGNMENT POINTS!
+
+- the less alignment points the more the design 
+looks coherent: more professional 
+
+- tips:
+use gridlines to visualize where the starting points
+of each element
+
+WHITE SPACE 
+-----------
+
+- empty spaces around your text or your elements 
+
+- lots of luxury stores, their best works are just 
+injecting white spaces around their products!
+
+- spacing things out! make lots more expensive
+
+- if you have lots of things like ditched up, 
+it makes it like a discount show!
+
+- if you have things like in your digital design:
+new, 100% noise cancellation, only $20, ...
+it makes the product looks cheap 
+but if you make more whitespace to it, it looks 
+like apple made 
+
+AUDIENCE (THE MOST IMPORTANT) 
+-----------------------------
+
+- think about your audience and what may appeal to them!
+
+- you have to have more flexibility in your 
+design not just according to the rules, but 
+about the audience or the message you're trying 
+to convey 
+

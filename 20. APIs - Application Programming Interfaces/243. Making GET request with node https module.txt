@@ -1,0 +1,49 @@
+MAKING GET REQUEST WITH NODE HTTPS MODULE 
+=========================================
+
+- create a file called index.html and app.js 
+- npm init 
+- npm i express 
+
+- to get request from another website:
+search google:
+make get request from external server with node 
+
+you can do it in 5 ways:
+a. using the standard node library 
+(https module)
+b. request module 
+c. axios 
+d. superAgent 
+e. got 
+
+note:
+all of these last four are external npm packages 
+
+but we're gonna do the native one 
+
+final code in app.js:
+const express = require("express");
+const https = require("https");
+
+const app = express();
+
+app.get("/", function (req, res) {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+  https.get(url, function (res) {
+    console.log(res);
+  });
+  res.send("Server is up and running");
+});
+
+app.listen(3000, function () {
+  console.log("server is running on port 3000");
+});
+
+
+note:
+you have to use the https:// thing because our program 
+doesn't have automation to add the https:// stuff 
+like in the regular browser
+

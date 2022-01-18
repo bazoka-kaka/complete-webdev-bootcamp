@@ -1,0 +1,81 @@
+USER EXPERIENCE DESIGN 
+======================
+
+- what is User Experience:
+design is something that we think of like 
+having an aesthetic what we think looks good 
+and enforcing that on the user 
+
+
+good experience with a website meaning 
+unobtrusive, it just lets you do your thing 
+and it feels like as if everything is easy 
+and everything is effortless 
+
+1. SIMPLICITY 
+-------------
+
+- keeping things simple is always better than 
+making it complex or more cluttered
+
+- making color schemes consistent and typography 
+is really delightful to read rather than complicated
+things that hurts your eyes with design 
+(meaning nicer user experience!)
+
+2. CONSISTENCY 
+--------------
+
+- keep your design consistent 
+
+but 
+
+also keep the functionality of your product 
+consistent 
+
+- don't make the user confused from going 
+to parts of your website because of inconsistency!
+
+3. READING PATTERNS
+-------------------
+
+- one of the most common reading pattern:
+F Pattern, Z Pattern
+
+- F Pattern meaning:
+eyes start at the top left of the corner 
+to the right then down and so on 
+
+- so you have things like bullet points, pictures, 
+icons, etc they are all on the left 
+
+- Z Pattern meaning:
+left to right, then zigzaging around to the left
+then right again
+
+example of the usage: websites with videos 
+or things like the facebook website 
+
+5. ALL PLATFORM DESIGN 
+----------------------
+
+- mobile responsiveness is really important 
+
+- don't make your web too cramped out with 
+things that make you dizzy 
+
+- don't make your website too concentrated
+also that makes your user not having 
+anything until they scroll to the end 
+
+- use your family and friends, professional testers 
+and get feedbacks, you have to test, test, test
+
+6. DON'T USE YOUR POWERS FOR EVIL 
+---------------------------------
+
+- some designers use their knowledge about user 
+interface, design, and user experience 
+also psychology to do bad things
+(this is called dark patterns)
+
