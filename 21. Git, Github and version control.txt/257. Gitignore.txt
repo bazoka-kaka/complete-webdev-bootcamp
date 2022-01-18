@@ -1,3 +1,55 @@
 GITIGNORE 
 ========= 
 
+- example if you have things like 
+secret passwords, api keys, etc 
+in a file called secret.txt 
+that you don't wanna host in a 
+public platform like github 
+
+- another type of file that you wanna add 
+to gitignore or you don't wanna upload to 
+github:
+files that are to do with your local settings,
+user preferences, and there's a whole 
+bunch of these types of utility files 
+that you don't want another person 
+to download and copy into their folders 
+
+another common example:
+.ds_store files which is bassically a settings 
+file that saves things like how you like 
+your icons to be arranged in a project folder 
+
+this is a hidden file 
+
+and we don't wanna clutter our github repo 
+with that file 
+
+- creating the .gitignore file:
+> touch .gitignore 
+
+you can add your files that should be ignored 
+when we commit our project to git 
+
+to remove all the files from the staging
+area:
+> git rm --cached -r .
+
+- adding individual files to gitignore:
+.DS_Store 
+Secrets.txt 
+
+- certain rules in .gitignore:
+you can use the "#" to comment 
+using wildcards:
+example:
+*.txt 
+
+here means all of the files that have .txt 
+as extension are gonna be ignored 
+
+after that if you do this:
+> git status 
+the files that are visible are those 
+that are not in the .gitignore 

@@ -1,0 +1,9 @@
+FORKING AND PULL REQUESTS
+=========================
+
+- forking is taking another person's github repo 
+and put it to your repo then you now own it 
+you can do anything you want to your forked github 
+repo 
+
+- 

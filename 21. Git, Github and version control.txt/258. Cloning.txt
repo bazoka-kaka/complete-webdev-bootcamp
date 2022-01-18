@@ -1,0 +1,12 @@
+CLONING 
+=======
+
+- this is gonna make you able to 
+pull down all of the commits and all 
+of the versions of a  particular 
+remote repo and to store 
+your files inside your pwd 
+
+- to clone a remote github repo:
+> git clone [repoLink]
+

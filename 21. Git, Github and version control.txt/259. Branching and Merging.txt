@@ -1,0 +1,31 @@
+BRANCHING AND MERGING 
+=====================
+
+- instead of continuing to commit into our master 
+branch, we can create a side branch 
+that is as many as we like 
+
+- these little branches are things where 
+we can do things without worrying about the main 
+branch being broken 
+
+- creating a branch:
+> git branch [newBranchName]
+
+- to see all the branches in your local repo:
+> git branch 
+
+- to go to another branch in yoru local repo:
+> git checkout [branchName]
+
+- merging with the master branch 
+first goto the master branch 
+> git checkout master 
+
+then merge it with the branch that you wanna merge:
+> git merge [branchName]
+
+note:
+this is gonna merge the master branch with 
+another branch 
+

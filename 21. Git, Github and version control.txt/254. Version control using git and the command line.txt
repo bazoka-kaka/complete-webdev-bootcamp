@@ -13,7 +13,7 @@ VERSION CONTROL USING GIT AND THE COMMAND LINE
 note: creating a new repository on your current 
 local dir 
 
-> la -a 
+> ls -a 
 note: this is gonna show the git dirs and 
 file configs 
 
