@@ -30,7 +30,7 @@ const app = express();
 
 app.get("/", function (req, res) {
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=549eb5d9f33b2243589eb108c3dd5c65&units=metric";
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid={your token key}&units=metric";
   https.get(url, function (res) {
     console.log(res);
   });
