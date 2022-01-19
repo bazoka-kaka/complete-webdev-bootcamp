@@ -1,0 +1,204 @@
+UNDERSTANDING NODE MODULE EXPORTS: HOW TO PASS FUNCTIONS AND DATA BETWEEN FILES 
+===============================================================================
+
+- create a file called date.js 
+and put this into there:
+const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+
+- getting the date back into our index.js:
+wrap it out into a function:
+function getDate() {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+  return day;
+}
+
+- exporting it:
+you can see on the node docs in the modules part
+
+this is what it says:
+"the module free variable is a reference
+to the object representing the current
+module"
+
+this means:
+we can require "module" if you wanna 
+use it inside your .js file 
+
+example:
+const date = require(__dirname + "/date.js");
+
+if you do something like this:
+console.log(module);
+
+this is gonna show the object that represents
+our module 
+
+this have things like:
+id (location)
+parent module: the module that requires it 
+in the parent module:
+there's children which is the modules 
+that is being required to it 
+and there's this thing:
+exports: {} -- outside the parent module 
+inside our current module 
+
+it's empty because we don't export anything yet 
+
+exporting it:
+module.exports = 'Hello';
+
+in another module:
+const date = require('date');
+
+console.log(date);
+
+note:
+this is gonna output:
+"Hello"
+
+- exporting function as module:
+module.exports = getDate;
+
+function getDate() {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+  return day;
+}
+
+note:
+we don't use the '()' thing because we don't 
+wanna call the getDate yet, we want 
+javascript or another file to call it instead 
+of us now!
+
+this is inside index.js:
+const date = require(__dirname + "/date.js");
+app.get("/", function (req, res) {
+  const day = date();
+  res.render("list", { listTitle: day, newListItem: items });
+});
+
+- what if we wanna export more than one
+function? 
+
+you can do this:
+date.js:
+module.exports.getDate = getDate;
+module.exports.getDay = getDay;
+
+function getDate() {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+  return day;
+}
+
+function getDay() {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+  return day;
+}
+
+in index.js:
+const date = require(__dirname + "/date.js");
+app.get("/", function (req, res) {
+  const day = date.getDate();
+  res.render("list", { listTitle: day, newListItem: items });
+});
+
+or you can do this:
+const day = date.getDay();
+
+- 6 ways to declare javascript functions:
+https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/
+
+a. function a () {}
+b. const a = function() {}
+c. ...
+
+we can do this to our getDate() in date.js:
+const date = function() {...}
+
+or it's the same with this:
+inside date.js:
+module.exports.getDate = function () {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  return today.toLocaleDateString("en-US", options);
+};
+
+module.exports.getDay = function () {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+  };
+
+  return today.toLocaleDateString("en-US", options);
+};
+
+this is even shorter:
+exports.getDate = function () {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  return today.toLocaleDateString("en-US", options);
+};
+
+exports.getDay = function () {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+  };
+
+  return today.toLocaleDateString("en-US", options);
+};
+
+here you just do the exports instead 

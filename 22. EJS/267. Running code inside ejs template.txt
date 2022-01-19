@@ -1,0 +1,54 @@
+RUNNING CODE INSIDE EJS TEMPLATE 
+================================ 
+
+- we wanna check if the day is a 
+weekday or a weekend
+then change the color accordingly 
+
+- if we wanna add some logics to our 
+.ejs file, we're gonna have to use this:
+<% for our javascript variable tag 
+within our control flow 
+
+docs:
+https://ejs.co/#docs
+
+"<% 'Scriptlet' tag, for control-flow, no output"
+
+this is called scriptlet because we're not 
+able to write full javascript here 
+
+but we can use control flows such as if, switch, 
+else, else if, while, etc statements here 
+
+this is gonna allow you to render different html 
+depending on what was the value of the variable 
+that you got passed in to the template 
+
+you have to add it around any part of your code 
+that is not html 
+
+final code in list.ejs:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <% if(kindOfDay == 'Saturday' || kindOfDay == 'Sunday') { %>
+    <h1 style="color: purple">It's a <%= kindOfDay %>!</h1>
+    <% } else { %>
+    <h1 style="color: blue">It's a <%= kindOfDay %>!</h1>
+    <% } %>
+  </body>
+</html>
+
+- the scriptlet tag allow you to do 
+basic javascript which is the control flow 
+so you can render our html slightly differently 
+depending on the value of the variable 
+that got passed in 
+

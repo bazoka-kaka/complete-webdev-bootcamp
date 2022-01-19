@@ -1,0 +1,156 @@
+CREATING YOUR FIRST EJS TEMPLATE 
+================================
+
+- EJS = embedded javascript templating 
+
+- installing the ejs:
+> npm i ejs 
+
+- setting our apps view engine to ejs:
+docs:
+https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+
+from the docs:
+let express = require('express');
+let app = express();
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', {foo: 'FOO'});
+});
+
+app.listen(4000, () => console.log('Example app listening on port 4000!'));
+
+note:
+ejs is not the only module that can 
+help us do this, but this is one of 
+the most easiest to work with 
+
+you have to do this exactly the same method
+from the docs to use ejs!
+
+after implementing the
+
+app.use('view engine', 'ejs');
+
+you have to implement the following:
+app.get('/', (req, res) => {
+  res.render('index', {foo: 'FOO'});
+});
+
+this uses the view engine that we setup 
+to render a particular page 
+
+- to use ejs or any view engines, we need 
+to create a new folder called views 
+and this is where the view engine 
+is gonna be by default go and look 
+for the files that you're trying to render 
+
+1. create a folder called views 
+2. create a file called list.ejs 
+
+and this is gonna be the base template 
+to create all of our todo list!
+
+here you're writing an html code 
+
+anything that is a valid html file 
+will be valid for an ejs file!
+
+- now we're gonna pass some 
+information from the index.js to 
+the list.ejs file 
+
+- we're gonna put a marker that's gonna tell the file 
+that this is the place to place a variable 
+marker for ejs:
+<%= EJS %>
+
+note:
+the variable name in the example above is EJS 
+
+you're gonna have to do this:
+app.get("/", function (req, res) {
+  const today = new Date();
+  const currDay = today.getDay();
+  const day = "";
+
+  if (currDay == 0 || currDay == 6) {
+    day = "weekend";
+  } else {
+    day = "weekday";
+  }
+  res.render("list", { kindOfDay: day });
+});
+
+it's common for people that use the EJS templating 
+and express:
+they're gonna use the same name for the variable
+example:
+res.render("list", { day: day });
+
+this is very confusing and not a good practice 
+
+this is the final code:
+index.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+
+app.set("view engine", "ejs");
+
+app.get("/", function (req, res) {
+  const today = new Date();
+  const currDay = today.getDay();
+  let day = "";
+
+  switch (currDay) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+      break;
+    default:
+      console.log("Error: Current day is equal to: " + currDay);
+  }
+
+  res.render("list", { kindOfDay: day });
+});
+
+app.listen(3000, function () {
+  console.log("server started at port 3000");
+});
+
+list.ejs:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>It's a <%= kindOfDay %>!</h1>
+  </body>
+</html>
+

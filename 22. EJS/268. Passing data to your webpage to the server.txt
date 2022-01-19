@@ -1,0 +1,104 @@
+PASSING DATA TO YOUR WEBPAGE TO THE SERVER 
+========================================== 
+
+- using the javascript date to get day name 
+instead of using switch statement:
+app.get("/", function (req, res) {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+
+  res.render("list", { kindOfDay: day });
+});
+
+- passing data back to our webpage
+to the server: POST request:
+
+challenge:
+1. create a new form in list.ejs which is gonna 
+have a single text input as the next todolist 
+item then when the user press the submit button, 
+it's gonna make a post request to the home route 
+
+2. write the code that handles the post request 
+to the home route and just console log the text 
+that the user wrote into that input!
+
+- now we pass the data into our new list item:
+
+note:
+when we try to render list, we have to provide
+both variables that we wanna render:
+res.render("list", { kindOfDay: day, newListItem: item });
+
+challenge:
+make the todolist so that it shows the new list 
+that the user typed
+everytime a user enters a new list item 
+
+final code in index.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+
+let items = ["Buy Food", "Cook The Food", "Eat The Food"];
+
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", function (req, res) {
+  const today = new Date();
+
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  const day = today.toLocaleDateString("en-US", options);
+
+  res.render("list", { kindOfDay: day, newListItem: items });
+});
+
+app.post("/", function (req, res) {
+  const item = req.body.newItem;
+  items.push(item);
+  res.redirect("/");
+});
+
+app.listen(3000, function () {
+  console.log("server started at port 3000");
+});
+
+final code in list.ejs:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1><%= kindOfDay %></h1>
+
+    <ul>
+      <% for(let i = 0; i < newListItem.length; ++i) { %>
+      <li><%= newListItem[i] %></li>
+      <% } %>
+    </ul>
+
+    <form action="/" method="post">
+      <input type="text" name="newItem" placeholder="Next Activity" />
+      <button type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>

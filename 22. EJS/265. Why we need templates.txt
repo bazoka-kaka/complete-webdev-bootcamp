@@ -1,0 +1,54 @@
+WHY WE NEED TEMPLATES 
+===================== 
+
+- create a new project:
+name the project: todolist-v1 
+> touch index.html index.js 
+> npm init 
+> npm i express body-parser
+
+- writing some logic to test if the current day 
+of the week is a weekend 
+and we're gonna send a message depending 
+on the day 
+index.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+
+app.get("/", function (req, res) {
+  const today = new Date();
+
+  if (today.getDay() == 0 || today.getDay() == 6) {
+    res.send("<h1>it's weekend</h1>");
+  } else {
+    res.sendFile(__dirname + "/index.html");
+  }
+});
+
+app.listen(3000, function () {
+  console.log("server started at port 3000");
+});
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>It's a weekday!</h1>
+    <p>Why are you not working!</p>
+  </body>
+</html>
+
+note:
+you don't wanna make many html pages
+that have mostly the same code!
+
+that's the reason you need template!
+

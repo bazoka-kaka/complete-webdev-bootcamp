@@ -1,0 +1,9 @@
+ADDING PREMADE CSS STYLING TO YOUR WEBSITE 
+========================================== 
+
+- to add css file into express, we have
+to tell express explicitly to serve up 
+the css file 
+
+here's how:
+app.use(express.static('public'));
