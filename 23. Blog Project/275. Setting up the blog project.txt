@@ -1,0 +1,16 @@
+SETTING UP THE BLOG PROJECT
+===========================
+
+- the node module folder is ignored
+by the .gitignore, therefore it doesn't 
+get uploaded to github and you won't download 
+it because it's such a big file 
+
+- to install our dependencies in package.json:
+> npm install 
+
+note:
+this is going to automatically go through 
+package.json and install all the dependencies 
+specified there 
+
