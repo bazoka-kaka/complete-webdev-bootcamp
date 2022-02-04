@@ -1,0 +1,140 @@
+367. POST a New Article
+=======================
+
+- without creating the html and css 
+and things like that, how can we keep it pure 
+and just build our API without the need 
+of building the frontend?
+
+client <--> API <--> server 
+
+server  - this is gonna be able to speak 
+to the database 
+
+API - this is exposing certain parts 
+of our server so that clients could 
+work with our server and database
+
+client - this could be a number of things, 
+could be a browser, which is gonna ask for 
+html, css, and javascript to the server 
+
+but the browser could also be making a get 
+request that is looking for a certain resources 
+example: data or a file 
+
+this could easily be done just by going 
+to that /articles route 
+
+and we got sent back the data that we requested 
+
+this is very well done using the get() 
+request, but how do we do that using 
+POST request?
+
+here we're gonna use a tool called postman 
+
+postman --> this is gonna allow us to test 
+our data and API without having to worry 
+about building an HTML form or building 
+up the frontend at all 
+
+installing postman... 
+
+https://www.postman.com/downloads/
+
+here we're gonna create our POST request, 
+but before we have to code it up so that our server 
+can create the correct response 
+
+this is the code:
+app.post("/articles", function (req, res) {
+  //
+  const title = req.body.title;
+  const content = req.body.content;
+  console.log(title, content);
+});
+
+inside your postman, you have to 
+make the address where you're gonna do posting 
+to localhost:3000/articles 
+
+then in the body tab, change the type to 
+x-www-form-urlencoded 
+
+note:
+the key is the variable name and the 
+value is the value of that variable 
+
+after we clicked the "send" in our postman 
+application, this is gonna wait forever 
+because it's expecting something in return 
+whether if the sent data is actually sent or not 
+
+we could add a callback function in our 
+newArticle.save();
+
+app.post("/articles", function (req, res) {
+  const newArticle = new Article({
+    title: req.body.title,
+    content: req.body.content,
+  });
+  newArticle.save(function (err) {
+    if (!err) {
+      res.send("Successfully added a new article");
+    } else {
+      console.log(err);
+    }
+  });
+});
+
+this is the final code:
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const express = require("express");
+
+mongoose.connect("mongodb://localhost:27017/wikiDB");
+
+const articleSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+});
+
+const Article = mongoose.model("Article", articleSchema);
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+
+app.get("/", function (req, res) {
+  res.send("Server is up and running");
+});
+
+app.get("/articles", function (req, res) {
+  Article.find(function (err, foundArticles) {
+    if (!err) {
+      res.send(foundArticles);
+    } else {
+      console.log(err);
+    }
+  });
+});
+
+app.post("/articles", function (req, res) {
+  const newArticle = new Article({
+    title: req.body.title,
+    content: req.body.content,
+  });
+  newArticle.save(function (err) {
+    if (!err) {
+      res.send("Successfully added a new article");
+    } else {
+      console.log(err);
+    }
+  });
+});
+
+app.listen(3000, function () {
+  console.log("Server started at port 3000");
+});

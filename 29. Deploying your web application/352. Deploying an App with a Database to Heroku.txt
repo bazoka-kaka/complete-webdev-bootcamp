@@ -1,0 +1,112 @@
+352. Deploying an App with a Database to Heroku
+===============================================
+
+1. track your codebase 
+in your git repo 
+
+> git init 
+> git add .
+> git commit -m "initial commit"
+> heroku login 
+note:
+you have to install heroku CLI 
+already 
+
+2. add herokuapp git remote 
+> heroku create 
+note:
+this is gonna create our brand new app 
+on heroku which is now called "gentle-stream"
+
+3. adding a procfile 
+> touch Procfile 
+note:
+the name should be exactly the same 
+
+> open Procfile -a vsc 
+note:
+-a --> this is the app that use 
+to open this Procfile file 
+
+inside the Procfile:
+node app.js 
+
+4. Listen on the correct port 
+heroku is gonna generate a dynamic 
+port rather than use the static one 
+
+you can also set your app to simply 
+only listen on their port:
+process.env.PORT :
+
+app.listen(process.env.PORT);
+
+or if you wanna run it locally as well 
+as wanna having it on heroku:
+
+let port = process.env.PORT;
+if(port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
+
+then you're gonna set your 
+app.listen to something like
+this:
+app.listen(port, function () {
+  console.log("Server started successfully");
+});
+
+5. use database or object storage instead 
+of writing to your local filesystem 
+
+(you already done this using the atlas 
+in the earlier lesson)
+
+6. complete language-specific setup 
+we have to add the version of node 
+to package.json 
+
+this is how this is gonna look like:
+{
+  "name": "todolist-v1",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "v16.13.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.8"
+  },
+  "description": ""
+}
+
+note:
+here you are adding this:
+"engines": {
+    "node": "v16.13.0"
+  },
+
+7. create a .gitignore file 
+
+inside the .gitignore:
+.node_modules
+npm-debug.log 
+.DS_Store 
+/*.env 
+
+then we're gonna commit everything
+to our github:
+> git add .
+> git commit -m "Add gitignore, procfile, and 
+update ports"
+

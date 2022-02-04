@@ -1,0 +1,221 @@
+INTRODUCTION TO MONGOOSE 
+========================
+
+- this is also called ODM (Object Document Mapper)
+
+- this is gonna allow nodejs which talks with 
+the language of javascript to talk with mongodb 
+which talks with the language of documents 
+and collections and databases 
+
+- the main objective of this framework:
+simplify the validation of validation code, 
+the writing of your business logic boilerplate, 
+and just to make the code shorter and easier to 
+work with 
+
+- all we have to do to make this works:
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'zildjan' });
+kitty.save().then(() => console.log("meow"));
+
+- run mongodb server:
+> mongod 
+
+- run mongodb shell:
+> mongo 
+
+- deleting useless database:
+a. go to the database 
+>> use [databaseName]
+
+b. db.dropDatabase
+>> db.dropDatabase()
+
+- connecting our mongoose:
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/FruitsDB");
+
+- inserting one data:
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/FruitsDB");
+
+//the mongoose schema 
+const fruitSchema = new mongoose.Schema({
+  name: String,
+  rating: number,
+  review: String,
+});
+
+//the mongoose model
+const Fruit = mongoose.model("Fruit", fruitSchema);
+
+const fruit = new Fruit({
+  name: "Apple",
+  rating: 7,
+  description: "Pretty solid as a fruit.",
+});
+
+// this is gonna save our newly created fruit into 
+//Fruit collection inside fruitDB
+fruit.save();
+
+note:
+const Fruit = mongoose.model("Fruit", fruitSchema);
+this is gonna create a mongoose model of fruit 
+
+mongoose.model() will always have 2 parameters, 
+the first one is gonna be the name of the collection
+which is always gonna be a string 
+
+a mongoose way of doing things is to specify the 
+singular name of your collection 
+
+example:
+if you have a collection of fruits, then we're 
+gonna have the word "Fruit"
+
+the second param is gonna be the structure that 
+we defined 
+
+challenge:
+create a new collection
+this is gonna be a collection of people 
+you need to create the schema for a new person 
+they have 2 fields:
+a. name 
+b. age 
+then you're gonna create a new model from 
+that schema of a person 
+and you're gonna create a new person:
+a. name: John
+b. age: 37
+then save it to our database and show it 
+using mongoose 
+
+solution:
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/peopleDB");
+
+//inserting a data
+const personSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+});
+
+const Person = mongoose.model("Person", personSchema);
+
+const person = new Person({
+  name: "John",
+  age: 37,
+});
+
+person.save();
+
+- adding a bunch of data using mongoose 
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/FruitsDB");
+
+const fruitSchema = new mongoose.Schema({
+  name: String,
+  rating: Number,
+  review: String,
+});
+
+const Fruit = mongoose.model("Fruit", fruitSchema);
+
+const kiwi = new Fruit({
+  name: "Kiwi",
+  rating: 10,
+  review: "The best fruit.",
+});
+
+const orange = new Fruit({
+  name: "Orange",
+  rating: 4,
+  review: "Too sour for me.",
+});
+
+const banana = new Fruit({
+  name: "Banana",
+  rating: 3,
+  review: "Has a strange shape.",
+});
+
+Fruit.insertMany([kiwi, orange, banana], function (err) {
+  //do something
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully saved all the fruits to fruitsDB");
+  }
+});
+
+the final code for everything in app.js:
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/fruitDB");
+
+const fruitSchema = new mongoose.Schema({
+  name: String,
+  rating: Number,
+  review: String,
+});
+
+const Fruit = new mongoose.model("Fruit", fruitSchema);
+
+const apple = new Fruit({
+  name: "Apple",
+  rating: 7,
+  review: "Pretty solid for a fruit.",
+});
+
+// apple.save();
+
+const personSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+});
+
+const Person = mongoose.model("Person", personSchema);
+
+const john = new Person({
+  name: "John",
+  age: 37,
+});
+
+// john.save();
+
+const kiwi = new Fruit({
+  name: "Kiwi",
+  rating: 10,
+  review: "The best fruit.",
+});
+
+const orange = new Fruit({
+  name: "Orange",
+  rating: 4,
+  review: "Too sour for me.",
+});
+
+const banana = new Fruit({
+  name: "Banana",
+  rating: 3,
+  review: "Has a strange shape.",
+});
+
+Fruit.insertMany([kiwi, orange, banana], function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully saved all the fruits to fruitDB");
+  }
+});

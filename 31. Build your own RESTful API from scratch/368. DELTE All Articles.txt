@@ -1,0 +1,61 @@
+368. DELTE All Articles
+=======================
+
+- the client is sending an HTTP 
+DELETE request to our /articles route 
+and this should delete all of the articles 
+that are in our collection 
+
+syntax:
+app.delete(route, function(req, res) {
+  //do something here
+});
+
+in mongoose, we could delete many documents
+using this function:
+<ModelName>.deleteMany(
+  {conditions},
+  function(err) {
+
+  }
+)
+
+backup alert:
+    {
+        "_id": "61fcb88a8eb11fa32e4ccbde",
+        "title": "REST",
+        "content": "REST is short for REpresentational State Transfer, It's an architectural style for designing APIs."
+    },
+    {
+        "_id": "5c139771d79ac8eac11e754a",
+        "title": "API",
+        "content": "API stands for Application Programming Interface. It is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer."
+    },
+    {
+        "_id": "5c1398aad79ac8eac11e7561",
+        "title": "Bootstrap",
+        "content": "This is a framework developed by Twitter that contains pre-made front-end templates for web design"
+    },
+    {
+        "_id": "5c1398ecd79ac8eac11e7567",
+        "title": "DOM",
+        "content": "The Document Object Model is like an API for interacting with our HTML"
+    },
+    {
+        "_id": "61fcc7254aafe6908bc14461",
+        "title": "Yehezkel Wiradhika",
+        "content": "Yehezkel is a top hacker and software developer working for 8200 IDF unit and Mossad in Israel.",
+        "__v": 0
+    },
+    {
+        "_id": "61fcc8c5b07cbd91e9bf3adb",
+        "title": "Benjamin Meijer",
+        "content": "Benjamin Meijer is a rabbi in the United Indonesian Jewish Community.",
+        "__v": 0
+    }
+
+we could just go to our postman and request 
+the delete then our app.js is gonna handle 
+the delete by outputting:
+"Successfully deleted all articles."
+

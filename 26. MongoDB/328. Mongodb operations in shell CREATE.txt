@@ -1,0 +1,53 @@
+MONGODB CRUD OPERATIONS IN SHELL: CREATE 
+========================================
+
+- whenever you are learning a new database, 
+you have to learn how to perform CRUD 
+using that database 
+
+ - to create your server:
+ > mongod 
+
+- to open the mongo shell:
+> mongo 
+note:
+you have to run mongod first to be able 
+to do this 
+
+in the shell
+------------
+- to show all the available options:
+>> help 
+
+- show database names:
+>> show dbs 
+
+- create a new database:
+>> use shopDB
+
+note:
+if you do show dbs then you'll not 
+see your new database there, this is because 
+if you want your database to be listed, 
+it has to have a content 
+
+- to see what database you are currently in:
+>> db
+
+- create data using mongodb:
+>> db.products.insertOne({_id: 1, name: "Pen", price: 1.20})
+
+note:
+you can choose to insertOne or insertMany
+
+- show all the collections that exists 
+in our current database:
+>> show collections 
+
+challenge:
+create the second product as such:
+id = 2
+name = "Pencil"
+price = 0.80
+stock = 12
+

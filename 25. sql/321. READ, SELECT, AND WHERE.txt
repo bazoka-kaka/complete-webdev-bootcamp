@@ -1,0 +1,18 @@
+READ SELECT AND WHERE 
+=====================
+
+- if you wanna show all the full table
+in products table:
+
+SELECT * FROM products;
+
+- if you only wanna output the name and price in 
+the products table:
+
+SELECT name, price FROM products;
+
+- if you wanna show only the particular 
+row from your table:
+
+SELECT * FROM products
+WHERE id=1;

@@ -1,0 +1,60 @@
+340. Establishing Relationships and Embedding Documents using Mongoose
+======================================================================
+
+- to make relationship with another 
+collection:
+const personSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+  favouriteFruit: fruitSchema,
+});
+
+then if we do something like this:
+const pineapple = new Fruit({
+  name: "Pineapple",
+  rating: 7,
+  review: "Pineapple is quite tasty.",
+});
+
+pineapple.save();
+
+const amy = new Person({
+  name: "Amy",
+  age: 19,
+  favouriteFruit: Pineapple,
+});
+
+amy.save();
+
+then we're gonna have an embedded document:
+{ "_id" : ObjectId("61eeada695a66e9be910c99b"), 
+"name" : "Amy", "age" : 19, "favouriteFruit" : 
+{ "name" : "Pineapple", "rating" : 7, "review" : 
+"Pineapple is quite tasty.", "_id" : 
+ObjectId("61eeada695a66e9be910c99a") }, "__v" : 0 }
+
+notice that the pineapple id here 
+is the same with the pineapple's id in 
+the fruit collection 
+
+- challenge:
+create a new fruit and then assign it 
+as the favourite fruit of john!
+
+solution:
+const durian = new Fruit({
+  name: "Durian",
+  rating: 10,
+  review: "Durian is the king of fruits",
+});
+
+durian.save();
+
+Person.updateOne({ name: "John" }, { favouriteFruit: durian }, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully updated favourite food of john to durian");
+  }
+});
+

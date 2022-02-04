@@ -1,0 +1,57 @@
+EXPRESS ROUTING PARAMETERS 
+==========================
+
+docs:
+http://expressjs.com/en/guide/routing.html
+
+note:
+read the route parameters part 
+
+we're gonna go to a full page version 
+of a blogpost here using the routing system 
+
+you can do something like this:
+app.get('/users/:userId/books/:bookId', function (req, res) {
+  res.send(req.params)
+})
+
+note:
+when the user enters something in the 
+"userId" and "bookId" example:
+/users/123/books/a
+
+you're gonna be able to tap into that parameter 
+that is stored in the userId and the bookId 
+
+
+full example
+------------
+
+app.get("/news/:topic", function(req, res) {
+  console.log(req.params.topic);
+});
+
+note:
+how to access what the user typed after /news/
+is using the req.params.[nameOfParameter]
+
+then if the user type this:
+*/news/politics
+
+this is gonna output:
+politics 
+
+this is better than doing this:
+app.get("/news/politics", function(req, res) {
+  //do something here
+});
+
+app.get("/news/science", function(req, res) {
+  //do something here 
+});
+
+...
+
+which is redundant and is not effective
+
+FORCING NODEMON TO RESTART YOUR SERVICE

@@ -1,0 +1,9 @@
+LODASH
+======
+
+- you don't want your route to have spacing 
+and have capital letter case 
+
+- lodash is another javascript library 
+that is very popular among developers 
+

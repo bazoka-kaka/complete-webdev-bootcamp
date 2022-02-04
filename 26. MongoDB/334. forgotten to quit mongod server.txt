@@ -1,0 +1,13 @@
+FORGOTTEN TO QUIT MONGOD SERVER 
+===============================
+
+1. Open up a fresh Hyper Terminal tab
+
+2. Paste the command below into Hyper:
+
+sudo pkill -f mongod
+
+3. Now enter the password that you use to log on to the Mac.
+
+4. Open a new Hyper terminal, you should now be able to run the mongod command again.
+

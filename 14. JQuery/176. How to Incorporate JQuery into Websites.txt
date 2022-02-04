@@ -1,20 +1,20 @@
-HOW TO INCORPORATE JQUERY INTO WEBSITES 
+HOW TO INCORPORATE JQUERY INTO WEBSITES
 =======================================
 
-- the most popular option is use the google's CDN 
+- the most popular option is use the google's CDN
 
 - the beauty of using a popular cdn:
-if a user has been on another website 
-that uses the same cdn to fetch the jquery library 
-then they'll likely have it already cached 
-and saved in their browser meaning they won't have 
-to fetch a fresh copy of jquery 
+if a user has been on another website
+that uses the same cdn to fetch the jquery library
+then they'll likely have it already cached
+and saved in their browser meaning they won't have
+to fetch a fresh copy of jquery
 
 - this is the link:
 https://developers.google.com/speed/libraries/#jquery
 use the 3x one!
 
-- you have to put the jquery cdn just 
+- you have to put the jquery cdn just
 above the javascript link!
 
 example:
@@ -36,7 +36,7 @@ in the head section, it'll not work!
 
 this is because:
 before we try to loadup the jquery's library, index.js 
-might actually be trying to access it 
+might actually be trying to access it
 
 prevention:
 checking whether the jquery is ready 

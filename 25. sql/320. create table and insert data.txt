@@ -1,0 +1,47 @@
+CREATE TABLE AND INSERT DATA 
+============================ 
+
+- the best sql docs:
+https://www.w3schools.com/sql/
+
+- the 4 main things that you're gonna 
+do with sql database:
+a. create 
+b. read 
+c. update 
+d. destroy 
+(CRUD)
+
+- this is where you can 
+do sql online:
+https://sqliteonline.com/
+
+creating table 
+--------------
+
+CREATE TABLE products (
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+)
+
+- primary key is something to uniquely 
+identify your data with
+
+- NOT NULL --> this is making your sql 
+not allowing a data to be empty, this is 
+usually used for the primary key 
+
+inserting data into sql 
+-----------------------
+
+INSERT INTO products 
+VALUES (1, "Pen", 1.20);
+
+- if you don't wanna insert all of the values 
+that is in the columns (only some of the datas)
+
+INSERT INTO products (id, name)
+VALUES (2, "Pencil");
+

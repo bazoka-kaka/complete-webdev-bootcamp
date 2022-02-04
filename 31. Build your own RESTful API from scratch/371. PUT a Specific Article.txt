@@ -1,0 +1,32 @@
+371. PUT a Specific Article
+===========================
+
+- we're gonna have to use this to update:
+<ModelName>.update(
+  {conditions},
+  {updates},
+  {overwrite: true}
+  function(err, results) {}
+);
+
+note:
+we're gonna use update from crud 
+and we're gonna use the update method that's available 
+through mongoose 
+
+if we leave the {overwrite: true} thing, 
+then we're just gonna update a particular 
+field not an entire document replaced!
+
+the reason why we use the {overwrite: true}
+is because if we were to update our document
+using mongodb, then the overwrite thing 
+is already enabled automatically, 
+it will overwrite things if you don't include 
+all the fields in your update 
+
+BUT.. by using mongoose, it is deemed necessary 
+to prevent this overwriting
+so by default, mongoose will prevent properties 
+being overwritten and deleted
+

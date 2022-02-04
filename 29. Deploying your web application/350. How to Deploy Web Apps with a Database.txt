@@ -1,0 +1,27 @@
+350. How to Deploy Web Apps with a Database
+===========================================
+
+- if we deploy our website to an internet 
+server, then we wanna connect that server 
+with our local database, then 
+it's not gonna work!
+
+- few differences between a server and a work station:
+server:
+has to be online 24/7
+
+we have to move our database to a server 
+so that it can be served 24/7 
+and accross the internet 
+
+here we're gonna use atlas 
+
+note:
+this is gonna allow us to have a database address 
+in the internet 
+
+example:
+mongodb://cluster0.mongodb.net:27017 
+
+this is gonna host your database and serve 
+up your data whenever it's needed 

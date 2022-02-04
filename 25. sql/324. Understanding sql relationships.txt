@@ -1,0 +1,46 @@
+FOREIGN KEYS AND INNER JOIN 
+===========================
+
+- foreign key is the key that's gonna link 
+all the tables together (making relationships
+between tables)
+
+- create a new table first (for demonstration 
+purposes)
+
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers (id),
+  FOREIGN KEY (product_id) REFERENCES products (id)
+)
+
+- populating the table orders 
+
+INSERT INTO orders
+VALUES (1, 4362, 2, 1);
+
+INSERT INTO orders
+VALUES (2, 3254, 1, 1);
+
+- joining the table together 
+
+there are lots of joins there, but 
+the most commonly used is INNER JOIN 
+
+example:
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders 
+INNER JOIN customers oN orders.customer_id = customers.id;
+
+- challenge:
+join the order with the product that the order 
+is relating to 
+
+answer:
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders 
+INNER JOIN products oN orders.product_id = products.id;

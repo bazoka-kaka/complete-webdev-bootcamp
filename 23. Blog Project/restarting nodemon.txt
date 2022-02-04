@@ -1,0 +1,7 @@
+FORCE RESTARTING NODEMON
+========================
+
+- to force restart nodemon:
+(while the nodemon is running)
+>> rs 
+

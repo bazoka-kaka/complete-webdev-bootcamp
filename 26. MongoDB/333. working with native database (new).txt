@@ -1,0 +1,106 @@
+WORKING WITH NATIVE DATABASE (NEW)
+==================================
+
+- adding some data to our database
+const MongoClient = require("mongodb").MongoClient;
+
+const url = "mongodb://localhost:27017";
+
+const client = new MongoClient(url);
+
+const insertDocuments = async function () {
+  //do something
+  try {
+    await client.connect();
+
+    const db = client.db("fruitsDB");
+    const fruits = db.collection("fruits");
+    const docs = [
+      { name: "Apple", score: 8, review: "Great fruit" },
+      { name: "Orange", score: 6, review: "Kinda sour" },
+      { name: "Banana", score: 9, review: "Great stuff" },
+    ];
+    const result = await fruits.insertMany(docs);
+    console.log(`successfully inserted ${result.insertedCount} documents`);
+  } finally {
+    await client.close();
+  }
+};
+
+insertDocuments();
+
+READING DATA INSIDE NODEJS 
+--------------------------
+
+const MongoClient = require("mongodb").MongoClient;
+
+const url = "mongodb://localhost:27017";
+
+const client = new MongoClient(url);
+
+const findDocuments = async function () {
+  try {
+    await client.connect();
+
+    const db = client.db("fruitsDB");
+    const fruits = db.collection("fruits");
+    const result = fruits.find({}, { projection: { _id: 0 } });
+    if ((await result.count()) === 0) {
+      console.log("No documents found!");
+    }
+    await result.forEach(console.dir);
+  } finally {
+    await client.close();
+  }
+};
+
+findDocuments();
+
+full version:
+const MongoClient = require("mongodb").MongoClient;
+
+const url = "mongodb://localhost:27017";
+
+const client = new MongoClient(url);
+
+const connectDocuments = async function () {
+  //something
+  try {
+    await client.connect();
+
+    const db = client.db("fruitDB");
+    const fruits = db.collection("fruits");
+    //do something here
+    const result = await readDocuments(fruits);
+    await result.forEach(console.dir);
+  } finally {
+    await client.close();
+  }
+};
+
+const insertDocuments = async function (fruits) {
+  let result;
+  try {
+    const doc = [
+      { name: "Orange", score: 6, review: "Kinda sour" },
+      { name: "Banana", score: 9, review: "Great stuff" },
+    ];
+    result = await fruits.insertMany(doc);
+  } finally {
+    return result;
+  }
+};
+
+const readDocuments = async function (fruits) {
+  let result;
+  try {
+    result = await fruits.find({}, { projection: { _id: 0 } });
+    if ((await result.count()) === 0) {
+      console.log("No documents found!");
+    }
+  } finally {
+    return result;
+  }
+};
+
+connectDocuments();

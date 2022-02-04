@@ -1,0 +1,11 @@
+NAVIGATING THROUGH POSTS
+========================
+
+- you can just do something like this:
+/posts/The Post Title 
+
+to go to the url of 
+/posts/the-post-title
+
+or you can transform it using this:
+post.title.toLowerCase().split(' ').join('-')

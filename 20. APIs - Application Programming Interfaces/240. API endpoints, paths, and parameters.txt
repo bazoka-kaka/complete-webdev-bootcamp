@@ -17,8 +17,9 @@ example:
 something/jokes/programming 
 this is gonna be programming jokes 
 something/jokes/military 
-this is gonna be military jokes 
-c. parameters 
+this is gonna be military jokes
+
+c. parameters
 parameters go to the end of your url after a question mark 
 example:
 something/joke/programming?contains=debugging 

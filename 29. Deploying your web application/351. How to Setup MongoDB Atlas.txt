@@ -1,0 +1,43 @@
+351. How to Setup MongoDB Atlas
+===============================
+
+- here we're gonna connect with the mongoshell 
+
+to see your mongo version:
+> mongo --version 
+
+then you connect by copying the 
+command to your command shell 
+
+- to see if we're connected to the same cluster:
+click collections, create a new database 
+call it "test" collection name also "test"
+
+and you wanna create a new data:
+newData: "Welcome to your database" 
+
+then you can do something just like 
+the usual mongodb databases 
+
+- connecting it from our application 
+
+now in your database, select 
+"connect your application"
+
+the copy the url example:
+mongodb+srv://tsukikagemaikaka1:Tsukikagemaika1@cluster0.ukhyx.mongodb.net/todolistDB
+
+you have to change your password with 
+our admin password 
+
+you have to add your database 
+name in the end of this link:
+example
+.../todolistDB 
+
+you have to delete this too:
+myFirstDatabase?retryWrites=true&w=majority
+
+that's it.. you're now using the database 
+from the atlas!
+

@@ -1,0 +1,25 @@
+UPDATING SINGLE VALUES AND ADDING COLUMNS IN SQL 
+================================================
+
+- updating single values 
+
+UPDATE products 
+SET price = 0.8 
+WHERE id = 2;
+
+- change the table (update by adding a column)
+
+here, we need to alter the table 
+
+ALTER TABLE products 
+ADD stock INT 
+
+now we update the values:
+UPDATE products 
+SET stock = 32 
+WHERE id = 1;
+ 
+UPDATE products 
+SET stock = 12 
+WHERE id = 2;
+

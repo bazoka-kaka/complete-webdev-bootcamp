@@ -1,0 +1,36 @@
+UPDATING AND DELETING DATA USING MONGOOSE 
+=========================================
+
+- updating one document:
+Fruit.updateOne({ name: "Apple" }, { rating: 10 }, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully updated the document");
+  }
+});
+
+- deleting a particular record 
+
+challenge:
+delete the apple entry in our document 
+
+Fruit.deleteOne({ name: "Apple" }, {}, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully deleted apple");
+  }
+});
+
+another challenge:
+clear out the person collection using deleteMany 
+
+//delete all people with the name John
+Person.deleteMany({ name: "John" }, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Successfully deleted people with the name John");
+  }
+});

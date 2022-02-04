@@ -1,4 +1,4 @@
-CREATING YOUR FIRST EJS TEMPLATE 
+CREATING YOUR FIRST EJS TEMPLATE
 ================================
 
 - EJS = embedded javascript templating 

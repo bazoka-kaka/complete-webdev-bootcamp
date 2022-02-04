@@ -1,0 +1,87 @@
+362. What is REST?
+==================
+
+- REST --> REpresentational State Transfer 
+
+when a client requests to the server, this is usually done using the HTTP
+request (Hypertext Transfer Protocol Request)
+
+implementation:
+app.get('/'..)
+
+note:
+HTTP is not the only language that a server could speak, another example would be FTP 
+request 
+
+FTP = File Transfer Protocol request
+
+HTTPS = HTTP Secure request
+
+you don't wanna insert your information detail inside an HTTP request!
+
+- in order for the server to give us the result that we want, then it might do one of two things:
+computation, run some code to work out the request that you need 
+or the server might need to communicate with our database to grab the relevant 
+pieces of data that the client requested 
+
+- the server has a lots of APIs which are services that can expose for clients 
+to be able to tap into 
+
+WHAT DOES IT MEAN TO MAKE OUR API RESTFUL?
+==========================================
+
+REST --> this is just an architectural style 
+
+since rest is just an architectural style, then it's 
+not the only one, the other most famous one that is used before 
+is called SOAP, another is GraphQL, FALCOR, etc 
+
+the gold standard for web API is REST 
+
+REST is the Phd tesis of someone called Roy Fielding 
+UCLA 
+
+- REST is a set of rules that web developers could follow 
+when they're building their APIs 
+
+- all website in the websites could use the same structure 
+to build in their API 
+
+you can have a whole street and all of their buildings 
+have the same layout, for example if you wanna go poop, 
+then since all have the same layout, you wouldn't have 
+to search for one right?
+
+by using API, web developers are able to work together more easily 
+and be able to use different APIs more easily 
+
+RESTful API RULES 
+-----------------
+
+these are the two most important rules of making RESTful API:
+1. use HTTP request verbs 
+2. use specific pattern of routes/endpoints urls
+
+1. HTTP REQUEST VERBS 
+- GET --> READ 
+- POST --> CREATE 
+- PUT --> UPDATE
+- PATCH --> UPDATE 
+- DELETE --> DELETE 
+
+note:
+this is similar to the database's CRUD 
+
+the difference between put and patch:
+put --> this is gonna update the database by sending an entire 
+entry to replace the previous one 
+
+patch --> this is only gonna send the pice of data 
+that needs to be updated instead of the entire entry 
+
+all of these HTTP requests uses the same template:
+app.<request_verb>(function(req, res) {})
+
+2. Use Specific pattern of routes/endpoints urls 
+this is gonna use specific rules regarding routing
+

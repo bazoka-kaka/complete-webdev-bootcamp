@@ -1,0 +1,11 @@
+MONGODB CRUD OPERATIONS IN THE SHELL: DELETE 
+============================================
+
+- removing/deleting a document:
+
+challenge:
+delete the document that has an id of 2
+
+answer:
+>> db.products.deleteOne({ _id: 2 })
+

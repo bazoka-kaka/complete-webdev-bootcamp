@@ -1,0 +1,83 @@
+RELATIONSHIPS IN MONGODB 
+========================
+
+- 2 main ways of creating relationships 
+using mongodb:
+1. (preferred but depends on the model of data 
+that you have) -- embedding document inside 
+another document 
+
+example:
+db.products.insert(
+  {
+    _id: 3,
+    name: "Rubber",
+    price: 1.30,
+    stock: 43,
+    reviews: [
+      {
+        authorName: "Sally",
+        rating: 5,
+        review: "Best rubber ever!"
+      }
+    ]
+  }
+)
+
+note:
+the relationship is associated using the embedded 
+document of reviews 
+
+if we have another review for the same 
+product, then we can append it to our array 
+
+this embedding data is really good 
+for one to many relationship
+
+another example if one user could have many 
+comments and one product could have many reviews 
+
+challenge:
+recreate the "Pencil" document that we deleted 
+earlier then add in some reviews for that document 
+
+this is the "Pencil document":
+{
+  _id: 2,
+  name: "Pencil",
+  price: 0.80,
+  stock: 12,
+  reviews: [
+    {
+      authorName: "Jake",
+      rating: 4.5,
+      review: "Best pencil ever"
+    },
+    {
+      authorName: "Jane",
+      rating: 4.7,
+      review: "Amazing pencil"
+    },
+  ]
+}
+
+2. referencing another collection 
+example:
+collection review:
+{
+  authorName: "Jake",
+  rating: 4.5,
+  review: "Best pencil ever"
+},
+{
+  authorName: "Jane",
+  rating: 4.7,
+  review: "Amazing pencil"
+}
+
+your reference:
+{
+  productNumber: 3243,
+  reviews: [1, 2]
+}
+

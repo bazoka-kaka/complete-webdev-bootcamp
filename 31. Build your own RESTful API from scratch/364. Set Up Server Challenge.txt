@@ -1,0 +1,17 @@
+364. Set Up Server Challenge
+============================
+
+- after creating the database, now we're gonna create our server 
+
+the boilerplate whenever you're creating a new server 
+that uses mongodb:
+1. create a new directory where you're gonna save your project in
+2. initialize npm and install body-parser, mongoose, ejs, and express 
+3. create a new file called app.js 
+4. inside app.js add server code 
+5. setup mongoDB:
+- dbname is wikiDB
+- collection name is articles
+- document has 2 fields:
+a. title
+b. content 

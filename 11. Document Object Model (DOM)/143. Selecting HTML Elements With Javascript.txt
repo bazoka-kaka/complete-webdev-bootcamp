@@ -5,6 +5,7 @@ SELECTING HTML ELEMENTS WITH JAVASCRIPT
 note:
 this is getting or setting by the tag name 
 
+
 example:
 document.getElementsByTagName("li");
 

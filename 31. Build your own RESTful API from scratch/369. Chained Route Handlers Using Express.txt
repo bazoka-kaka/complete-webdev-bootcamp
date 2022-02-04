@@ -1,0 +1,87 @@
+369. Chained Route Handlers Using Express
+=========================================
+
+- instead of using the route methods that 
+we've been doing all the time, we can 
+use something else, which is app.route()
+method 
+
+the app.route() method is gonna allow us to 
+create a chainable route handlers 
+by adding the RESTful methods 
+
+example:
+app.route('/book')
+  .get(function (req, res) {
+    res.send('Get a random book')
+  })
+  .post(function (req, res) {
+    res.send('Add a book')
+  })
+  .put(function (req, res) {
+    res.send('Update the book')
+  })
+
+this is the final code after refactoring 
+using app.route():
+
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const express = require("express");
+
+mongoose.connect("mongodb://localhost:27017/wikiDB");
+
+const articleSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+});
+
+const Article = mongoose.model("Article", articleSchema);
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+
+app.get("/", function (req, res) {
+  res.send("Server is up and running");
+});
+
+app
+  .route("/articles")
+  .get(function (req, res) {
+    Article.find(function (err, foundArticles) {
+      if (!err) {
+        res.send(foundArticles);
+      } else {
+        console.log(err);
+      }
+    });
+  })
+  .post(function (req, res) {
+    const newArticle = new Article({
+      title: req.body.title,
+      content: req.body.content,
+    });
+    newArticle.save(function (err) {
+      if (!err) {
+        res.send("Successfully added a new article");
+      } else {
+        console.log(err);
+      }
+    });
+  })
+  .delete(function (req, res) {
+    //
+    Article.deleteMany(function (err) {
+      if (!err) {
+        res.send("Successfully deleted all articles.");
+      } else {
+        res.send(err);
+      }
+    });
+  });
+
+app.listen(3000, function () {
+  console.log("Server started at port 3000");
+});

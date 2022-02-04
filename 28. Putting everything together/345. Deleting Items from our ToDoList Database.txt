@@ -1,0 +1,177 @@
+345. Deleting Items from our ToDoList Database
+==============================================
+
+- to make when we check the checkbox to delete 
+our list item, then we'll have to implement a 
+form to it
+
+<form action="">
+    <div class="item">
+      <input type="checkbox" />
+      <p><%= item.name %></p>
+    </div>
+  </form>
+
+then we'll have to set our css element
+so that it doesn't get weird:
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+- setting where this form is gonna post to:
+inside list.ejs:
+<form action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" />
+      <p><%= item.name %></p>
+    </div>
+  </form>
+
+inside app.js:
+app.post("/delete", function (req, res) {
+  console.log(req.body);
+});
+
+note:
+this is just a test that is gonna show us 
+what is being sent from our list.ejs 
+
+- now we're gonna make our list disappear whenever 
+we checked our check box 
+
+here's how:
+<input name="checkbox" type="checkbox" onChange="this.form.submit()" />
+
+we're now gonna set our input value 
+as the id of our list:
+      <input
+        value="<%= item._id %>"
+        name="checkbox"
+        type="checkbox"
+        onChange="this.form.submit()"
+      />
+
+challenge:
+remove the item that has the id of 
+checkedItemId!
+
+solution:
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.deleteOne({ _id: checkedItemId }, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("One item deleted!");
+    }
+  });
+  res.redirect("/");
+});
+
+another solution:
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("One item deleted!");
+    }
+  });
+  res.redirect("/");
+});
+
+final code:
+//jshint esversion:6
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+const app = express();
+
+app.set("view engine", "ejs");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+//create a new database using mongoose
+mongoose.connect("mongodb://localhost:27017/todolistDB", {
+  useNewUrlParser: true,
+});
+
+//create todolist schema
+const itemsSchema = new mongoose.Schema({
+  name: String,
+});
+
+//create todolist model
+const Item = mongoose.model("Item", itemsSchema);
+
+//create the default documents
+const item1 = new Item({ name: "Welcome to your todo list!" });
+
+const item2 = new Item({ name: "Hit the + button to aff a new item." });
+
+const item3 = new Item({ name: "<-- Hit this to delete an item" });
+
+const defaultItems = [item1, item2, item3];
+
+const workItems = [];
+
+app.get("/", function (req, res) {
+  Item.find({}, function (err, foundItems) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundItems.length === 0) {
+        //inserting our items into mongoose
+
+        Item.insertMany(defaultItems, function (err) {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Successfully inserted datas into database!");
+          }
+        });
+        res.redirect("/");
+      } else {
+        res.render("list", { listTitle: "Today", newListItems: foundItems });
+      }
+    }
+  });
+});
+
+app.post("/", function (req, res) {
+  const itemName = req.body.newItem;
+  const newItem = new Item({
+    name: itemName,
+  });
+  newItem.save();
+  res.redirect("/");
+});
+
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("One item deleted!");
+      res.redirect("/");
+    }
+  });
+});
+
+app.get("/work", function (req, res) {
+  res.render("list", { listTitle: "Work List", newListItems: workItems });
+});
+
+app.get("/about", function (req, res) {
+  res.render("about");
+});
+
+app.listen(3000, function () {
+  console.log("Server started on port 3000");
+});

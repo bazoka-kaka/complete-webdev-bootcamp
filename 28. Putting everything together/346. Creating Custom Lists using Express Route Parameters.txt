@@ -1,0 +1,239 @@
+346. Creating Custom Lists using Express Route Parameters
+=========================================================
+
+- we're gonna implement adding another 
+route for example into our work list 
+which is inside the route of work "/work"
+
+we're gonna have to implement something 
+called express route parameters 
+
+express is gonna allow us to use route 
+parameters to create dynamic routes 
+
+challenge:
+delete the .get("/work") method and create a dynamic 
+route based on the route parameters 
+
+so that for example: /home or /work, 
+we're gonna be able to print out the last 
+part there!
+
+reminder:
+express route parameters:
+app.get("/category/:<paramName>", function(req, res) {
+  //access req.params.paramName
+})
+
+solution:
+app.get("/:customListName", function (req, res) {
+  console.log(req.params.customListName);
+});
+
+- now we're gonna create a new document 
+first we have to create the schema and 
+the model:
+const listSchema = {
+  name: String,
+  items: [itemsSchema],
+};
+
+const List = mongoose.model("List", listSchema);
+
+then we're gonna create the document 
+whenever the user is making a route 
+request:
+app.get("/:customListName", function (req, res) {
+  const customListName = req.params.customListName;
+  const list = new List({
+    name: customListName,
+    items: defaultItems,
+  });
+  list.save();
+});
+
+we don't wanna duplicate the list 
+component whenever we're calling 
+our route, meaning we don't want to 
+add the same list whenever the user goes 
+to the route that they specifies 
+
+we have to check whether the name of 
+something in the list already exists 
+
+we're now gonna use the mongoose findOne()
+
+<ModelName>.findOne({conditions}, function(err, results) {
+  //use the found results docs 
+})
+
+solution:
+app.get("/:customListName", function (req, res) {
+  const customListName = req.params.customListName;
+  List.findOne({ name: customListName }, function (err, foundList) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (!foundList) {
+        console.log("Doesn't exist!");
+      } else {
+        console.log("Exists!");
+      }
+    }
+  });
+  const list = new List({
+    name: customListName,
+    items: defaultItems,
+  });
+  list.save();
+});
+
+note:
+to drop a collection in our current database:
+db.<collection_name>.drop()
+
+this is how:
+app.get("/:customListName", function (req, res) {
+  const customListName = req.params.customListName;
+  List.findOne({ name: customListName }, function (err, foundList) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (!foundList) {
+        //create a new list!
+        const list = new List({
+          name: customListName,
+          items: defaultItems,
+        });
+        list.save();
+        res.redirect("/" + customListName);
+      } else {
+        //show an existing list
+        res.render("list", {
+          listTitle: customListName,
+          newListItems: foundList.items,
+        });
+      }
+    }
+  });
+});
+
+the full code:
+//jshint esversion:6
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+const app = express();
+
+app.set("view engine", "ejs");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+//create a new database using mongoose
+mongoose.connect("mongodb://localhost:27017/todolistDB", {
+  useNewUrlParser: true,
+});
+
+//create todolist schema
+const itemsSchema = new mongoose.Schema({
+  name: String,
+});
+
+//create todolist model
+const Item = mongoose.model("Item", itemsSchema);
+
+//create the default documents
+const item1 = new Item({ name: "Welcome to your todo list!" });
+
+const item2 = new Item({ name: "Hit the + button to aff a new item." });
+
+const item3 = new Item({ name: "<-- Hit this to delete an item" });
+
+const listSchema = new mongoose.Schema({
+  name: String,
+  items: [itemsSchema],
+});
+
+const List = mongoose.model("List", listSchema);
+
+const defaultItems = [item1, item2, item3];
+
+app.get("/", function (req, res) {
+  Item.find({}, function (err, foundItems) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundItems.length === 0) {
+        //inserting our items into mongoose
+
+        Item.insertMany(defaultItems, function (err) {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Successfully inserted datas into database!");
+          }
+        });
+        res.redirect("/");
+      } else {
+        res.render("list", { listTitle: "Today", newListItems: foundItems });
+      }
+    }
+  });
+});
+
+app.post("/", function (req, res) {
+  const itemName = req.body.newItem;
+  const newItem = new Item({
+    name: itemName,
+  });
+  newItem.save();
+  res.redirect("/");
+});
+
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("One item deleted!");
+      res.redirect("/");
+    }
+  });
+});
+
+app.get("/:customListName", function (req, res) {
+  const customListName = req.params.customListName;
+  List.findOne({ name: customListName }, function (err, foundList) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (!foundList) {
+        //create a new list!
+        const list = new List({
+          name: customListName,
+          items: defaultItems,
+        });
+        list.save();
+        res.redirect("/" + customListName);
+      } else {
+        //show an existing list
+        res.render("list", {
+          listTitle: customListName,
+          newListItems: foundList.items,
+        });
+      }
+    }
+  });
+});
+
+app.get("/about", function (req, res) {
+  res.render("about");
+});
+
+app.listen(3000, function () {
+  console.log("Server started on port 3000");
+});

@@ -1,0 +1,220 @@
+348. Revisiting Lodash and Deleting Items from Custom ToDo Lists
+================================================================
+
+- problem: 
+when we wanna delete an item 
+from our custom list, we'll be redirected
+automatically to our home page 
+
+reason:
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("One item deleted!");
+      res.redirect("/");
+    }
+  });
+});
+
+here we're only checking for the item and 
+totally ignoring where the item is coming 
+from 
+
+another problem:
+there's no other input here 
+  <form action="/delete" method="post">
+    <div class="item">
+      <input
+        value="<%= item._id %>"
+        name="checkbox"
+        type="checkbox"
+        onChange="this.form.submit()"
+      />
+      <p><%= item.name %></p>
+    </div>
+  </form>
+
+this means that we can't pass in the 
+list using the earlier method of button 
+where we pass the name of the list to the button 
+(since the value of the checkbox is already
+set to the item id)
+
+solution:
+use a hidden input!
+note:
+this is gonna allow us to include data that 
+can't be seen or modified by users 
+
+we're gonna pass our list name here 
+
+we're gonna use this:
+<input type="hidden" name="listName" value="<%= listTitle %>" />
+
+code:
+
+  <form action="/delete" method="post">
+    <div class="item">
+      <input
+        value="<%= item._id %>"
+        name="checkbox"
+        type="checkbox"
+        onChange="this.form.submit()"
+      />
+      <p><%= item.name %></p>
+    </div>
+    <input type="hidden" name="listName" value="<%= listTitle %>" />
+  </form>
+
+if the listName is "Today" we are gonna remove it 
+the usual way, but if it's a custom list, 
+then we're gonna have to remove a document 
+from our list (an array that is inside our 
+list data)
+
+"mongoose delete array element in document 
+and save"
+
+you are gonna use $pull or $pullAll 
+to remove the item from the array 
+(you can do this directly in mongoDB)
+
+the $pull operator removes from an existing array 
+all instances of a value that match a specified 
+condition
+
+we can use this $pull along with 
+Model.findOneAndUpdate()
+
+Mongoose.findOneAndUpdate()
+---------------------------
+
+<ModelName>.findOneAndUpdate(
+  {conditions},
+  {updates},
+  function(err, results) {}
+)
+
+note:
+conditions --> what we wanna find 
+updates --> what we wanna update 
+note:
+how to do this?
+{updates} = {$pull: {field: {query}}}
+
+the field has to be an array or something
+query = which item in that array of items 
+do we wanna pull 
+
+final syntax:
+<ModelName>.findOneAndUpdate(
+  {conditions},
+  {$pull: {field: {_id: value}}},
+  function(err, results) {}
+)
+
+
+function... --> the callback 
+
+this is the code:
+List.findOneAndUpdate(
+      { name: listName },
+      { $pull: { items: { _id: checkedItemId } } },
+      function (err, foundList) {
+        if (!err) {
+          res.redirect("/" + listName);
+        }
+      }
+    );
+
+the final post code:
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  const listName = req.body.listName;
+
+  if (listName === "Today") {
+    Item.findByIdAndRemove(checkedItemId, function (err) {
+      if (!err) {
+        console.log("One item deleted!");
+        res.redirect("/");
+      }
+    });
+  } else {
+    //do another thing
+    List.findOneAndUpdate(
+      { name: listName },
+      { $pull: { items: { _id: checkedItemId } } },
+      function (err, foundList) {
+        if (!err) {
+          res.redirect("/" + listName);
+        }
+      }
+    );
+  }
+});
+
+- another problem:
+when we create our last parameters, it 
+differentiates between a lowercase word and 
+an uppercase one 
+
+example:
+home != Home 
+
+note:
+this is a completely different list at this point 
+
+we're just gonna use lodash here 
+
+remember to install lodash first:
+> npm i lodash 
+
+we're gonna use the .capitalize()
+meaning we're gonna convert the first 
+character to uppercase and the remaining 
+to lowercase!
+
+this is the solution:
+const customListName = _.capitalize(req.params.customListName);
+
+the code:
+app.get("/:customListName", function (req, res) {
+  const customListName = _.capitalize(req.params.customListName);
+  List.findOne({ name: customListName }, function (err, foundList) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (!foundList) {
+        //create a new list!
+        const list = new List({
+          name: customListName,
+          items: defaultItems,
+        });
+        list.save();
+        res.redirect("/" + customListName);
+      } else {
+        //show an existing list
+        res.render("list", {
+          listTitle: customListName,
+          newListItems: foundList.items,
+        });
+      }
+    }
+  });
+});
+
+note:
+don't forget to include lodash!
+const _ = require('lodash');
+
+you can even do something like this:
+/HOMe 
+
+this is gonna be automatically converted to 
+/Home instead!
+
+don't forget to drop your earlier database
+to make this work : )

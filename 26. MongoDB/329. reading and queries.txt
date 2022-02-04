@@ -1,0 +1,41 @@
+MONGODB CRUD OPERATIONS IN SHELL: READING AND QUERIES
+=====================================================
+
+- show all of the collections in curr database:
+>> show collections 
+
+- show all of the documents that are inside 
+a collections:
+>> db.products.find()
+
+note:
+the collection name is products 
+
+- querying specific elements only:
+>> db.products.find({ name: "Pencil"})
+
+note:
+this is gonna output all the data 
+that has the name "Pencil"
+
+another example:
+db.products.find({ price: { $gt: 1 } })
+
+note:
+this is gonna find all the products which 
+has the price greater than 1
+
+- querying that outputs projections (only 
+the things that we wanna see)
+
+>> db.products.find({_id: 1}, {name: 1})
+
+note:
+this is only gonna output the name of the product
+that has an id of 1 
+
+by default the id is also gonna be outputted 
+therefore if we don't want our id 
+to be outputted:
+>> db.products.find({_id: 1}, {name: 1, _id: 0})
+

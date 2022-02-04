@@ -1,0 +1,14 @@
+SQL COMMAND DELETE 
+==================
+
+- this is gonna delete a record from 
+the table 
+
+DELETE FROM products 
+WHERE id = 2;
+
+note:
+if you do something like this:
+DELETE FROM products;
+
+this is gonna delete everything!

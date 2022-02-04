@@ -1,0 +1,9 @@
+FOREACH
+=======
+
+example:
+const numbers = [1, 2, 4, 5, 7, 8];
+letters.forEach(function(number) {
+  console.log(number);
+});
+

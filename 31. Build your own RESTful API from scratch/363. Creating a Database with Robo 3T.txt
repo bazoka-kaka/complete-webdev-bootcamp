@@ -1,0 +1,26 @@
+363. Creating a Database with Robo 3T
+=====================================
+
+- you are gonna have a wikipedia on all of the programming knowledges that you learned 
+- you're gonna have an article related to the topics that you've learned 
+so you can have an article on the DOM, jquery, bootstrap, and you can 
+have your own notes organized like this on our own wikipedia 
+
+- the first thing we're gonna do:
+create the data in our database 
+
+- the GUI that is commonly used by mongodb:
+robo 3T
+
+https://robomongo.org/
+
+you're gonna have to create a new database called 
+wikiDB 
+
+then create a collection called "articles"
+
+insert some data from here:
+https://github.com/londonappbrewery/Build-Your-Own-RESTful-API
+
+using your GUI mongodb 
+
