@@ -35,9 +35,14 @@ app.post("/", function (req, res) {
   const url = `https://us20.api.mailchimp.com/3.0/lists/473981a59d`;
   const options = {
     method: "POST",
-    auth: "bazoka-kaka:87fca30a02575008fe91a8fda99a3cba-us20",
+    auth: "bazoka-kaka:b5c3347afcc4d83e16c8dd1eabfa2e98-us20",
   };
   const request = https.request(url, options, function (response) {
+    if (response.statusCode == 200) {
+      res.sendFile(__dirname + "/success.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
     response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
@@ -47,11 +52,15 @@ app.post("/", function (req, res) {
   request.end();
 });
 
+app.post("/failure", function (req, res) {
+  res.redirect("/");
+});
+
 app.listen(3000, function () {
   console.log("server started at port 3000");
 });
 
 //api key
-//87fca30a02575008fe91a8fda99a3cba-us20
+//b5c3347afcc4d83e16c8dd1eabfa2e98-us20
 //audience id
 //473981a59d
